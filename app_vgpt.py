@@ -4,7 +4,7 @@ from matcher import match_text
 import os
 
 # ===== Wake check =====
-params = st.experimental_get_query_params()
+params = st.query_params
 if "wake" in params:
     st.write("✅ App is awake.")
     st.stop()
