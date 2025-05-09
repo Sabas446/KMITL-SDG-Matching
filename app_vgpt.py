@@ -3,6 +3,12 @@ import streamlit as st
 from matcher import match_text
 import os
 
+# ===== Wake check =====
+params = st.experimental_get_query_params()
+if "wake" in params:
+    st.write("✅ App is awake.")
+    st.stop()
+
 # ===== Page Configuration =====
 st.set_page_config(
     page_title="KMITL SDG Matching for All",
