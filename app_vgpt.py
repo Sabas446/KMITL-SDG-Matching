@@ -3,11 +3,31 @@ import streamlit as st
 from matcher import match_text
 import os
 
-# ===== Wake check =====
-params = st.query_params
-if "wake" in params:
-    st.write("✅ App is awake.")
-    st.stop()
+# ===== Counter Functions =====
+def read_counter():
+    try:
+        with open("counter.txt", "r") as f:
+            total_visits, total_checks = f.read().split(",")
+            return int(total_visits), int(total_checks)
+    except:
+        return 0, 0
+
+def write_counter(total_visits, total_checks):
+    with open("counter.txt", "w") as f:
+        f.write(f"{total_visits},{total_checks}")
+
+# ===== Init Session State =====
+if "has_counted" not in st.session_state:
+    st.session_state["has_counted"] = False
+if "total_visits" not in st.session_state or "total_checks" not in st.session_state:
+    visits, checks = read_counter()
+    st.session_state["total_visits"] = visits
+    st.session_state["total_checks"] = checks
+
+if not st.session_state["has_counted"]:
+    st.session_state["total_visits"] += 1
+    st.session_state["has_counted"] = True
+    write_counter(st.session_state["total_visits"], st.session_state["total_checks"])
 
 # ===== Page Configuration =====
 st.set_page_config(
@@ -81,12 +101,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ===== Header =====
+# ===== Header + SEO Content =====
 st.markdown("<div class='main-title'>KMITL SDG Matching for All</div>", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
         🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
-        รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong>
+        รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong><br><br>
+        <em>ระบบนี้พัฒนาภายใต้แนวคิด Routine to Research (R2R) โดยนักวิเคราะห์นโยบายและแผน สจล.<br>
+        มุ่งสร้างเครื่องมือสำหรับวิเคราะห์ข้อความให้สอดคล้องกับ SDGs อย่างแม่นยำ<br>
+        ครอบคลุมเฉพาะเป้าหมายที่เกี่ยวข้อง เพื่อสนับสนุนการสื่อสารข้อมูลความยั่งยืนของสถาบัน</em>
     </div>
 """, unsafe_allow_html=True)
 
@@ -99,6 +122,9 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
+        st.session_state["total_checks"] += 1
+        write_counter(st.session_state["total_visits"], st.session_state["total_checks"])
+
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
@@ -107,7 +133,6 @@ if st.button("🔍 วิเคราะห์"):
                 name = sdg_names.get(sdg, 'Unknown SDG')
                 icon_path = f"icons/{sdg}.png"
                 default_icon = "icons/default.png"
-
                 used_icon = icon_path if os.path.exists(icon_path) else default_icon if os.path.exists(default_icon) else None
 
                 if used_icon:
@@ -119,19 +144,21 @@ if st.button("🔍 วิเคราะห์"):
                 else:
                     st.markdown(f"<span style='font-size:22px; color:#444; font-weight:600;'>SDG {sdg}: {name}</span>", unsafe_allow_html=True)
 
-            # ===== Show Hashtag Box (With Copy Button) =====
             base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
             sdg_hashtags = ' '.join([f"#SDG{sdg}" for sdg in matched_sdgs])
             full_hashtags = base_hashtags + "\n" + sdg_hashtags
 
             st.markdown("### ✨ สรุปการวิเคราะห์ (Hashtag)")
-            st.code(full_hashtags, language=None)
+            st.code(full_hashtags, language='markdown')
         else:
             st.info("ไม่พบคำที่ตรงกับ SDGs ในข้อความนี้")
 
-# ===== Footer =====
-st.markdown("""
-    <div style='text-align:center; margin-top: 80px; font-size: 14px; color: #666;'>
-        © 2025 Office of Strategy Management KMITL
+# ===== Footer with Counter =====
+st.markdown("---")
+st.markdown(f"""
+    <div style='text-align:center; margin-top: 20px; font-size: 14px; color: #666;'>
+        👥 ผู้เข้าใช้งานรวม: <strong>{st.session_state['total_visits']}</strong> ครั้ง |
+        📊 จำนวนข้อความที่วิเคราะห์: <strong>{st.session_state['total_checks']}</strong> ข้อความ<br>
+        <br>© 2025 Office of Strategy Management KMITL
     </div>
 """, unsafe_allow_html=True)
