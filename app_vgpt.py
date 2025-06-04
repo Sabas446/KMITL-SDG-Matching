@@ -8,7 +8,7 @@ import os
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
 # ===== Logo with st.image() =====
-col1, col2 = st.columns([1, 9])
+col1, col2 = st.columns([9, 1])
 with col1:
     st.image("osm_logo.png", width=70)
 
