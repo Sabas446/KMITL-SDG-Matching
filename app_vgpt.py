@@ -1,63 +1,29 @@
-
 import streamlit as st
 from matcher import match_text
+from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
 
-# ===== Counter Functions =====
-def read_counter():
-    try:
-        with open("counter.txt", "r") as f:
-            total_visits, total_checks = f.read().split(",")
-            return int(total_visits), int(total_checks)
-    except:
-        return 0, 0
-
-def write_counter(total_visits, total_checks):
-    with open("counter.txt", "w") as f:
-        f.write(f"{total_visits},{total_checks}")
-
-# ===== Init Session State =====
-if "has_counted" not in st.session_state:
-    st.session_state["has_counted"] = False
-if "total_visits" not in st.session_state or "total_checks" not in st.session_state:
-    visits, checks = read_counter()
-    st.session_state["total_visits"] = visits
-    st.session_state["total_checks"] = checks
-
-if not st.session_state["has_counted"]:
-    st.session_state["total_visits"] += 1
-    st.session_state["has_counted"] = True
-    write_counter(st.session_state["total_visits"], st.session_state["total_checks"])
-
 # ===== Page Configuration =====
-st.set_page_config(
-    page_title="KMITL SDG Matching for All",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
+
+st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
+
+if "has_logged_visit" not in st.session_state:
+    st.session_state["has_logged_visit"] = True
+    log_action_to_sheet("visit")
 
 # ===== SDG Names for Display =====
-sdg_names = {
-    '1': 'No Poverty',
-    '2': 'Zero Hunger',
-    '3': 'Good Health and Well-being',
-    '4': 'Quality Education',
-    '5': 'Gender Equality',
-    '6': 'Clean Water and Sanitation',
-    '7': 'Affordable and Clean Energy',
-    '8': 'Decent Work and Economic Growth',
-    '9': 'Industry, Innovation and Infrastructure',
-    '10': 'Reduced Inequality',
-    '11': 'Sustainable Cities and Communities',
-    '12': 'Responsible Consumption and Production',
-    '13': 'Climate Action',
-    '14': 'Life Below Water',
-    '15': 'Life on Land',
-    '16': 'Peace, Justice and Strong Institutions',
-    '17': 'Partnerships for the Goals'
-}
+
+sdg_names = {str(i): name for i, name in enumerate([
+    "No Poverty", "Zero Hunger", "Good Health and Well-being", "Quality Education", "Gender Equality",
+    "Clean Water and Sanitation", "Affordable and Clean Energy", "Decent Work and Economic Growth",
+    "Industry, Innovation and Infrastructure", "Reduced Inequality", "Sustainable Cities and Communities",
+    "Responsible Consumption and Production", "Climate Action", "Life Below Water", "Life on Land",
+    "Peace, Justice and Strong Institutions", "Partnerships for the Goals"
+], start=1)}
+
 
 # ===== CSS Styling =====
+
 st.markdown("""
     <style>
         html, body, [class*="css"] {
@@ -101,7 +67,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ===== Header + SEO Content =====
+# ===== Header =====
+
 st.markdown("<div class='main-title'>KMITL SDG Matching for All</div>", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
@@ -109,19 +76,16 @@ st.markdown("""
         รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong><br><br>
     </div>
 """, unsafe_allow_html=True)
-
 st.markdown("---")
 
 # ===== Input and Submit =====
-text_input = st.text_area("📥 กรุณาใส่ข้อความที่ต้องการตรวจสอบ:", height=300)
 
+text_input = st.text_area("📥 กรุณาใส่ข้อความที่ต้องการตรวจสอบ:", height=300)
 if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        st.session_state["total_checks"] += 1
-        write_counter(st.session_state["total_visits"], st.session_state["total_checks"])
-
+        log_action_to_sheet("check")
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
@@ -131,7 +95,6 @@ if st.button("🔍 วิเคราะห์"):
                 icon_path = f"icons/{sdg}.png"
                 default_icon = "icons/default.png"
                 used_icon = icon_path if os.path.exists(icon_path) else default_icon if os.path.exists(default_icon) else None
-
                 if used_icon:
                     cols = st.columns([0.13, 0.87])
                     with cols[0]:
@@ -140,17 +103,22 @@ if st.button("🔍 วิเคราะห์"):
                         st.markdown(f"<div style='display:flex; align-items:center; height:50px;'><span style='font-size:22px; color:#444; font-weight:600; line-height:1;'>SDG {sdg}: {name}</span></div>", unsafe_allow_html=True)
                 else:
                     st.markdown(f"<span style='font-size:22px; color:#444; font-weight:600;'>SDG {sdg}: {name}</span>", unsafe_allow_html=True)
-
+                    
+            # ===== Show Hashtag Box (With Copy Button) =====
             base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
             sdg_hashtags = ' '.join([f"#SDG{sdg}" for sdg in matched_sdgs])
             full_hashtags = base_hashtags + "\n" + sdg_hashtags
 
             st.markdown("### ✨ สรุปการวิเคราะห์ (Hashtag)")
-            st.code(full_hashtags, language='markdown')
+            st.code(full_hashtags, language=None)        
+                    
         else:
             st.info("ไม่พบคำที่ตรงกับ SDGs ในข้อความนี้")
 
-# ===== Footer with Counter =====
+total_visits, total_checks, month_visits, month_checks = get_stats_from_logs()
+
+# ===== Footer =====
+
 st.markdown("---")
 st.markdown(f"""
     <div style='text-align:center; margin-top: 30px; font-size: 16px; color: #444; line-height: 1.8;'>
@@ -160,8 +128,9 @@ st.markdown(f"""
             ครอบคลุมเฉพาะเป้าหมายที่เกี่ยวข้อง เพื่อสนับสนุนการสื่อสารข้อมูลความยั่งยืนของสถาบัน
         </em>
         <br><br>
-        👥 <strong>ผู้เข้าใช้งานรวม:</strong> {st.session_state['total_visits']} ครั้ง |
-        📊 <strong>จำนวนข้อความที่วิเคราะห์:</strong> {st.session_state['total_checks']} ข้อความ
+        👥 <strong>ผู้เข้าใช้งานรวม:</strong> {total_visits} ครั้ง |
+        📊 <strong>ข้อความที่วิเคราะห์รวม:</strong> {total_checks} ข้อความ<br>
+        📅 <strong>เดือนนี้:</strong> 👥 {month_visits} ครั้ง | 📊 {month_checks} ข้อความ
         <br><br>
         <span style='font-size: 14px; color: #888;'>© 2025 Office of Strategy Management KMITL</span>
     </div>
