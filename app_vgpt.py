@@ -9,7 +9,7 @@ st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initi
 
 # ===== Logo with st.image() =====
 col1, col2 = st.columns([9, 1])
-with col1:
+with col2:
     st.image("osm_logo.png", width=70)
 
 if "has_logged_visit" not in st.session_state:
