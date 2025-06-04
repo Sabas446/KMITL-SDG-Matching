@@ -7,15 +7,12 @@ import os
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
-# ===== Header with OSM logo =====
-st.markdown("""
-<div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;'>
-    <div style='font-size: 36px; color:#f26f21; font-weight:bold;'>
-        KMITL SDG Matching for All
-    </div>
-    <img src='osm_logo.png' width='70' style='margin-right:5px; margin-top:5px;'>
-</div>
-""", unsafe_allow_html=True)
+# ===== Logo with st.image() =====
+col1, col2 = st.columns([9, 1])
+with col1:
+    st.markdown("<h1 style='color:#f26f21;'>KMITL SDG Matching for All</h1>", unsafe_allow_html=True)
+with col2:
+    st.image("osm_logo.png", width=70)
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
