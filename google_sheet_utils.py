@@ -1,14 +1,16 @@
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import datetime
+import streamlit as st
+import json
+from oauth2client.service_account import ServiceAccountCredentials
 
 SHEET_NAME = "sdg_counter"
-CREDENTIALS_FILE = "sdg-matching-tracker-97fd8acc2eed.json"
 
 def log_action_to_sheet(action):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+    creds_dict = json.loads(st.secrets["GSP_CREDENTIALS"])
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
     now = datetime.datetime.now().isoformat()
@@ -16,7 +18,8 @@ def log_action_to_sheet(action):
 
 def get_stats_from_logs():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+    creds_dict = json.loads(st.secrets["GSP_CREDENTIALS"])
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
     data = sheet.get_all_records()
