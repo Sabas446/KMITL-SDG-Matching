@@ -69,6 +69,10 @@ st.markdown("""
         .stButton > button:hover {
             background-color: #d95400;
         }
+        .stButton > button:active {
+            background-color: #ba4c0a !important;
+            color: white !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
