@@ -34,8 +34,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 params = st.query_params
-if "wake" in params:
-    st.stop()  # ปลุกเฉย ๆ ไม่ log
+if any(k.startswith("wake") for k in params):
+    st.stop()  # ปลุกเฉย ๆ ไม่ต้อง log
 
 now = time.time()
 if "last_visit_logged" not in st.session_state or now - st.session_state["last_visit_logged"] > 1800:  # 30 นาที
