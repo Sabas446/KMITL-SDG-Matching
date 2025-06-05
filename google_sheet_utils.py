@@ -13,8 +13,12 @@ def log_action_to_sheet(action):
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
+
     now = datetime.datetime.now().isoformat()
-    sheet.append_row([now, action])
+    user_agent = st.request.headers.get("user-agent", "unknown")
+    query = st.query_params
+
+    sheet.append_row([now, action, user_agent, str(query)])
 
 def get_stats_from_logs():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
