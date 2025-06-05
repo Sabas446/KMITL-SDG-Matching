@@ -7,8 +7,19 @@ import os
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
+from datetime import datetime
+now = datetime.now()
+
+# บล็อก BOT ที่ปลุกเว็บทุก 5 นาทีโดยไม่มี UA
+if (now.minute % 5 == 2 and now.second < 20) or (now.second in range(35, 39)):
+    log_action_to_sheet("⛔ BLOCKED BOT at " + now.strftime("%H:%M:%S"))
+    st.stop()
+
+# log ยืนยันว่า app ทำงาน
 log_action_to_sheet("🔥 TEST: app_vgpt is running")
 
+# ตรวจ UA 
+import os
 user_agent = os.environ.get("HTTP_USER_AGENT", "unknown")
 log_action_to_sheet("DEBUG UA = " + user_agent)
 
