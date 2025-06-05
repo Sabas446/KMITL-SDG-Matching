@@ -32,6 +32,9 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+params = st.query_params
+if "wake" in params:
+    st.stop()  # ปลุกเฉย ๆ ไม่ log
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
