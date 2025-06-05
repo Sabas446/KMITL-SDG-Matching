@@ -2,12 +2,6 @@ import streamlit as st
 from matcher import match_text
 from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
-import time  # เพิ่มเข้าไป
-
-# ===== Debug Logging สำหรับจับ bot =====
-user_agent = st.request_headers.get("User-Agent", "").lower()
-params = st.query_params
-log_action_to_sheet("DEBUG UA=" + user_agent + " | PARAMS=" + str(params))
 
 # ===== Page Configuration =====
 
