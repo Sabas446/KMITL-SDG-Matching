@@ -13,10 +13,6 @@ log_action_to_sheet("DEBUG UA=" + user_agent + " | PARAMS=" + str(params))
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
-
-# ===== Force TEST Log =====
-log_action_to_sheet("🔥 TEST: app_vgpt is running")
-
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
     log_action_to_sheet("visit")
