@@ -35,14 +35,12 @@ st.markdown("""
 
 params = st.query_params
 if "wake" in params:
-    st.stop()
+    st.stop()  # ปลุกเฉย ๆ ไม่ log
 
 now = time.time()
-if "last_visit_time" not in st.session_state or now - st.session_state["last_visit_time"] > 600:
-    st.session_state["last_visit_time"] = now
-    if "has_logged_visit" not in st.session_state:
-        st.session_state["has_logged_visit"] = True
-        log_action_to_sheet("visit")
+if "last_visit_logged" not in st.session_state or now - st.session_state["last_visit_logged"] > 1800:  # 30 นาที
+    log_action_to_sheet("visit")
+    st.session_state["last_visit_logged"] = now
 
 # ===== SDG Names for Display =====
 
