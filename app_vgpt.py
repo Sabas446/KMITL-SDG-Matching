@@ -9,6 +9,9 @@ st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initi
 
 log_action_to_sheet("🔥 TEST: app_vgpt is running")
 
+user_agent = os.environ.get("HTTP_USER_AGENT", "unknown")
+log_action_to_sheet("DEBUG UA = " + user_agent)
+
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
     log_action_to_sheet("visit")
