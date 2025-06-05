@@ -7,7 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 SHEET_NAME = "sdg_counter"
 
-def log_action_to_sheet(action):
+def log_action_to_sheet(action, user_agent=None, query=None):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     creds_dict = json.loads(st.secrets["GSP_CREDENTIALS"])
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
@@ -15,10 +15,7 @@ def log_action_to_sheet(action):
     sheet = client.open(SHEET_NAME).worksheet("logs")
 
     now = datetime.datetime.now().isoformat()
-    user_agent = st.request.headers.get("user-agent", "unknown")
-    query = st.query_params
-
-    sheet.append_row([now, action, user_agent, str(query)])
+    sheet.append_row([now, action, user_agent or "unknown", str(query) or ""])
 
 def get_stats_from_logs():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
