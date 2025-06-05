@@ -2,6 +2,7 @@ import streamlit as st
 from matcher import match_text
 from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
+import time
 
 # ===== Logo with st.image() =====
 st.markdown("""
@@ -34,11 +35,14 @@ st.markdown("""
 
 params = st.query_params
 if "wake" in params:
-    st.stop()  # ปลุกเฉย ๆ ไม่ log
+    st.stop()
 
-if "has_logged_visit" not in st.session_state:
-    st.session_state["has_logged_visit"] = True
-    log_action_to_sheet("visit")
+now = time.time()
+if "last_visit_time" not in st.session_state or now - st.session_state["last_visit_time"] > 600:
+    st.session_state["last_visit_time"] = now
+    if "has_logged_visit" not in st.session_state:
+        st.session_state["has_logged_visit"] = True
+        log_action_to_sheet("visit")
 
 # ===== SDG Names for Display =====
 
