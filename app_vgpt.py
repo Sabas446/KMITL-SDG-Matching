@@ -69,7 +69,15 @@ st.markdown("""
 
 # ===== Header =====
 
-st.markdown("<div class='main-title'>KMITL SDG Matching for All</div>", unsafe_allow_html=True)
+st.markdown("""
+<div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 30px; margin-bottom: 20px;">
+    <div style="font-size: 42px; font-weight: bold; color: #f26f21;">
+        KMITL SDG Matching for All
+    </div>
+    <img src="https://raw.githubusercontent.com/Sabas446/KMITL-SDG-Matching/main/osm_logo.png"
+         style="width: 42px; height: 42px;">
+</div>
+""", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
         🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
