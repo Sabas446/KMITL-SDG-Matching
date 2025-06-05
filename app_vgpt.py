@@ -3,17 +3,35 @@ from matcher import match_text
 from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
 
-# ===== Page Configuration =====
-
-st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
-
 # ===== Logo with st.image() =====
 st.markdown("""
-<div style='display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 10px;'>
+<style>
+.header-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.header-flex img {
+    max-width: 50px;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+
+<div class="header-flex">
     <div class='main-title'>KMITL SDG Matching for All</div>
-    <img src='https://raw.githubusercontent.com/Sabas446/KMITL-SDG-Matching/main/osm_logo.png' width='50'>
+    <img src='https://raw.githubusercontent.com/Sabas446/KMITL-SDG-Matching/main/osm_logo.png'>
 </div>
 """, unsafe_allow_html=True)
+
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
