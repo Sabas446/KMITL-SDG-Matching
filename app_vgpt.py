@@ -119,7 +119,9 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        log_action_to_sheet("check")
+        user_agent = st.request.headers.get("user-agent", "unknown")
+        query = st.query_params
+        log_action_to_sheet("check", user_agent=user_agent, query=query)
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
