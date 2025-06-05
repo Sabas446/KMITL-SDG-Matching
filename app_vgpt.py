@@ -34,18 +34,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 params = st.query_params
-user_agent = st.request.headers.get("user-agent", "").lower()
-
-# หากเป็นการปลุกจาก bot หรือ uptime หรือพารามิเตอร์ที่ขึ้นต้นว่า wake ให้หยุดทันที
-if any(k.startswith("wake") for k in params) or "uptimerobot" in user_agent or "bot" in user_agent:
-    st.stop()
+if any(k.startswith("wake") for k in params):
+    st.stop()  # ปลุกเฉย ๆ ไม่ต้อง log
 
 now = time.time()
 if "last_visit_logged" not in st.session_state or now - st.session_state["last_visit_logged"] > 1800:  # 30 นาที
-    log_action_to_sheet("visit", user_agent=user_agent, query=params)
+    log_action_to_sheet("visit")
     st.session_state["last_visit_logged"] = now
 
 # ===== SDG Names for Display =====
+
 sdg_names = {str(i): name for i, name in enumerate([
     "No Poverty", "Zero Hunger", "Good Health and Well-being", "Quality Education", "Gender Equality",
     "Clean Water and Sanitation", "Affordable and Clean Energy", "Decent Work and Economic Growth",
@@ -54,7 +52,9 @@ sdg_names = {str(i): name for i, name in enumerate([
     "Peace, Justice and Strong Institutions", "Partnerships for the Goals"
 ], start=1)}
 
+
 # ===== CSS Styling =====
+
 st.markdown("""
     <style>
         html, body, [class*="css"] {
@@ -103,21 +103,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ===== Header =====
+
 st.markdown("""
     <div class='subtitle'>
-        🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใด้บ้าง<br>
+        🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
         รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong><br><br>
     </div>
 """, unsafe_allow_html=True)
 st.markdown("---")
 
 # ===== Input and Submit =====
+
 text_input = st.text_area("📥 กรุณาใส่ข้อความที่ต้องการตรวจสอบ:", height=300)
-if st.button("🔍 วิเคราะร้อง"):
+if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
-        st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะร้อง")
+        st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        log_action_to_sheet("check", user_agent=user_agent, query=params)
+        user_agent = st.request.headers.get("user-agent", "unknown")
+        query = st.query_params
+        log_action_to_sheet("check", user_agent=user_agent, query=query)
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
@@ -135,30 +139,35 @@ if st.button("🔍 วิเคราะร้อง"):
                         st.markdown(f"<div style='display:flex; align-items:center; height:50px;'><span style='font-size:22px; color:#444; font-weight:600; line-height:1;'>SDG {sdg}: {name}</span></div>", unsafe_allow_html=True)
                 else:
                     st.markdown(f"<span style='font-size:22px; color:#444; font-weight:600;'>SDG {sdg}: {name}</span>", unsafe_allow_html=True)
+                    
+            # ===== Show Hashtag Box (With Copy Button) =====
             base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
             sdg_hashtags = ' '.join([f"#SDG{sdg}" for sdg in matched_sdgs])
             full_hashtags = base_hashtags + "\n" + sdg_hashtags
-            st.markdown("### ✨ สรุปการวิเคราะร้อง (Hashtag)")
-            st.code(full_hashtags, language=None)
+
+            st.markdown("### ✨ สรุปการวิเคราะห์ (Hashtag)")
+            st.code(full_hashtags, language=None)        
+                    
         else:
             st.info("ไม่พบคำที่ตรงกับ SDGs ในข้อความนี้")
 
 total_visits, total_checks, month_visits, month_checks = get_stats_from_logs()
 
 # ===== Footer =====
+
 st.markdown("---")
 st.markdown(f"""
     <div style='text-align:center; margin-top: 30px; font-size: 16px; color: #444; line-height: 1.8;'>
         <em>
-            ระบบนี้พัฒนาภายใต้แนวคิด Routine to Research (R2R) โดยนักวิเคราะนโยบายและแผน สจล.<br>
-            มุ่งสร้างเครื่อมือสำหรับวิเคราะข้อความให้สอดคล้องกับ SDGs อย่างแม่นยำ<br>
-            ครอบคุมเฉพะเป้าหมายที่เกี่ยวข้อง เพื่อสนับสนุนการสื่อสารข้อมูลความยั่งยืนของสถาบัน
+            ระบบนี้พัฒนาภายใต้แนวคิด Routine to Research (R2R) โดยนักวิเคราะห์นโยบายและแผน สจล.<br>
+            มุ่งสร้างเครื่องมือสำหรับวิเคราะห์ข้อความให้สอดคล้องกับ SDGs อย่างแม่นยำ<br>
+            ครอบคลุมเฉพาะเป้าหมายที่เกี่ยวข้อง เพื่อสนับสนุนการสื่อสารข้อมูลความยั่งยืนของสถาบัน
         </em>
         <br><br>
         👥 <strong>ผู้เข้าใช้งานรวม:</strong> {total_visits} ครั้ง |
-        📊 <strong>ข้อความที่วิเคราะรวม:</strong> {total_checks} ข้อความ<br>
+        📊 <strong>ข้อความที่วิเคราะห์รวม:</strong> {total_checks} ข้อความ<br>
         📅 <strong>เดือนนี้:</strong> 👥 {month_visits} ครั้ง | 📊 {month_checks} ข้อความ
         <br><br>
         <span style='font-size: 14px; color: #888;'>© 2025 Office of Strategy Management KMITL</span>
     </div>
-""")
+""", unsafe_allow_html=True)
