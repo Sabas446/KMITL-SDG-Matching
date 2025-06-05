@@ -8,9 +8,12 @@ import os
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
 # ===== Logo with st.image() =====
-col1, col2 = st.columns([9, 1])
-with col2:
-    st.image("osm_logo.png", width=70)
+st.markdown("""
+<div style='display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 10px;'>
+    <div class='main-title'>KMITL SDG Matching for All</div>
+    <img src='https://raw.githubusercontent.com/Sabas446/KMITL-SDG-Matching/main/osm_logo.png' width='50'>
+</div>
+""", unsafe_allow_html=True)
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
@@ -78,7 +81,6 @@ st.markdown("""
 
 # ===== Header =====
 
-st.markdown("<div class='main-title'>KMITL SDG Matching for All</div>", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
         🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
