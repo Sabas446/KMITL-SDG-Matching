@@ -2,45 +2,14 @@ import streamlit as st
 from matcher import match_text
 from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
-import time
 
-# ===== Logo with st.image() =====
-st.markdown("""
-<style>
-.header-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-.header-flex img {
-    max-width: 50px;
-    height: auto;
-}
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-</style>
+# ===== Page Configuration =====
 
-<div class="header-flex">
-    <div class='main-title'>KMITL SDG Matching for All</div>
-    <img src='https://raw.githubusercontent.com/Sabas446/KMITL-SDG-Matching/main/osm_logo.png'>
-</div>
-""", unsafe_allow_html=True)
+st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
-params = st.query_params
-if any(k.startswith("wake") for k in params):
-    st.stop()  # ปลุกเฉย ๆ ไม่ต้อง log
-
-now = time.time()
-if "last_visit_logged" not in st.session_state or now - st.session_state["last_visit_logged"] > 1800:  # 30 นาที
+if "has_logged_visit" not in st.session_state:
+    st.session_state["has_logged_visit"] = True
     log_action_to_sheet("visit")
-    st.session_state["last_visit_logged"] = now
 
 # ===== SDG Names for Display =====
 
@@ -95,15 +64,12 @@ st.markdown("""
         .stButton > button:hover {
             background-color: #d95400;
         }
-        .stButton > button:active {
-            background-color: #ba4c0a !important;
-            color: white !important;
-        }
     </style>
 """, unsafe_allow_html=True)
 
 # ===== Header =====
 
+st.markdown("<div class='main-title'>KMITL SDG Matching for All</div>", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
         🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
@@ -119,9 +85,7 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        user_agent = st.request.headers.get("user-agent", "unknown")
-        query = st.query_params
-        log_action_to_sheet("check", user_agent=user_agent, query=query)
+        log_action_to_sheet("check")
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
