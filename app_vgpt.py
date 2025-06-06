@@ -11,7 +11,7 @@ from datetime import datetime
 now = datetime.now()
 
 # บล็อก BOT ที่ยิงเป๊ะทุก 5 นาที โดยไม่ log
-if (now.minute % 5 == 2 and now.second < 20) or (now.second in range(35, 39)):
+if (now.minute % 5 == 2 and now.second < 20) or (now.second in range(55, 59)):
     st.stop()
 
 # นับ visit เฉพาะ user จริง
