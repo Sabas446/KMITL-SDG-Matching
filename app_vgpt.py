@@ -13,12 +13,14 @@ params = st.query_params
 now = datetime.now(timezone(timedelta(hours=7)))
 user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
 
-# ===== Anti-Bot Blocking Based on Time Pattern (แม่นยำกว่า) =====
-now = time.time()
-offset = st.session_state.get("bot_offset", 0)
-elapsed = (now - offset) % 300
-if elapsed < 20 or elapsed > 290:
+# ===== Anti-Bot Blocking Based on 5-minute pattern detection =====
+now = int(time.time())
+last_log = st.session_state.get("last_log", 0)
+
+if now - last_log == 300:
     st.stop()
+
+st.session_state["last_log"] = now
 
 # นับ visit เฉพาะ user จริง
 
