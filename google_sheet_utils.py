@@ -37,3 +37,16 @@ def get_stats_from_logs():
     month_checks = df_month[df_month["action"] == "check"].shape[0]
 
     return total_visits, total_checks, month_visits, month_checks
+
+def get_last_logged_timestamp():
+    creds = get_credentials()
+    client = gspread.authorize(creds)
+    sheet = client.open(SHEET_NAME).worksheet("logs")
+    values = sheet.get_all_values()
+    for row in reversed(values):
+        if len(row) >= 2 and row[1].startswith("visit"):
+            try:
+                return datetime.datetime.strptime(row[0], "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone(timedelta(hours=7)))
+            except:
+                continue
+    return None
