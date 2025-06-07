@@ -4,15 +4,6 @@ from matcher import match_text
 from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
 
-# ===== Anti-Bot Blocking Based on Time Pattern (แม่นยำกว่า) =====
-now = time.time()
-if "bot_offset" not in st.session_state:
-    st.session_state["bot_offset"] = now % 300
-offset = st.session_state["bot_offset"]
-elapsed = (now - offset) % 300
-if elapsed < 20 or elapsed > 290:
-    st.stop()
-
 # ===== Page Configuration =====
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
@@ -21,6 +12,15 @@ from datetime import datetime, timezone, timedelta
 params = st.query_params
 now = datetime.now(timezone(timedelta(hours=7)))
 user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
+
+# ===== Anti-Bot Blocking Based on Time Pattern (แม่นยำกว่า) =====
+now = time.time()
+if "bot_offset" not in st.session_state:
+    st.session_state["bot_offset"] = now % 300
+offset = st.session_state["bot_offset"]
+elapsed = (now - offset) % 300
+if elapsed < 20 or elapsed > 290:
+    st.stop()
 
 # นับ visit เฉพาะ user จริง
 
