@@ -17,7 +17,7 @@ user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
 now = int(time.time())
 last_log = st.session_state.get("last_log", 0)
 
-if now - last_log == 300:
+if 290 <= now - last_log <= 310:
     st.stop()
 
 st.session_state["last_log"] = now
