@@ -14,9 +14,9 @@ now = datetime.now(timezone(timedelta(hours=7)))
 user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
 
 # ===== Anti-Bot Blocking Based on Time Pattern (แม่นยำกว่า) =====
-import time
 now = time.time()
-elapsed = now % 300
+offset = st.session_state.get("bot_offset", 0)
+elapsed = (now - offset) % 300
 if elapsed < 20 or elapsed > 290:
     st.stop()
 
