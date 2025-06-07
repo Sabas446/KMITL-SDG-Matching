@@ -8,19 +8,21 @@ import os
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
+from google_sheet_utils import get_last_logged_timestamp
 from datetime import datetime, timezone, timedelta
-params = st.query_params
 now = datetime.now(timezone(timedelta(hours=7)))
-user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
+params = st.query_params
 
-# ===== Anti-Bot Blocking Based on 5-minute pattern detection =====
-now = int(time.time())
-last_log = st.session_state.get("last_log", 0)
-
-if 290 <= now - last_log <= 310:
+# 🚫 บล็อก wake=xyz ไม่ต้อง log
+if any(k.startswith("wake") for k in params):
     st.stop()
 
-st.session_state["last_log"] = now
+# 🛡️ Block bot ที่ยิงทุก 5 นาที (แบบ interval)
+last_log = get_last_logged_timestamp()
+if last_log:
+    diff = (now - last_log).total_seconds()
+    if 280 <= diff <= 320:
+        st.stop()
 
 # นับ visit เฉพาะ user จริง
 
