@@ -7,11 +7,13 @@ import os
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
-from datetime import datetime
-now = datetime.now()
+from datetime import datetime, timezone, timedelta
+params = st.query_params
+now = datetime.now(timezone(timedelta(hours=7)))
+user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
 
-# บล็อก BOT ที่ยิงเป๊ะทุก 5 นาที โดยไม่ log
-if (now.minute % 5 == 2 and now.second < 20) or (now.second in range(55, 59)):
+# บล็อก Wake Bot ที่ยิงซ้ำหรือทุก 5 นาที
+if any(k.startswith("wake") for k in params) or ("python" in user_agent or "uptime" in user_agent or "monitor" in user_agent):
     st.stop()
 
 # นับ visit เฉพาะ user จริง
