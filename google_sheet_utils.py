@@ -15,7 +15,7 @@ def log_action_to_sheet(action):
     creds = get_credentials()
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
-    now = datetime.datetime.now().isoformat()
+    now = datetime.datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d %H:%M:%S")
     sheet.append_row([now, action])
 
 def get_stats_from_logs():
