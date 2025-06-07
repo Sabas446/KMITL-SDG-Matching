@@ -12,9 +12,13 @@ params = st.query_params
 now = datetime.now(timezone(timedelta(hours=7)))
 user_agent = os.environ.get("HTTP_USER_AGENT", "").lower()
 
-# บล็อก Wake Bot ที่ยิงซ้ำหรือทุก 5 นาที
-if any(k.startswith("wake") for k in params) or ("python" in user_agent or "uptime" in user_agent or "monitor" in user_agent):
+# ✅ Anti-bot based on time pattern (ใหม่)
+import time
+now_timestamp = time.time()
+last_visit = st.session_state.get("last_visit", 0)
+if 290 < now_timestamp - last_visit < 310: 
     st.stop()
+st.session_state["last_visit"] = now_timestamp
 
 # นับ visit เฉพาะ user จริง
 
