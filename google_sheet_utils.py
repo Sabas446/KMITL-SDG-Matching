@@ -23,21 +23,23 @@ def get_stats_from_logs():
     creds = get_credentials()
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
-    data = sheet.get_all_records()
-    df = pd.DataFrame(data)
+    
+    values = sheet.get_all_values()
+    df = pd.DataFrame(values[1:], columns=["timestamp", "action"])
+    
     df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
     df["timestamp"] = df["timestamp"].dt.tz_convert("Asia/Bangkok")
 
     now = datetime.datetime.now()
     df_month = df[(df["timestamp"].dt.month == now.month) & (df["timestamp"].dt.year == now.year)]
 
-    total_visits = df[df["action"] == "visit"].shape[0]
+    total_visits = df[df["action"].str.startswith("visit")].shape[0]
     total_checks = df[df["action"] == "check"].shape[0]
-    month_visits = df_month[df_month["action"] == "visit"].shape[0]
+    month_visits = df_month[df_month["action"].str.startswith("visit")].shape[0]
     month_checks = df_month[df_month["action"] == "check"].shape[0]
 
     return total_visits, total_checks, month_visits, month_checks
-
+    
 def get_last_logged_timestamp():
     creds = get_credentials()
     client = gspread.authorize(creds)
