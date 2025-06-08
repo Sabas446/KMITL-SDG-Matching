@@ -17,11 +17,19 @@ def log_action_to_sheet(action, timestamp=None):
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
 
+    # 🧹 ลบแถวสุดท้ายถ้าเป็น "bot"
+    values = sheet.get_all_values()
+    last_row_index = len(values)
+    if values and len(values[-1]) >= 2:
+        last_action = values[-1][1]
+        if last_action == "bot":
+            sheet.delete_rows(last_row_index)
+
+    # 🕒 สร้าง timestamp ถ้ายังไม่ได้ส่งมา
     if timestamp is None:
         timestamp = datetime.datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d %H:%M:%S")
-    
-    sheet.append_row([timestamp, action])
 
+    sheet.append_row([timestamp, action])
 
 def get_stats_from_logs():
     creds = get_credentials()
