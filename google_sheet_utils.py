@@ -12,12 +12,16 @@ def get_credentials():
     creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=scope)
     return creds
 
-def log_action_to_sheet(action):
+def log_action_to_sheet(action, timestamp=None):
     creds = get_credentials()
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet("logs")
-    now = datetime.datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d %H:%M:%S")
-    sheet.append_row([now, action])
+
+    if timestamp is None:
+        timestamp = datetime.datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d %H:%M:%S")
+    
+    sheet.append_row([timestamp, action])
+
 
 def get_stats_from_logs():
     creds = get_credentials()
@@ -50,9 +54,12 @@ def get_last_logged_timestamp():
     sheet = client.open(SHEET_NAME).worksheet("logs")
     values = sheet.get_all_values()
     for row in reversed(values):
-        if len(row) >= 2 and row[1].startswith("visit"):
+        if len(row) >= 2 and row[1] in ["visit", "bot"]:
             try:
-                return datetime.datetime.strptime(row[0], "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone(timedelta(hours=7)))
+                return datetime.datetime.strptime(row[0], "%Y-%m-%d %H:%M:%S").replace(
+    tzinfo=timezone(timedelta(hours=7))
+).timestamp()
+
             except:
                 continue
     return None
