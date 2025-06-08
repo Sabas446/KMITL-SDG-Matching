@@ -9,8 +9,11 @@ import os
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
 from google_sheet_utils import get_last_logged_timestamp
+import time
+now = time.time()
 from datetime import datetime, timezone, timedelta
-now = datetime.now(timezone(timedelta(hours=7)))
+thai_time = datetime.fromtimestamp(now, timezone(timedelta(hours=7)))
+
 params = st.query_params
 
 # 🚫 บล็อก wake=xyz ไม่ต้อง log
@@ -21,7 +24,7 @@ if any(k.startswith("wake") for k in params):
 last_log = get_last_logged_timestamp()
 is_bot = False
 if last_log:
-    diff = (now - last_log).total_seconds()
+    diff = now - last_log
     if 290 <= diff <= 310:
         is_bot = True
 
@@ -29,7 +32,7 @@ if last_log:
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
-    log_action_to_sheet("bot" if is_bot else "visit")
+    log_action_to_sheet("bot" if is_bot else "visit", timestamp=thai_time.strftime("%Y-%m-%d %H:%M:%S"))
 
 # ===== SDG Names for Display =====
 
