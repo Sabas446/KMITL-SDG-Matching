@@ -25,7 +25,11 @@ def get_stats_from_logs():
     sheet = client.open(SHEET_NAME).worksheet("logs")
     
     values = sheet.get_all_values()
+    # ✅ ตัด header
     df = pd.DataFrame(values[1:], columns=["timestamp", "action"])
+
+    # ✅ กรอง bot ออก
+    df = df[df["action"] != "bot"]
     
     df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
     df["timestamp"] = df["timestamp"].dt.tz_convert("Asia/Bangkok")
