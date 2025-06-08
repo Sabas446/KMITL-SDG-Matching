@@ -17,18 +17,19 @@ params = st.query_params
 if any(k.startswith("wake") for k in params):
     st.stop()
 
-# 🛡️ Block bot ที่ยิงทุก 5 นาที (แบบ interval)
+# ✅ ตรวจเวลาห่างจาก log ล่าสุด เพื่อ log เป็น bot/visit
 last_log = get_last_logged_timestamp()
+is_bot = False
 if last_log:
     diff = (now - last_log).total_seconds()
-    if 280 <= diff <= 320:
-        st.stop()
+    if 290 <= diff <= 310:
+        is_bot = True
 
 # นับ visit เฉพาะ user จริง
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
-    log_action_to_sheet("visit")
+    log_action_to_sheet("bot" if is_bot else "visit")
 
 # ===== SDG Names for Display =====
 
