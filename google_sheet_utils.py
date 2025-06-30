@@ -46,7 +46,7 @@ def get_stats_from_logs():
     df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
     df["timestamp"] = df["timestamp"].dt.tz_convert("Asia/Bangkok")
 
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(timezone(timedelta(hours=7)))
     df_month = df[(df["timestamp"].dt.month == now.month) & (df["timestamp"].dt.year == now.year)]
 
     total_visits = df[df["action"].str.startswith("visit")].shape[0]
