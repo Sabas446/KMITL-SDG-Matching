@@ -1,8 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
-import datetime
-from datetime import timezone, timedelta
+from datetime import datetime, timezone, timedelta
 import streamlit as st
 
 SHEET_NAME = "sdg_counter"
@@ -27,7 +26,7 @@ def log_action_to_sheet(action, timestamp=None):
 
     # 🕒 สร้าง timestamp ถ้ายังไม่ได้ส่งมา
     if timestamp is None:
-        timestamp = datetime.datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
 
     sheet.append_row([timestamp, action])
 
@@ -37,16 +36,16 @@ def get_stats_from_logs():
     sheet = client.open(SHEET_NAME).worksheet("logs")
     
     values = sheet.get_all_values()
-    # ✅ ตัด header
     df = pd.DataFrame(values[1:], columns=["timestamp", "action"])
 
     # ✅ กรอง bot ออก
     df = df[df["action"] != "bot"]
-    
-    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
-    df["timestamp"] = df["timestamp"].dt.tz_convert("Asia/Bangkok")
 
-    now = datetime.datetime.now(timezone(timedelta(hours=7)))
+    # ✅ จัดการ timezone อย่างปลอดภัย
+    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+    df["timestamp"] = df["timestamp"].apply(lambda ts: ts.tz_localize("Asia/Bangkok") if ts.tzinfo is None else ts.tz_convert("Asia/Bangkok"))
+
+    now = datetime.now(timezone(timedelta(hours=7)))
     df_month = df[(df["timestamp"].dt.month == now.month) & (df["timestamp"].dt.year == now.year)]
 
     total_visits = df[df["action"].str.startswith("visit")].shape[0]
@@ -55,7 +54,7 @@ def get_stats_from_logs():
     month_checks = df_month[df_month["action"] == "check"].shape[0]
 
     return total_visits, total_checks, month_visits, month_checks
-    
+
 def get_last_logged_timestamp():
     creds = get_credentials()
     client = gspread.authorize(creds)
@@ -64,10 +63,12 @@ def get_last_logged_timestamp():
     for row in reversed(values):
         if len(row) >= 2 and row[1] in ["visit", "bot"]:
             try:
-                return datetime.datetime.strptime(row[0], "%Y-%m-%d %H:%M:%S").replace(
-    tzinfo=timezone(timedelta(hours=7))
-).timestamp()
-
+                ts = pd.to_datetime(row[0])
+                if ts.tzinfo is None:
+                    ts = ts.tz_localize("Asia/Bangkok")
+                else:
+                    ts = ts.tz_convert("Asia/Bangkok")
+                return ts.timestamp()
             except:
                 continue
     return None
