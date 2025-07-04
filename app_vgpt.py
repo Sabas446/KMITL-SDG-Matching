@@ -151,7 +151,8 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        log_action_to_sheet("check")
+        now = datetime.now(timezone(timedelta(hours=7)))
+        log_action_to_sheet("check", timestamp=now.isoformat())
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
