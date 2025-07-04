@@ -32,7 +32,7 @@ if last_log:
 
 if "has_logged_visit" not in st.session_state:
     st.session_state["has_logged_visit"] = True
-    log_action_to_sheet("bot" if is_bot else "visit", timestamp=thai_time.strftime("%Y-%m-%d %H:%M:%S"))
+    log_action_to_sheet("bot" if is_bot else "visit", timestamp=thai_time.isoformat())
 
 # ===== SDG Names for Display =====
 
