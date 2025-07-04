@@ -1,38 +1,16 @@
 import streamlit as st
 import time
 from matcher import match_text
-from google_sheet_utils import log_action_to_sheet, get_stats_from_logs
 import os
 
 # ===== Page Configuration =====
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
 
-from google_sheet_utils import get_last_logged_timestamp
 import time
 now = time.time()
 from datetime import datetime, timezone, timedelta
 thai_time = datetime.fromtimestamp(now, timezone(timedelta(hours=7)))
-
-params = st.query_params
-
-# 🚫 บล็อก wake=xyz ไม่ต้อง log
-if any(k.startswith("wake") for k in params):
-    st.stop()
-
-# ✅ ตรวจเวลาห่างจาก log ล่าสุด เพื่อ log เป็น bot/visit
-last_log = get_last_logged_timestamp()
-is_bot = False
-if last_log:
-    diff = now - last_log
-    if 290 <= diff <= 310:
-        is_bot = True
-
-# นับ visit เฉพาะ user จริง
-
-if "has_logged_visit" not in st.session_state:
-    st.session_state["has_logged_visit"] = True
-    log_action_to_sheet("bot" if is_bot else "visit", timestamp=thai_time.isoformat())
 
 # ===== SDG Names for Display =====
 
@@ -151,8 +129,6 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        now = datetime.now(timezone(timedelta(hours=7)))
-        log_action_to_sheet("check", timestamp=now.isoformat())
         matched_sdgs = match_text(text_input)
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
@@ -181,7 +157,6 @@ if st.button("🔍 วิเคราะห์"):
         else:
             st.info("ไม่พบคำที่ตรงกับ SDGs ในข้อความนี้")
 
-total_visits, total_checks, month_visits, month_checks = get_stats_from_logs()
 
 # ===== Footer =====
 
@@ -193,11 +168,6 @@ st.markdown(f"""
             มุ่งสร้างเครื่องมือสำหรับวิเคราะห์ข้อความให้สอดคล้องกับ SDGs อย่างแม่นยำ<br>
             ครอบคลุมเฉพาะเป้าหมายที่เกี่ยวข้อง เพื่อสนับสนุนการสื่อสารข้อมูลความยั่งยืนของสถาบัน
         </em>
-        <br><br>
-        👥 <strong>ผู้เข้าใช้งานรวม:</strong> {total_visits} ครั้ง |
-        📊 <strong>ข้อความที่วิเคราะห์รวม:</strong> {total_checks} ข้อความ<br>
-        📅 <strong>เดือนนี้:</strong> 👥 {month_visits} ครั้ง | 📊 {month_checks} ข้อความ
-        <br><br>
         <small>© 2025 Office of Strategy Management KMITL</small>
     </div>
 """, unsafe_allow_html=True)
