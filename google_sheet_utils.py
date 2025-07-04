@@ -26,7 +26,7 @@ def log_action_to_sheet(action, timestamp=None):
 
     # 🕒 สร้าง timestamp ถ้ายังไม่ได้ส่งมา
     if timestamp is None:
-        timestamp = datetime.now(timezone(timedelta(hours=7))).strftime('%Y-%m-%dT%H:%M:%S%z')
+        timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
 
     sheet.append_row([timestamp, action])
 
@@ -43,7 +43,8 @@ def get_stats_from_logs():
 
     # ✅ จัดการ timezone อย่างปลอดภัย
     df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
-    df["timestamp"] = df["timestamp"].dt.tz_localize("Asia/Bangkok", ambiguous='NaT', nonexistent='NaT')
+    df["timestamp"] = df["timestamp"].apply(lambda ts: ts.tz_localize("Asia/Bangkok") if ts is not pd.NaT and ts.tzinfo is None else ts)
+    df["timestamp"] = df["timestamp"].apply(lambda ts: ts.tz_convert("Asia/Bangkok") if ts is not pd.NaT and ts.tzinfo else ts)
     df = df.dropna(subset=["timestamp"])
 
     now = datetime.now(timezone(timedelta(hours=7)))
