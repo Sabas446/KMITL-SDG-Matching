@@ -42,8 +42,7 @@ def get_stats_from_logs():
     df = df[df["action"] != "bot"]
 
     # ✅ จัดการ timezone อย่างปลอดภัย
-    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
-    df["timestamp"] = df["timestamp"].apply(lambda ts: ts.tz_localize("Asia/Bangkok") if ts.tzinfo is None else ts.tz_convert("Asia/Bangkok"))
+    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True, errors="coerce").dt.tz_convert("Asia/Bangkok")
 
     now = datetime.now(timezone(timedelta(hours=7)))
     df_month = df[(df["timestamp"].dt.month == now.month) & (df["timestamp"].dt.year == now.year)]
