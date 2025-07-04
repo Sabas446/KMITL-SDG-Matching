@@ -43,7 +43,7 @@ def get_stats_from_logs():
 
     # ✅ จัดการ timezone อย่างปลอดภัย
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True, errors="coerce").dt.tz_convert("Asia/Bangkok")
-
+    df = df.dropna(subset=["timestamp"])
     now = datetime.now(timezone(timedelta(hours=7)))
     df_month = df[(df["timestamp"].dt.month == now.month) & (df["timestamp"].dt.year == now.year)]
 
