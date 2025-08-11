@@ -1,154 +1,3381 @@
-# === AUTO-GENERATED from legacy rules ===
-add_terms(1, 1, ["alleviating poverty", "combat poverty", "end poverty", "eradicate poverty", "extreme poverty", "lift people out of poverty", "poverty", "poverty alleviation", "poverty eradication", "poverty reduction", "การขจัดความยากจนขั้นรุนแรง", "การลดความยากจน", "ขจัดความยากจน", "ช่วยเหลือผู้ยากไร้", "บรรเทาความยากจน", "ยกระดับชีวิตคนจน", "ยุติความยากจน", "ลดความยากจน", "ลดช่องว่างทางรายได้", "ลดปัญหาความยากจน", "สร้างโอกาสทางเศรษฐกิจให้ผู้มีรายได้น้อย", "ยากจน"], "Direct mention of poverty eradication")
-add_terms(1, 2, ["disadvantaged populations", "poor communities", "support vulnerable", "uplift marginalized groups", "vulnerable groups", "กลุ่มคนชายขอบ", "กลุ่มด้อยโอกาส", "กลุ่มผู้มีรายได้น้อย", "กลุ่มเปราะบาง", "การคุ้มครองทางสังคมสำหรับกลุ่มเสี่ยง", "การสนับสนุนกลุ่มเปราะบาง", "คนจน", "รายได้น้อย"], "Focus on vulnerable groups and low income support")
-add_terms(1, 3, ["access to basic services", "access to education", "access to financial services", "access to healthcare", "access to sanitation", "basic services", "universal access to basic services", "การเข้าถึงบริการพื้นฐาน", "บริการพื้นฐาน", "บริการสุขภาพ", "สิทธิเข้าถึง", "เข้าถึงการศึกษา", "เข้าถึงบริการสาธารณสุข", "เข้าถึงสาธารณูปโภคพื้นฐาน"], "Access to basic services for vulnerable populations")
-add_terms(1, 4, ["cash transfer", "emergency financial support", "financial aid", "microfinance access", "social protection", "universal social protection", "welfare system", "การคุ้มครองทางสังคม", "การสนับสนุนทางการเงิน", "ระบบสวัสดิการสังคม", "สวัสดิการสังคม", "เงินช่วยเหลือ"], "Financial aid, social welfare, and protection systems")
-add_terms(1, 5, ["economic inequality", "inclusive economy", "inclusive growth", "income inequality", "reduce economic disparity", "การพัฒนาเศรษฐกิจอย่างทั่วถึง", "ลดความเหลื่อมล้ำทางเศรษฐกิจ", "เศรษฐกิจที่ครอบคลุมทุกกลุ่ม", "โอกาสทางเศรษฐกิจที่เท่าเทียม"], "Economic inequality and inclusive growth")
-add_terms(1, 6, ["build resilience", "community resilience", "economic resilience", "resilience", "ชุมชนยากจน", "ชุมชนเปราะบาง", "ลดความเสี่ยงจากภัยพิบัติ", "เพิ่มความสามารถในการฟื้นตัว", "เสริมศักยภาพ", "เสริมสร้างความสามารถในการฟื้นตัว"], "Resilience building for poor communities")
-add_terms(1, 7, ["access to finance", "access to land", "access to markets", "การเข้าถึงตลาด", "การเข้าถึงที่ดิน", "การเข้าถึงแหล่งเงินทุน", "ที่ดิน", "แหล่งเงินทุน"], "Access to resources (land, finance, markets)")
-add_terms(1, 8, ["inclusive economic policy", "inclusive growth", "pro-poor policy", "นโยบายที่ครอบคลุม", "นโยบายเศรษฐกิจเพื่อคนจน"], "Pro-poor policy and inclusive economic policies")
-add_terms(1, 9, ["address root causes of poverty", "tackle poverty at its roots", "การเปลี่ยนแปลงโครงสร้างเศรษฐกิจ", "แก้ไขสาเหตุของความยากจน"], "Structural solutions to eradicate poverty")
-add_terms(2, 1, ["end hunger", "eradicate hunger", "food security", "hunger", "reduce hunger", "zero hunger", "การลดปัญหาความหิวโหย", "ขจัดความหิวโหย", "ความมั่นคงทางอาหาร", "ยุติความหิวโหย", "ลดความหิวโหย", "อาหารเพียงพอ"], "Direct mention of hunger eradication")
-add_terms(2, 2, ["food access", "food aid", "food insecurity", "การช่วยเหลือด้านอาหาร", "การเข้าถึงอาหาร", "ขาดแคลนอาหาร", "อาหารเพื่อกลุ่มเปราะบาง", "อาหารเพื่อคนยากจน"], "Focus on food access for vulnerable populations")
-add_terms(2, 3, ["agricultural productivity", "sustainable agriculture", "sustainable food production", "การผลิตอาหารที่ยั่งยืน", "การพัฒนาการเกษตรอย่างยั่งยืน", "การเกษตรที่ยั่งยืน", "ผลผลิตทางการเกษตร"], "Sustainable agriculture and food production systems")
-add_terms(2, 4, ["local farmers", "small-scale farmers", "smallholder farmers", "การสนับสนุนเกษตรกรรายย่อย", "เกษตรกรท้องถิ่น", "เกษตรกรรายย่อย", "เกษตรกรรายย่อยที่ยั่งยืน"], "Support for small-scale farmers and agricultural systems")
-add_terms(2, 5, ["food distribution", "food equity", "การกระจายอาหาร", "การกระจายอาหารอย่างยั่งยืน", "การแบ่งปันอาหารกับคนยากจน", "ความเท่าเทียมในการเข้าถึงอาหาร"], "Food distribution and equity in access to food")
-add_terms(2, 6, ["climate change impacts", "climate resilience", "sustainable farming in changing climate", "การฟื้นฟูความมั่นคงทางอาหารในสภาพภูมิอากาศเปลี่ยนแปลง", "ผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ", "เกษตรกรรมที่ยั่งยืนในสภาพอากาศเปลี่ยนแปลง"], "Addressing climate change impacts on food security")
-add_terms(2, 7, ["reduce food waste", "responsible food production", "sustainable food consumption", "การบริโภคอาหารอย่างรับผิดชอบ", "การผลิตอาหารที่รับผิดชอบ", "ลดขยะอาหาร", "อาหารที่ยั่งยืน"], "Promoting responsible consumption and production in food systems")
-add_terms(2, 8, ["food system resilience", "food systems", "sustainable food systems", "การพัฒนาระบบอาหารอย่างยั่งยืน", "การเสริมสร้างความสามารถในการฟื้นตัวของระบบอาหาร", "ระบบอาหารที่ยั่งยืน"], "Strengthening food systems for resilience and sustainability")
-add_terms(2, 9, ["food security policies", "long-term food security", "การแก้ปัญหาความหิวโหยระยะยาว", "การแก้ปัญหาความหิวโหยในระยะยาว", "นโยบายความมั่นคงทางอาหาร"], "Long-term policy solutions to end hunger")
-add_terms(3, 1, ["child health", "disease prevention", "good health", "health care", "health promotion", "health services", "maternal health", "mental health", "road safety", "universal health coverage", "การดูแลสุขภาพ", "การป้องกันโรค", "การส่งเสริมสุขภาพ", "ความปลอดภัยทางถนน", "บริการสุขภาพ", "สุขภาพจิต", "สุขภาพที่ดี", "สุขภาพแม่และเด็ก", "หลักประกันสุขภาพถ้วนหน้า"], "Direct mention of health improvement and well-being")
-add_terms(3, 2, ["emergency health response", "health system strengthening", "mental health support", "nutrition programs", "primary health care", "vaccination programs", "การฉีดวัคซีน", "การตอบสนองฉุกเฉินด้านสุขภาพ", "การสนับสนุนสุขภาพจิต", "บริการปฐมภูมิ", "เสริมสร้างระบบสุขภาพ", "โภชนาการ"], "Focus on health access, preventive measures, and health systems")
-add_terms(3, 3, ["clinics and hospitals", "disaster response", "health insurance", "mental health services", "nutrition education", "vaccination campaigns", "การตอบสนองภัยพิบัติ", "การรณรงค์ฉีดวัคซีน", "การให้ความรู้ด้านโภชนาการ", "คลินิกและโรงพยาบาล", "บริการสุขภาพจิต", "ประกันสุขภาพ"], "Related to key health services and risk prevention")
-add_terms(3, 4, ["build rural clinics", "community health outreach", "mobile emergency units", "polio eradication", "school meal programs", "suicide prevention programs", "การกำจัดโปลิโอ", "การเข้าถึงชุมชนด้านสุขภาพ", "สร้างคลินิกชนบท", "หน่วยฉุกเฉินเคลื่อนที่", "โครงการป้องกันการฆ่าตัวตาย", "โครงการอาหารกลางวันโรงเรียน"], "Specific health interventions and programs")
-add_terms(3, 5, ["community health workers", "crisis hotlines", "field hospitals", "health insurance rollout", "hpv vaccination", "vitamin supplementation", "การขยายประกันสุขภาพ", "การฉีดวัคซีน HPV", "การเสริมวิตามิน", "สายด่วนสุขภาพจิต", "อาสาสมัครสาธารณสุข", "โรงพยาบาลสนาม"], "Program examples targeting health outcomes")
-add_terms(3, 6, ["emergency response time", "health service access rate", "insurance coverage", "nutrition improvement", "suicide rate", "vaccination coverage", "การพัฒนาโภชนาการ", "ความครอบคลุมของการประกันสุขภาพ", "อัตราการฆ่าตัวตาย", "อัตราการฉีดวัคซีน", "อัตราการเข้าถึงบริการสุขภาพ", "เวลาตอบสนองเหตุฉุกเฉิน"], "Health-related measurable indicators")
-add_terms(3, 7, ["higher health literacy", "improved child health", "improved mental health", "increased patient access", "reduced disease outbreaks", "ความรู้ด้านสุขภาพที่เพิ่มขึ้น", "ลดการระบาดของโรค", "สุขภาพจิตที่ดีขึ้น", "สุขภาพเด็กที่ดีขึ้น"], "Health outcomes and behavior change")
-add_terms(3, 8, ["access to reproductive health", "end epidemics", "improve road safety", "integrate mental health", "reduce maternal mortality", "การเข้าถึงบริการอนามัยการเจริญพันธุ์", "บูรณาการสุขภาพจิตในระบบสุขภาพปฐมภูมิ", "ปรับปรุงความปลอดภัยทางถนน", "ยุติการแพร่ระบาดของโรค", "ลดอัตราการเสียชีวิตของมารดา"], "Impact on broader health system and society")
-add_terms(3, 9, ["enhanced workforce productivity", "healthier populations", "increase life expectancy", "reduce poverty from medical costs", "strengthen health systems", "ประชากรมีสุขภาพดีขึ้น", "ลดความยากจนจากค่าใช้จ่ายทางการแพทย์", "เพิ่มประสิทธิภาพแรงงาน", "เพิ่มอายุขัยเฉลี่ย", "เสริมสร้างระบบสุขภาพ"], "Contribution to global health goals")
-add_terms(4, 1, ["access to education", "equitable education", "inclusive education", "lifelong learning", "quality education", "การศึกษาที่ครอบคลุม", "การศึกษาที่มีคุณภาพ", "การศึกษาที่เท่าเทียม", "การเข้าถึงการศึกษา", "การเรียนรู้ตลอดชีวิต", "การฝึกอบรม", "การรู้หนังสือ", "การเรียนรู้", "education", "learning", "literacy", "school", "training"], "Direct mention of education and learning")
-add_terms(4, 2, ["early childhood education", "primary education", "secondary education", "technical education", "tertiary education", "การศึกษาขั้นพื้นฐาน", "การศึกษาปฐมวัย", "การศึกษามัธยมศึกษา", "การศึกษาระดับอุดมศึกษา", "การศึกษาอาชีวศึกษา"], "Early childhood to tertiary education")
-add_terms(4, 3, ["affordable education", "education for disabled", "education for vulnerable", "free education", "gender equality in education", "การศึกษาสำหรับกลุ่มเปราะบาง", "การศึกษาสำหรับคนพิการ", "การศึกษาโดยไม่เสียค่าใช้จ่าย", "การศึกษาในราคาที่เอื้อมถึงได้", "ความเสมอภาคทางเพศในระบบการศึกษา"], "Access and equity")
-add_terms(4, 4, ["entrepreneurship education", "relevant skills for employment", "technical skills", "vocational skills", "การฝึกทักษะด้านเทคนิค", "การศึกษาผู้ประกอบการ", "ทักษะที่เกี่ยวข้องกับการจ้างงาน", "ทักษะอาชีพ"], "Skills for work and life")
-add_terms(4, 5, ["effective learning environment", "inclusive learning environment", "safe learning environment", "สิ่งแวดล้อมการเรียนรู้ที่ครอบคลุม", "สิ่งแวดล้อมการเรียนรู้ที่ปลอดภัย", "สิ่งแวดล้อมการเรียนรู้ที่มีประสิทธิภาพ"], "Quality learning environments")
-add_terms(4, 6, ["basic literacy", "basic numeracy", "literacy skills", "numeracy skills", "การคำนวณขั้นพื้นฐาน", "การรู้หนังสือขั้นพื้นฐาน", "ทักษะการคำนวณ", "ทักษะการรู้หนังสือ"], "Literacy and numeracy")
-add_terms(4, 7, ["education financing", "education policy", "investment in education", "การจัดสรรงบประมาณเพื่อการศึกษา", "การลงทุนในภาคการศึกษา", "นโยบายด้านการศึกษา"], "Education policy and financing")
-add_terms(4, 8, ["capacity building for teachers", "teacher qualification", "teacher training", "การฝึกอบรมครู", "การพัฒนาศักยภาพครู", "คุณสมบัติของครู"], "Teacher training and capacity building")
-add_terms(4, 9, ["education for cultural diversity", "education for global citizenship", "education for sustainable development", "human rights education", "การศึกษาด้านการพัฒนาที่ยั่งยืน", "การศึกษาด้านความหลากหลายทางวัฒนธรรม", "การศึกษาด้านพลเมืองโลก", "การศึกษาด้านสิทธิมนุษยชน"], "Global citizenship and sustainable education")
-add_terms(5, 1, ["end discrimination against women", "gender equality", "women empowerment", "การเสริมสร้างพลังให้ผู้หญิง", "ความเสมอภาคทางเพศ", "ยุติการเลือกปฏิบัติต่อผู้หญิง", "สิทธิสตรี"], "Direct mention of gender equality")
-add_terms(5, 2, ["domestic violence", "end all violence against women", "sexual violence", "violence against women", "ความรุนแรงทางเพศ", "ความรุนแรงในครอบครัว", "ยุติความรุนแรงต่อผู้หญิง"], "Discrimination and violence elimination")
-add_terms(5, 3, ["increase women's political participation", "women in leadership", "women participation in decision-making", "การมีส่วนร่วมของผู้หญิงในการตัดสินใจ", "การเพิ่มการมีส่วนร่วมทางการเมืองของผู้หญิง", "ผู้หญิงในตำแหน่งผู้นำ"], "Access to leadership and decision-making")
-add_terms(5, 4, ["equal access to economic resources", "financial services for women", "women's right to land and property", "การเข้าถึงทรัพยากรทางเศรษฐกิจอย่างเท่าเทียม", "บริการทางการเงินสำหรับผู้หญิง", "สิทธิของผู้หญิงในที่ดินและทรัพย์สิน"], "Access to economic resources")
-add_terms(5, 5, ["access to reproductive rights", "education on reproductive health", "sexual and reproductive health", "การศึกษาด้านสุขภาพการเจริญพันธุ์", "การเข้าถึงสิทธิด้านการเจริญพันธุ์", "สุขภาพทางเพศและอนามัยการเจริญพันธุ์"], "Sexual and reproductive health rights")
-add_terms(5, 6, ["laws promoting gender equality", "legal protection for women", "การคุ้มครองทางกฎหมายสำหรับผู้หญิง", "นโยบายส่งเสริมความเสมอภาคทางเพศ"], "Legal frameworks for gender equality")
-add_terms(5, 7, ["recognize unpaid care and domestic work", "shared responsibility within the household", "การแบ่งปันความรับผิดชอบในครอบครัว", "ยอมรับงานดูแลและงานบ้านที่ไม่ได้รับค่าจ้าง"], "Shared domestic responsibilities")
-add_terms(5, 8, ["equal opportunities in innovation", "women in technology", "ผู้หญิงในเทคโนโลยี", "โอกาสที่เท่าเทียมในการนวัตกรรม"], "Gender equality in technology and innovation")
-add_terms(5, 9, ["global partnerships for gender equality", "international support for women's rights", "การสนับสนุนสิทธิสตรีในระดับสากล", "ความร่วมมือระดับโลกเพื่อความเสมอภาคทางเพศ"], "Global support and partnerships for gender equality")
-add_terms(6, 1, ["affordable water", "clean water", "hygiene", "safe drinking water", "sanitation", "water access", "water quality", "การสุขาภิบาล", "การเข้าถึงน้ำ", "คุณภาพน้ำ", "น้ำดื่มปลอดภัย", "น้ำราคาไม่แพง", "น้ำสะอาด", "สุขอนามัย", "สุขาภิบาล"], "Core Concepts - Clean Water and Sanitation")
-add_terms(6, 2, ["integrated water resources management", "river basin management", "water management", "การจัดการน้ำ", "การบริหารจัดการทรัพยากรน้ำแบบบูรณาการ", "การบริหารลุ่มน้ำ"], "Water Resources Management")
-add_terms(6, 3, ["wastewater reuse", "wastewater treatment", "water pollution", "การนำกลับมาใช้น้ำเสีย", "การบำบัดน้ำเสีย", "มลพิษทางน้ำ"], "Wastewater and Pollution Control")
-add_terms(6, 4, ["reuse water", "water conservation", "water efficiency", "การนำน้ำกลับมาใช้", "การอนุรักษ์น้ำ", "ประสิทธิภาพการใช้น้ำ"], "Water Efficiency and Conservation")
-add_terms(6, 5, ["ecosystem restoration", "freshwater ecosystems", "protect aquatic ecosystems", "การปกป้องระบบนิเวศทางน้ำ", "การฟื้นฟูระบบนิเวศ", "ระบบนิเวศน้ำจืด"], "Water Ecosystems Protection")
-add_terms(6, 6, ["community participation in water management", "local water initiatives", "การมีส่วนร่วมของชุมชนในการบริหารน้ำ", "โครงการน้ำในท้องถิ่น"], "Community Participation")
-add_terms(6, 7, ["capacity-building in water sector", "international cooperation on water", "การเสริมสร้างศักยภาพในภาคส่วนน้ำ", "ความร่วมมือระหว่างประเทศด้านน้ำ"], "International Cooperation")
-add_terms(6, 8, ["investment in water systems", "sanitation infrastructure", "water supply systems", "การลงทุนในระบบน้ำ", "ระบบจ่ายน้ำ", "โครงสร้างพื้นฐานด้านสุขาภิบาล"], "Infrastructure for Water and Sanitation")
-add_terms(6, 9, ["climate resilience in water", "flood and drought management", "การจัดการน้ำท่วมและภัยแล้ง", "การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศในด้านน้ำ"], "Climate Change and Water Disasters")
-add_terms(7, 1, ["affordable energy", "clean energy", "energy access", "การเข้าถึงพลังงาน", "พลังงานราคาประหยัด", "พลังงานสะอาด"], "Core Concepts - Energy Access and Clean Energy")
-add_terms(7, 2, ["biomass energy", "geothermal energy", "hydropower", "ocean energy", "renewable energy", "solar energy", "wind energy", "พลังงานความร้อนใต้พิภพ", "พลังงานจากมหาสมุทร", "พลังงานชีวมวล", "พลังงานน้ำ", "พลังงานลม", "พลังงานหมุนเวียน", "พลังงานแสงอาทิตย์"], "Renewable Energy")
-add_terms(7, 3, ["efficient energy use", "energy conservation", "energy efficiency", "การอนุรักษ์พลังงาน", "การใช้พลังงานอย่างมีประสิทธิภาพ", "ประสิทธิภาพการใช้พลังงาน"], "Energy Efficiency")
-add_terms(7, 4, ["modern energy services", "reliable energy", "sustainable energy", "บริการพลังงานสมัยใหม่", "พลังงานที่ยั่งยืน", "พลังงานที่เชื่อถือได้"], "Modern Energy Services")
-add_terms(7, 5, ["energy infrastructure", "upgrade energy systems", "การอัปเกรดระบบพลังงาน", "โครงสร้างพื้นฐานด้านพลังงาน"], "Energy Infrastructure and Upgrade")
-add_terms(7, 6, ["international cooperation on energy", "investment in clean energy", "การลงทุนในพลังงานสะอาด", "ความร่วมมือระหว่างประเทศด้านพลังงาน"], "Investment and International Cooperation")
-add_terms(7, 7, ["energy technology innovation", "research on clean energy", "การวิจัยด้านพลังงานสะอาด", "นวัตกรรมเทคโนโลยีพลังงาน"], "Technology and Innovation for Energy")
-add_terms(7, 8, ["energy access in least developed countries", "sustainable energy for all", "การเข้าถึงพลังงานในประเทศพัฒนาน้อยที่สุด", "พลังงานที่ยั่งยืนสำหรับทุกคน"], "Energy Access in Developing Countries")
-add_terms(7, 9, ["capacity-building in energy management", "training for sustainable energy", "การฝึกอบรมด้านพลังงานอย่างยั่งยืน", "การเสริมสร้างศักยภาพในการบริหารจัดการพลังงาน"], "Capacity Building for Energy Management")
-add_terms(8, 1, ["decent work", "economic growth", "productive employment", "การจ้างงานที่มีผลิตภาพ", "การเติบโตทางเศรษฐกิจ", "งานที่มีคุณค่า"], "Core Concepts - Decent Work and Economic Growth")
-add_terms(8, 2, ["employment opportunities", "full employment", "labor rights", "การจ้างงานเต็มที่", "สิทธิแรงงาน", "โอกาสการจ้างงาน"], "Employment and Labor Rights")
-add_terms(8, 3, ["occupational safety", "safe working environments", "workplace security", "ความปลอดภัยในการทำงาน", "ความปลอดภัยในสถานที่ทำงาน", "สภาพแวดล้อมการทำงานที่ปลอดภัย"], "Safe and Secure Work Environments")
-add_terms(8, 4, ["education and training for youth", "youth employment", "การจ้างงานเยาวชน", "การศึกษาและการฝึกอบรมสำหรับเยาวชน"], "Youth Employment and Education")
-add_terms(8, 5, ["increase economic productivity", "innovation-driven economy", "การเพิ่มผลิตภาพทางเศรษฐกิจ", "เศรษฐกิจที่ขับเคลื่อนด้วยนวัตกรรม"], "Economic Productivity and Innovation")
-add_terms(8, 6, ["small and medium-sized enterprises", "support for entrepreneurship", "การสนับสนุนผู้ประกอบการ", "วิสาหกิจขนาดกลางและขนาดย่อม"], "Entrepreneurship and SMEs Support")
-add_terms(8, 7, ["access to affordable credit", "access to financial services", "การเข้าถึงบริการทางการเงิน", "การเข้าถึงสินเชื่อในอัตราที่เอื้อมถึงได้"], "Financial Services Access")
-add_terms(8, 8, ["job creation through tourism", "sustainable tourism", "การท่องเที่ยวอย่างยั่งยืน", "การสร้างงานผ่านการท่องเที่ยว"], "Sustainable Tourism and Job Creation")
-add_terms(8, 9, ["end modern slavery", "eradicate forced labor", "การขจัดแรงงานบังคับ", "การยุติทาสยุคใหม่"], "Forced Labor and Modern Slavery Elimination")
-add_terms(9, 1, ["infrastructure development", "innovation", "sustainable industrialization", "การพัฒนาโครงสร้างพื้นฐาน", "นวัตกรรม", "อุตสาหกรรมที่ยั่งยืน", "โครงสร้างพื้นฐาน", "infrastructure"], "Core Concepts - Industry, Innovation and Infrastructure")
-add_terms(9, 2, ["resilient infrastructure", "sustainable infrastructure", "โครงสร้างพื้นฐานที่มีความสามารถในการฟื้นตัว", "โครงสร้างพื้นฐานที่ยั่งยืน", "อาคารปลอดภัย", "resilient buildings"], "Resilient and Sustainable Infrastructure")
-add_terms(9, 3, ["inclusive industrialization", "promote inclusive and sustainable industrialization", "การพัฒนาอุตสาหกรรมอย่างทั่วถึงและยั่งยืน", "การส่งเสริมอุตสาหกรรมที่ทั่วถึงและยั่งยืน"], "Inclusive and Sustainable Industrialization")
-add_terms(9, 4, ["increase scientific research", "research and innovation", "การวิจัยและนวัตกรรม", "การเพิ่มการวิจัยทางวิทยาศาสตร์"], "Research, Development and Innovation")
-add_terms(9, 5, ["support for small-scale industries", "upgrade small industries", "การยกระดับอุตสาหกรรมขนาดเล็ก", "การสนับสนุนอุตสาหกรรมขนาดเล็ก"], "Small-Scale Industry Development")
-add_terms(9, 6, ["access to information and communication technology", "internet access", "การเข้าถึงอินเทอร์เน็ต", "การเข้าถึงเทคโนโลยีสารสนเทศและการสื่อสาร"], "Access to Information and Communication Technology")
-add_terms(9, 7, ["industrial diversification", "technology upgrading", "การกระจายอุตสาหกรรม", "การยกระดับเทคโนโลยี"], "Industrial Diversification")
-add_terms(9, 8, ["economic infrastructure", "regional and transborder infrastructure", "โครงสร้างพื้นฐานทางเศรษฐกิจ", "โครงสร้างพื้นฐานระดับภูมิภาคและข้ามพรมแดน"], "Infrastructure for Economic Development")
-add_terms(9, 9, ["resilient industrialization", "sustainable industrial systems", "การพัฒนาอุตสาหกรรมที่มีความสามารถในการฟื้นตัว", "ระบบอุตสาหกรรมที่ยั่งยืน"], "Sustainable and Resilient Industrial Systems")
-add_terms(10, 1, ["income inequality", "inequality", "reduce inequality", "ความเหลื่อมล้ำทางรายได้", "ความไม่เท่าเทียมกัน", "ลดความเหลื่อมล้ำ"], "Core Concepts - Reducing Inequality")
-add_terms(10, 2, ["economic inclusion", "political inclusion", "social inclusion", "การมีส่วนร่วมทางการเมือง", "การรวมทางสังคม", "การรวมทางเศรษฐกิจ"], "Social, Economic, Political Inclusion")
-add_terms(10, 3, ["anti-discrimination policies", "equal opportunity", "equity policies", "นโยบายต่อต้านการเลือกปฏิบัติ", "นโยบายเพื่อความเสมอภาค", "โอกาสที่เท่าเทียมกัน"], "Equal Opportunity and Policies")
-add_terms(10, 4, ["fiscal policy for equality", "progressive taxation", "social protection systems", "นโยบายการคลังเพื่อความเท่าเทียม", "ภาษีก้าวหน้า", "ระบบการคุ้มครองทางสังคม"], "Fiscal, Wage, and Social Protection Policies")
-add_terms(10, 5, ["migration governance", "orderly migration", "safe migration", "การบริหารจัดการการโยกย้ายถิ่นฐาน", "การอพยพที่ปลอดภัย", "การอพยพอย่างมีระเบียบ"], "Migration and Mobility Governance")
-add_terms(10, 6, ["empower marginalized groups", "political representation", "การเป็นตัวแทนทางการเมือง", "การเสริมพลังกลุ่มเปราะบาง"], "Representation and Empowerment")
-add_terms(10, 7, ["inclusive global institutions", "reform global governance", "regulate global financial markets", "การกำกับดูแลตลาดการเงินโลก", "การปฏิรูปการปกครองโลก", "สถาบันโลกที่ครอบคลุม", "ภัยพิบัติ", "น้ำท่วม", "อุทกภัย", "แผ่นดินไหว", "disaster", "flood", "earthquake", "emergency response",], "Global Governance Reform and Financial Systems")
-add_terms(10, 8, ["lower cost of remittances", "remittance costs", "การลดค่าธรรมเนียมการโอนเงิน", "ค่าธรรมเนียมการส่งเงินกลับประเทศ"], "Facilitate Migration Remittances")
-add_terms(10, 9, ["differential treatment for least developed countries", "special treatment for developing countries", "การปฏิบัติพิเศษสำหรับประเทศกำลังพัฒนา", "การปฏิบัติแตกต่างสำหรับประเทศพัฒนาน้อยที่สุด"], "Special and Differential Treatment for Developing Countries")
-add_terms(11, 1, ["sustainable cities", "sustainable communities", "urban sustainability", "ความยั่งยืนของเมือง", "ชุมชนที่ยั่งยืน", "เมืองที่ยั่งยืน"], "Core Concepts - Sustainable Cities and Communities")
-add_terms(11, 2, ["inclusive cities", "resilient cities", "safe cities", "เมืองที่ครอบคลุม", "เมืองที่ปลอดภัย", "เมืองที่มีความสามารถในการฟื้นตัว"], "Safe, Inclusive, and Resilient Cities")
-add_terms(11, 3, ["adequate housing", "affordable housing", "housing upgrade", "การปรับปรุงที่อยู่อาศัย", "ที่อยู่อาศัยที่ราคาจับต้องได้", "ที่อยู่อาศัยที่เพียงพอ"], "Affordable and Adequate Housing")
-add_terms(11, 4, ["accessible transportation", "public transport", "sustainable transport", "urban mobility", "การคมนาคมที่เข้าถึงได้", "การเคลื่อนที่ในเมือง", "ระบบขนส่งที่ยั่งยืน", "ระบบขนส่งสาธารณะ"], "Sustainable Transport and Mobility")
-add_terms(11, 5, ["integrated urban planning", "urban management", "urban planning", "การจัดการเมือง", "การวางผังเมือง", "การวางผังเมืองแบบบูรณาการ"], "Integrated Urban Planning and Management")
-add_terms(11, 6, ["preserve cultural sites", "protect cultural heritage", "protect natural heritage", "การสงวนแหล่งมรดกทางวัฒนธรรม", "การอนุรักษ์มรดกทางวัฒนธรรม", "การอนุรักษ์มรดกธรรมชาติ"], "Cultural and Natural Heritage Protection")
-add_terms(11, 7, ["disaster risk reduction", "resilience to disasters", "urban resilience", "การฟื้นตัวของเมืองจากภัยพิบัติ", "การลดความเสี่ยงจากภัยพิบัติ"], "Disaster Risk Reduction and Resilience")
-add_terms(11, 8, ["improve air quality", "sustainable building design", "sustainable waste management", "การจัดการขยะอย่างยั่งยืน", "การปรับปรุงคุณภาพอากาศ", "การออกแบบอาคารอย่างยั่งยืน"], "Air Quality, Waste Management, and Sustainable Buildings")
-add_terms(11, 9, ["access to green spaces", "public green spaces", "smart cities", "การเข้าถึงพื้นที่สีเขียว", "พื้นที่สีเขียวสาธารณะ", "เมืองอัจฉริยะ"], "Access to Green Spaces and Smart Cities")
-add_terms(12, 1, ["responsible consumption", "responsible production", "sustainable consumption", "sustainable production", "การบริโภคอย่างมีความรับผิดชอบ", "การบริโภคอย่างยั่งยืน", "การผลิตอย่างมีความรับผิดชอบ", "การผลิตอย่างยั่งยืน"], "Core Concepts - Sustainable Consumption and Production")
-add_terms(12, 2, ["circular economy", "efficient resource use", "resource efficiency", "การใช้ทรัพยากรอย่างมีประสิทธิภาพ", "เศรษฐกิจหมุนเวียน"], "Resource Efficiency and Circular Economy")
-add_terms(12, 3, ["recycling", "waste management", "waste reduction", "การจัดการขยะ", "การรีไซเคิล", "การลดขยะ", "การจัดการของเสีย"], "Waste Reduction, Recycling and Management")
-add_terms(12, 4, ["chemical waste management", "hazardous waste", "safe management of chemicals", "การจัดการขยะเคมี", "การจัดการสารเคมีอย่างปลอดภัย", "ขยะอันตราย"], "Chemicals and Hazardous Waste Management")
-add_terms(12, 5, ["sustainable business practices", "sustainable industrial practices", "sustainable supply chain", "ห่วงโซ่อุปทานอย่างยั่งยืน", "แนวปฏิบัติทางธุรกิจที่ยั่งยืน", "แนวปฏิบัติทางอุตสาหกรรมที่ยั่งยืน"], "Sustainable Business, Industry and Supply Chains")
-add_terms(12, 6, ["awareness for sustainable lifestyles", "eco-labeling", "education for responsible consumption", "การติดฉลากสิ่งแวดล้อม", "การศึกษาเกี่ยวกับการบริโภคอย่างมีความรับผิดชอบ", "การสร้างความตระหนักรู้เกี่ยวกับการดำรงชีวิตอย่างยั่งยืน"], "Public Awareness, Education and Eco-Labeling")
-add_terms(12, 7, ["green public procurement", "sustainable procurement", "การจัดซื้อจัดจ้างสีเขียว", "การจัดซื้อจัดจ้างอย่างยั่งยืน"], "Green Public Procurement and Sustainable Practices")
-add_terms(12, 8, ["consumer engagement", "responsible tourism", "sustainable tourism", "การท่องเที่ยวอย่างมีความรับผิดชอบ", "การท่องเที่ยวอย่างยั่งยืน", "การมีส่วนร่วมของผู้บริโภค"], "Sustainable Tourism and Consumer Engagement")
-add_terms(12, 9, ["innovation for sustainable consumption", "monitor sustainable practices", "report on sustainable production", "การติดตามแนวปฏิบัติที่ยั่งยืน", "การรายงานการผลิตที่ยั่งยืน", "นวัตกรรมเพื่อการบริโภคอย่างยั่งยืน"], "Monitoring, Reporting and Innovation")
-add_terms(13, 1, ["address climate crisis", "climate action", "combat climate change", "การดำเนินการด้านสภาพภูมิอากาศ", "การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศ", "แก้ไขวิกฤตสภาพภูมิอากาศ", "การเปลี่ยนแปลงสภาพภูมิอากาศ", "climate change", "climate"], "Core Concepts - Climate Action")
-add_terms(13, 2, ["achieve carbon neutrality", "lower carbon emissions", "reduce greenhouse gas emissions", "บรรลุความเป็นกลางทางคาร์บอน", "ลดการปล่อยก๊าซเรือนกระจก", "ลดการปล่อยคาร์บอน", "ภาวะโลกร้อน", "global warming", "greenhouse gas"], "Greenhouse Gas Emission Reduction and Carbon Neutrality")
-add_terms(13, 3, ["adaptation to climate change", "climate resilience", "nature-based solutions", "การปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ", "การฟื้นตัวจากการเปลี่ยนแปลงสภาพภูมิอากาศ", "แนวทางที่ใช้ธรรมชาติเป็นพื้นฐาน"], "Climate Resilience and Adaptation")
-add_terms(13, 4, ["adaptation planning for disasters", "build resilience to climate-related disasters", "disaster risk reduction", "การลดความเสี่ยงจากภัยพิบัติ", "การวางแผนปรับตัวต่อภัยพิบัติ", "การสร้างความสามารถในการรับมือภัยพิบัติที่เกี่ยวข้องกับสภาพภูมิอากาศ"], "Disaster Risk Reduction and Adaptation Planning")
-add_terms(13, 5, ["climate change legislation", "climate policies", "national climate action plans", "กฎหมายว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ", "นโยบายด้านสภาพภูมิอากาศ", "แผนปฏิบัติการด้านสภาพภูมิอากาศระดับชาติ"], "Climate Policy, Governance and Legislation")
-add_terms(13, 6, ["capacity-building for climate action", "education on climate change", "raising awareness on climate change", "การศึกษาเรื่องการเปลี่ยนแปลงสภาพภูมิอากาศ", "การสร้างความตระหนักรู้เรื่องการเปลี่ยนแปลงสภาพภูมิอากาศ", "การเสริมสร้างขีดความสามารถในการดำเนินการด้านสภาพภูมิอากาศ"], "Climate Education, Awareness and Capacity-Building")
-add_terms(13, 7, ["climate agreements", "global partnerships for climate action", "international cooperation on climate", "ข้อตกลงด้านสภาพภูมิอากาศ", "ความร่วมมือระหว่างประเทศด้านสภาพภูมิอากาศ", "หุ้นส่วนระดับโลกเพื่อการดำเนินการด้านสภาพภูมิอากาศ"], "International Cooperation on Climate Action")
-add_terms(13, 8, ["climate early warning systems", "climate information services", "disaster early warning systems", "บริการข้อมูลสภาพภูมิอากาศ", "ระบบเตือนภัยล่วงหน้าจากภัยพิบัติ", "ระบบเตือนภัยล่วงหน้าด้านสภาพภูมิอากาศ"], "Early Warning Systems and Climate Information")
-add_terms(13, 9, ["climate finance", "funding for climate initiatives", "investment in climate resilience", "การลงทุนในความสามารถในการฟื้นตัวจากการเปลี่ยนแปลงสภาพภูมิอากาศ", "การสนับสนุนทางการเงินสำหรับโครงการด้านสภาพภูมิอากาศ", "การเงินด้านสภาพภูมิอากาศ"], "Climate Finance and Investment")
-add_terms(14, 1, ["conserve oceans", "protect marine ecosystems", "safeguard marine biodiversity", "การคุ้มครองความหลากหลายทางทะเล", "การปกป้องระบบนิเวศทางทะเล", "การอนุรักษ์มหาสมุทร", "ทะเล", "ทรัพยากรทางทะเล", "สัตว์ทะเล", "ocean", "marine life"], "Core Concepts - Conservation of Oceans and Marine Ecosystems")
-add_terms(14, 2, ["marine litter", "plastic pollution in oceans", "reduce marine pollution", "ขยะทะเล", "มลพิษพลาสติกในมหาสมุทร", "ลดมลพิษทางทะเล"], "Marine Pollution Control")
-add_terms(14, 3, ["blue economy", "sustainable marine management", "sustainable ocean management", "การบริหารจัดการทะเลอย่างยั่งยืน", "การบริหารจัดการมหาสมุทรอย่างยั่งยืน", "เศรษฐกิจสีน้ำเงิน"], "Sustainable Marine Resources Management")
-add_terms(14, 4, ["climate change impact on oceans", "ocean acidification", "reduce ocean acidification", "ผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศต่อมหาสมุทร", "ภาวะกรดในมหาสมุทร", "ลดภาวะกรดในมหาสมุทร"], "Ocean Acidification and Climate Change Mitigation")
-add_terms(14, 5, ["end overfishing", "sustainable aquaculture", "sustainable fisheries", "การประมงอย่างยั่งยืน", "การยุติการจับปลามากเกินไป", "การเพาะเลี้ยงสัตว์น้ำอย่างยั่งยืน"], "Sustainable Fisheries and Aquaculture")
-add_terms(14, 6, ["expand marine reserves", "marine protected areas", "protect coastal ecosystems", "การขยายเขตอนุรักษ์ทางทะเล", "การปกป้องระบบนิเวศชายฝั่ง", "พื้นที่คุ้มครองทางทะเล"], "Marine Protected Areas and Coastal Ecosystems")
-add_terms(14, 7, ["economic support for artisanal fisheries", "small fisheries livelihood", "support small-scale fisheries", "การดำรงชีวิตของชาวประมงขนาดเล็ก", "การสนับสนุนการประมงขนาดเล็ก", "การสนับสนุนทางเศรษฐกิจแก่การประมงพื้นบ้าน"], "Support for Small-Scale Fisheries")
-add_terms(14, 8, ["innovation for marine conservation", "marine scientific research", "technology transfer for ocean health", "การถ่ายทอดเทคโนโลยีเพื่อสุขภาพมหาสมุทร", "การวิจัยทางวิทยาศาสตร์ทางทะเล", "นวัตกรรมเพื่อการอนุรักษ์ทางทะเล"], "Scientific Research, Innovation and Technology for Ocean Health")
-add_terms(14, 9, ["global ocean governance", "implement international law for oceans", "UNCLOS", "การบริหารจัดการมหาสมุทรในระดับโลก", "การบังคับใช้กฎหมายระหว่างประเทศด้านมหาสมุทร", "อนุสัญญาสหประชาชาติว่าด้วยกฎหมายทะเล (UNCLOS)"], "International Law and Ocean Governance (UNCLOS)")
-add_terms(15, 1, ["protect terrestrial ecosystems", "restore degraded land", "sustainable use of terrestrial ecosystems", "การอนุรักษ์ระบบนิเวศบนบก", "ฟื้นฟูพื้นที่เสื่อมโทรม", "ส่งเสริมการใช้ระบบนิเวศบนบกอย่างยั่งยืน"], "Core Concepts - Protect, Restore and Promote Sustainable Use of Terrestrial Ecosystems")
-add_terms(15, 2, ["halt deforestation", "restore forests", "sustainable forest management", "การจัดการป่าไม้อย่างยั่งยืน", "การฟื้นฟูป่าไม้", "ยุติการตัดไม้ทำลายป่า", "ป่าไม้", "forest"], "Forest Management and Restoration")
-add_terms(15, 3, ["combat desertification", "halt land degradation", "land degradation neutrality", "ความเป็นกลางด้านการเสื่อมโทรมของที่ดิน", "ต่อสู้กับการแปรสภาพเป็นทะเลทราย", "ยุติการเสื่อมโทรมของที่ดิน"], "Combat Desertification and Land Degradation")
-add_terms(15, 4, ["conserve biodiversity", "halt biodiversity loss", "protect endangered species", "การปกป้องสัตว์ใกล้สูญพันธุ์", "การอนุรักษ์ความหลากหลายทางชีวภาพ", "ยุติการสูญเสียความหลากหลายทางชีวภาพ", "ความหลากหลายทางชีวภาพ", "biodiversity", "wildlife"], "Biodiversity Conservation")
-add_terms(15, 5, ["manage protected areas", "protect natural habitats", "restore ecosystems", "การจัดการพื้นที่คุ้มครอง", "การปกป้องถิ่นที่อยู่อาศัยตามธรรมชาติ", "การฟื้นฟูระบบนิเวศ"], "Protect Natural Habitats")
-add_terms(15, 6, ["combat wildlife trafficking", "end poaching", "illegal wildlife trade", "การค้าสัตว์ป่าอย่างผิดกฎหมาย", "การปราบปรามการลักลอบค้าสัตว์ป่า", "ยุติการล่าสัตว์ผิดกฎหมาย"], "End Poaching and Wildlife Trafficking")
-add_terms(15, 7, ["control invasive alien species", "prevent invasive species", "การควบคุมชนิดพันธุ์ต่างถิ่นรุกราน", "การป้องกันการรุกรานของชนิดพันธุ์ต่างถิ่น"], "Control Invasive Alien Species")
-add_terms(15, 8, ["ecosystem values in development", "integrate biodiversity into planning", "mainstream biodiversity in development", "การบูรณาการความหลากหลายทางชีวภาพในการพัฒนา", "ค่านิยมระบบนิเวศในการพัฒนา", "บูรณาการความหลากหลายทางชีวภาพในการวางแผน"], "Integrate Biodiversity Values into Development")
-add_terms(15, 9, ["fund ecosystem protection", "increase biodiversity funding", "mobilize financial resources for conservation", "ระดมทรัพยากรทางการเงินเพื่อการอนุรักษ์", "เงินทุนสำหรับการปกป้องระบบนิเวศ", "เพิ่มเงินทุนเพื่อความหลากหลายทางชีวภาพ"], "Mobilize Financial Resources for Conservation")
-add_terms(16, 1, ["peace and justice", "strong institutions", "การสร้างสันติภาพและความยุติธรรม", "สถาบันที่เข้มแข็ง", "สันติภาพ", "ความยุติธรรม", "peace", "justice"], "Core Concepts - Peace, Justice, and Strong Institutions")
-add_terms(16, 2, ["access to justice", "legal aid", "การช่วยเหลือทางกฎหมาย", "การเข้าถึงความยุติธรรม"], "Access to Justice and Legal Aid")
-add_terms(16, 3, ["anti-corruption", "combat bribery", "การต่อต้านการทุจริต", "การปราบปรามการติดสินบน"], "Combating Corruption and Bribery")
-add_terms(16, 4, ["accountable institutions", "inclusive institutions", "transparent governance", "การบริหารจัดการที่โปร่งใส", "สถาบันที่ครอบคลุมทุกคน", "สถาบันที่มีความรับผิดชอบ"], "Inclusive, Accountable, and Transparent Institutions")
-add_terms(16, 5, ["participation in decision-making", "public participation", "การมีส่วนร่วมของประชาชน", "การมีส่วนร่วมในการตัดสินใจ"], "Participation in Decision-Making and Governance")
-add_terms(16, 6, ["human rights", "human rights protection", "การคุ้มครองสิทธิมนุษยชน", "สิทธิมนุษยชน"], "Human Rights Protection")
-add_terms(16, 7, ["rule of law", "strengthen rule of law", "การเสริมสร้างการปกครองโดยกฎหมาย", "การเสริมสร้างหลักนิติธรรม"], "Strengthening the Rule of Law")
-add_terms(16, 8, ["mediation and negotiation", "non-violent conflict resolution", "การแก้ปัญหาขัดแย้งโดยสันติ", "การไกล่เกลี่ยและการเจรจาต่อรอง"], "Non-Violent Conflict Resolution")
-add_terms(16, 9, ["effective public institutions", "institutional accountability", "ตรวจสอบได้และโปร่งใส", "สถาบันที่มีประสิทธิภาพและโปร่งใส"], "Accountability, Transparency, and Effective Institutions")
-add_terms(17, 1, ["global partnerships", "partnerships for the goals", "การสร้างหุ้นส่วนระดับโลก", "ความร่วมมือสำหรับเป้าหมาย", "ความร่วมมือระหว่างประเทศ", "ความร่วมมือเพื่อการพัฒนา","global partnership", "international cooperation", "partnerships"], "Core Concepts - Global Partnerships and Cooperation")
-add_terms(17, 2, ["mobilize financial resources", "oda", "official development assistance", "การช่วยเหลือเพื่อการพัฒนาอย่างเป็นทางการ", "การระดมทรัพยากรทางการเงิน"], "Finance Mobilization and ODA")
-add_terms(17, 3, ["science and innovation", "technology cooperation", "technology transfer", "การถ่ายทอดเทคโนโลยี", "ความร่วมมือทางเทคโนโลยี", "วิทยาศาสตร์และนวัตกรรม"], "Technology, Science and Innovation")
-add_terms(17, 4, ["capacity building", "institutional capacity", "technical assistance", "การเสริมสร้างศักยภาพ", "การให้ความช่วยเหลือทางเทคนิค", "ศักยภาพสถาบัน"], "Capacity Building and Institutional Strengthening")
-add_terms(17, 5, ["market access", "promote trade", "trade cooperation", "การเข้าถึงตลาด", "ความร่วมมือทางการค้า", "ส่งเสริมการค้า"], "Trade and Market Access")
-add_terms(17, 6, ["accountability mechanisms", "data availability", "monitoring and reporting", "กลไกความรับผิดชอบ", "การติดตามและรายงาน", "การเข้าถึงข้อมูล"], "Data, Monitoring and Accountability")
-add_terms(17, 7, ["institutional coherence", "integrated policies", "policy coherence", "ความสอดคล้องของนโยบาย", "ความสอดคล้องของสถาบัน", "นโยบายแบบบูรณาการ"], "Policy and Institutional Coherence")
-add_terms(17, 8, ["civil society partnerships", "multi-stakeholder", "private sector engagement", "การมีส่วนร่วมของภาคเอกชน", "ความร่วมมือกับภาคประชาสังคม", "หุ้นส่วนที่หลากหลาย"], "Multi-Stakeholder Partnerships")
-add_terms(17, 9, ["green finance", "resource efficiency", "sustainable financing", "การจัดหาเงินทุนอย่างยั่งยืน", "การเงินสีเขียว", "ประสิทธิภาพในการใช้ทรัพยากร"], "Resource Efficiency and Sustainable Financing")
+# Auto-generated v2: COMBINED with extra FP exclusions from audit
+
+# Encoding: UTF-8
+
+def register_terms(add_terms):
+    # SDG 1 | Layer 1 | Core concepts – No Poverty
+    add_terms(1, 1, [
+        "alleviating poverty",
+        "basic income",
+        "combat poverty",
+        "covid-19",
+        "developing countries",
+        "developing world",
+        "economic development",
+        "economic empowerment",
+        "employment guarantee",
+        "end poverty",
+        "ending poverty in all forms",
+        "energy poverty",
+        "eradicate poverty",
+        "extreme poverty",
+        "financial inclusion",
+        "financial services",
+        "housing assistance",
+        "human capital",
+        "inclusive society",
+        "income distribution",
+        "income support",
+        "informal economy",
+        "labor market",
+        "lift people out of poverty",
+        "livelihood programs",
+        "living wage",
+        "low income",
+        "microcredit",
+        "multidimensional poverty",
+        "poverty",
+        "poverty alleviation",
+        "poverty eradication",
+        "poverty reduction",
+        "profit",
+        "reduce poverty",
+        "social exclusion",
+        "social security",
+        "social services",
+        "social welfare",
+        "support low-income communities",
+        "sustainable development",
+        "taxation",
+        "wealth distribution",
+        "welfare",
+        "welfare state",
+        "การกระจายความมั่งคั่ง",
+        "การกระจายรายได้",
+        "การกีดกันทางสังคม",
+        "การขจัดความยากจนขั้นรุนแรง",
+        "การช่วยเหลือที่อยู่อาศัย",
+        "การบรรเทาความยากจน",
+        "การพัฒนาที่ยั่งยืน",
+        "การพัฒนาเศรษฐกิจ",
+        "การยุติความยากจนในทุกรูปแบบ",
+        "การรับประกันการมีงานทํา",
+        "การลดความยากจน",
+        "การสนับสนุนผู้มีรายได้น้อย",
+        "การสนับสนุนรายได้",
+        "การเข้าถึงความจําเป็นพื้นฐาน",
+        "การเข้าถึงบริการขั้นพื้นฐานอย่างเท่าเทียม",
+        "การเสริมสร้างเศรษฐกิจฐานราก",
+        "กําไร",
+        "ขจัดความยากจน",
+        "ความยากจน",
+        "ความยากจนด้านพลังงาน",
+        "ความยากจนหลายมิติ",
+        "ความไม่เท่าเทียม",
+        "ความไม่เท่าเทียมทางรายได้",
+        "ค่าจ้างที่เพียงพอต่อการดํารงชีพ",
+        "ช่วยเหลือผู้ยากไร้",
+        "ตลาดแรงงาน",
+        "ทุนมนุษย์",
+        "นโยบายตลาดแรงงาน",
+        "นโยบายสังคม",
+        "นโยบายสาธารณะ",
+        "บรรเทาความยากจน",
+        "บริการทางการเงิน",
+        "บริการสังคม",
+        "ประกันสังคม",
+        "ประเทศกําลังพัฒนา",
+        "ภาษี",
+        "ยกระดับชีวิตคนจน",
+        "ยุติความยากจน",
+        "รัฐสวัสดิการ",
+        "รายได้ขั้นพื้นฐาน",
+        "รายได้ต่ํา",
+        "รายได้พื้นฐาน",
+        "ลดความยากจน",
+        "ลดช่องว่างทางรายได้",
+        "ลดปัญหาความยากจน",
+        "สนับสนุนชุมชนรายได้น้อย",
+        "สร้างโอกาสทางเศรษฐกิจให้ผู้มีรายได้น้อย",
+        "สวัสดิการ",
+        "สวัสดิการถ้วนหน้า",
+        "สังคมครอบคลุม",
+        "สัมประสิทธิ์จีนี",
+        "สุขภาพ",
+        "อุตสาหกรรม",
+        "เศรษฐกิจนอกระบบ",
+        "โครงการคนจนเมือง",
+        "โครงการส่งเสริมอาชีพ",
+        "โควิด-19",
+        "โลกกําลังพัฒนา",
+        "โอกาสทางเศรษฐกิจ",
+        "ไมโครเครดิต",
+    ], "Core concepts – No Poverty")
+
+    # SDG 1 | Layer 2 | Social protection systems
+    add_terms(1, 2, [
+        "basic needs access",
+        "disadvantaged populations",
+        "equal access to basic services",
+        "health service",
+        "poor communities",
+        "support vulnerable",
+        "uplift marginalized groups",
+        "vulnerable groups",
+        "กลุ่มคนชายขอบ",
+        "กลุ่มด้อยโอกาส",
+        "กลุ่มผู้มีรายได้น้อย",
+        "กลุ่มเปราะบาง",
+        "การคุ้มครองทางสังคมสำหรับกลุ่มเสี่ยง",
+        "การสนับสนุนกลุ่มเปราะบาง",
+        "คนจน",
+        "รายได้น้อย",
+    ], "Social protection systems")
+
+    # SDG 1 | Layer 3 | Financial inclusion & livelihoods
+    add_terms(1, 3, [
+        "access to basic services",
+        "access to education",
+        "access to financial services",
+        "access to healthcare",
+        "access to sanitation",
+        "basic services",
+        "universal access to basic services",
+        "การเข้าถึงบริการพื้นฐาน",
+        "บริการพื้นฐาน",
+        "บริการสุขภาพ",
+        "สิทธิเข้าถึง",
+        "เข้าถึงการศึกษา",
+        "เข้าถึงบริการสาธารณสุข",
+        "เข้าถึงสาธารณูปโภคพื้นฐาน",
+    ], "Financial inclusion & livelihoods")
+
+    # SDG 1 | Layer 4 | Vulnerable groups & targeting
+    add_terms(1, 4, [
+        "cash transfer",
+        "emergency financial support",
+        "financial aid",
+        "microfinance access",
+        "social protection",
+        "universal social protection",
+        "welfare system",
+        "การคุ้มครองทางสังคม",
+        "การสนับสนุนทางการเงิน",
+        "ระบบสวัสดิการสังคม",
+        "สวัสดิการสังคม",
+        "เงินช่วยเหลือ",
+    ], "Vulnerable groups & targeting")
+
+    # SDG 1 | Layer 5 | Access to basic services
+    add_terms(1, 5, [
+        "economic inequality",
+        "inclusive economy",
+        "inclusive growth",
+        "income inequality",
+        "reduce economic disparity",
+        "การพัฒนาเศรษฐกิจอย่างทั่วถึง",
+        "ลดความเหลื่อมล้ำทางเศรษฐกิจ",
+        "เศรษฐกิจที่ครอบคลุมทุกกลุ่ม",
+        "โอกาสทางเศรษฐกิจที่เท่าเทียม",
+    ], "Access to basic services")
+
+    # SDG 1 | Layer 6 | Policy & governance for poverty reduction
+    add_terms(1, 6, [
+        "build resilience",
+        "community resilience",
+        "economic resilience",
+        "labor market policy",
+        "public policy",
+        "resilience",
+        "social policy",
+        "ชุมชนยากจน",
+        "ชุมชนเปราะบาง",
+        "ลดความเสี่ยงจากภัยพิบัติ",
+        "เพิ่มความสามารถในการฟื้นตัว",
+        "เสริมศักยภาพ",
+        "เสริมสร้างความสามารถในการฟื้นตัว",
+    ], "Policy & governance for poverty reduction")
+
+    # SDG 1 | Layer 7 | Resilience to shocks (disaster/economic)
+    add_terms(1, 7, [
+        "access to finance",
+        "access to land",
+        "access to markets",
+        "การเข้าถึงตลาด",
+        "การเข้าถึงที่ดิน",
+        "การเข้าถึงแหล่งเงินทุน",
+        "ที่ดิน",
+        "แหล่งเงินทุน",
+    ], "Resilience to shocks (disaster/economic)")
+
+    # SDG 1 | Layer 8 | Measurement & poverty lines (e.g., $1.90)
+    add_terms(1, 8, [
+        "gini coefficient",
+        "inclusive economic policy",
+        "inclusive growth",
+        "pro-poor policy",
+        "นโยบายที่ครอบคลุม",
+        "นโยบายเศรษฐกิจเพื่อคนจน",
+    ], "Measurement & poverty lines (e.g., $1.90)")
+
+    # SDG 1 | Layer 9 | Financing & partnerships for poverty alleviation
+    add_terms(1, 9, [
+        "address root causes of poverty",
+        "tackle poverty at its roots",
+        "การเปลี่ยนแปลงโครงสร้างเศรษฐกิจ",
+        "แก้ไขสาเหตุของความยากจน",
+    ], "Financing & partnerships for poverty alleviation")
+
+    # SDG 2 | Layer 1 | Core concepts – Zero Hunger & food security
+    add_terms(2, 1, [
+        "agricultural innovation",
+        "agricultural science",
+        "agriculture",
+        "agritech",
+        "agroecology",
+        "alternative agriculture",
+        "alternative protein",
+        "arable land",
+        "biological control",
+        "cereal",
+        "common wheat",
+        "community-supported agriculture",
+        "cover crop",
+        "crop production",
+        "cultivar",
+        "end hunger",
+        "eradicate hunger",
+        "farm animal",
+        "feeding behavior",
+        "food loss",
+        "food reserves",
+        "food safety",
+        "food security",
+        "food supply",
+        "genetic divergence",
+        "genetic resource",
+        "germplasm",
+        "grains",
+        "household food security",
+        "hunger",
+        "hunger reduction",
+        "integrated pest management",
+        "local food",
+        "maize",
+        "malnutrition",
+        "micronutrient",
+        "nutrition",
+        "nutrition assessment",
+        "nutrition improvement initiative",
+        "nutrition security",
+        "nutritional assessment",
+        "nutritional status",
+        "nutritious food",
+        "organic farming",
+        "precision agriculture",
+        "promote sustainable agriculture",
+        "reduce hunger",
+        "seeds",
+        "smallholder",
+        "smart irrigation",
+        "snail farming",
+        "soil fertility",
+        "soil health",
+        "sustainable farming",
+        "undernutrition",
+        "urban farming",
+        "yield improvement",
+        "zero hunger",
+        "การควบคุมทางชีวภาพ",
+        "การจัดการศัตรูพืชแบบผสมผสาน",
+        "การจัดหาอาหาร",
+        "การทําฟาร์มแบบยั่งยืน",
+        "การประเมินภาวะโภชนาการ",
+        "การประเมินโภชนาการ",
+        "การปรับปรุงพันธุ์พืช",
+        "การผลิตพืชผล",
+        "การลดความหิวโหย",
+        "การลดปัญหาความหิวโหย",
+        "การสูญเสียอาหาร",
+        "การเกษตร",
+        "การเจริญเติบโตของพืช",
+        "การเพิ่มผลผลิต",
+        "การเลี้ยงหอย",
+        "ขจัดความหิวโหย",
+        "ข้าวสาลีทั่วไป",
+        "ข้าวโพด",
+        "คลังสํารองอาหาร",
+        "ความปลอดภัยด้านอาหาร",
+        "ความมั่นคงด้านโภชนาการ",
+        "ความมั่นคงทางอาหาร",
+        "ความมั่นคงทางอาหารในครัวเรือน",
+        "ความมั่นคงทางอาหารในท้องถิ่น",
+        "ความอุดมสมบูรณ์ของดิน",
+        "ความแตกต่างทางพันธุกรรม",
+        "ความไม่มั่นคงทางอาหาร",
+        "ซีเรียล",
+        "ดัชนีพืชพรรณ",
+        "ทรัพยากรพันธุกรรม",
+        "ทางเลือกด้านเกษตรกรรม",
+        "ที่ดินทํากิน",
+        "ธนาคารอาหารชุมชน",
+        "ธัญพืช",
+        "นวัตกรรมเกษตร",
+        "นโยบายการเกษตร",
+        "ปรับปรุงการเข้าถึงอาหาร",
+        "ปศุสัตว์",
+        "พฤติกรรมการกิน",
+        "พลาสมาพืช",
+        "พืชคลุมดิน",
+        "พืชผล",
+        "ภาวะขาดสารอาหาร",
+        "ภาวะทุพโภชนาการ",
+        "ยุติความหิวโหย",
+        "ระบบการปลูกพืช",
+        "ระบบการผลิตอาหาร",
+        "ระบบการเกษตร",
+        "ระบบชลประทานอัจฉริยะ",
+        "ระบบอาหาร",
+        "ลดความหิวโหย",
+        "วิทยาศาสตร์การเกษตร",
+        "สถานะโภชนาการ",
+        "สายพันธุ์พืช",
+        "สารอาหารรอง",
+        "สุขภาพของดิน",
+        "ส่งเสริมเกษตรยั่งยืน",
+        "อาหารที่มีคุณค่าทางโภชนาการ",
+        "อาหารท้องถิ่น",
+        "อาหารเพียงพอ",
+        "เกษตรกรรมที่ยั่งยืน",
+        "เกษตรผสมผสาน",
+        "เกษตรสนับสนุนชุมชน",
+        "เกษตรอินทรีย์",
+        "เกษตรเชิงนิเวศ",
+        "เกษตรแม่นยํา",
+        "เกษตรในเมือง",
+        "เทคโนโลยีทางการเกษตร",
+        "เทคโนโลยีเกษตร",
+        "เมล็ดพันธุ์",
+        "โครงการพัฒนาโภชนาการ",
+        "โปรตีนทางเลือก",
+    ], "Core concepts – Zero Hunger & food security")
+
+    # SDG 2 | Layer 2 | Nutrition & malnutrition
+    add_terms(2, 2, [
+        "food access",
+        "food aid",
+        "food insecurity",
+        "improve food access",
+        "การช่วยเหลือด้านอาหาร",
+        "การเข้าถึงอาหาร",
+        "ขาดแคลนอาหาร",
+        "อาหารเพื่อกลุ่มเปราะบาง",
+        "อาหารเพื่อคนยากจน",
+    ], "Nutrition & malnutrition")
+
+    # SDG 2 | Layer 3 | Sustainable agriculture & smallholders
+    add_terms(2, 3, [
+        "agricultural productivity",
+        "sustainable agriculture",
+        "sustainable food production",
+        "การผลิตอาหารที่ยั่งยืน",
+        "การพัฒนาการเกษตรอย่างยั่งยืน",
+        "การเกษตรที่ยั่งยืน",
+        "ผลผลิตทางการเกษตร",
+    ], "Sustainable agriculture & smallholders")
+
+    # SDG 2 | Layer 4 | Supply chains & food loss/waste
+    add_terms(2, 4, [
+        "local farmers",
+        "small-scale farmers",
+        "smallholder farmers",
+        "การสนับสนุนเกษตรกรรายย่อย",
+        "เกษตรกรท้องถิ่น",
+        "เกษตรกรรายย่อย",
+        "เกษตรกรรายย่อยที่ยั่งยืน",
+    ], "Supply chains & food loss/waste")
+
+    # SDG 2 | Layer 5 | Access & affordability of food
+    add_terms(2, 5, [
+        "agricultural technology",
+        "cropping system",
+        "farming system",
+        "food distribution",
+        "food equity",
+        "food production system",
+        "plant breeding",
+        "plant growth",
+        "การกระจายอาหาร",
+        "การกระจายอาหารอย่างยั่งยืน",
+        "การแบ่งปันอาหารกับคนยากจน",
+        "ความเท่าเทียมในการเข้าถึงอาหาร",
+    ], "Access & affordability of food")
+
+    # SDG 2 | Layer 6 | Policy & governance of food systems
+    add_terms(2, 6, [
+        "agricultural policy",
+        "climate change impacts",
+        "climate resilience",
+        "sustainable farming in changing climate",
+        "การฟื้นฟูความมั่นคงทางอาหารในสภาพภูมิอากาศเปลี่ยนแปลง",
+        "ผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "เกษตรกรรมที่ยั่งยืนในสภาพอากาศเปลี่ยนแปลง",
+    ], "Policy & governance of food systems")
+
+    # SDG 2 | Layer 7 | Climate resilience in food systems
+    add_terms(2, 7, [
+        "reduce food waste",
+        "responsible food production",
+        "sustainable food consumption",
+        "การบริโภคอาหารอย่างรับผิดชอบ",
+        "การผลิตอาหารที่รับผิดชอบ",
+        "ลดขยะอาหาร",
+        "อาหารที่ยั่งยืน",
+    ], "Climate resilience in food systems")
+
+    # SDG 2 | Layer 8 | Food security indicators & outcomes
+    add_terms(2, 8, [
+        "food system resilience",
+        "food systems",
+        "sustainable food systems",
+        "vegetation index",
+        "การพัฒนาระบบอาหารอย่างยั่งยืน",
+        "การเสริมสร้างความสามารถในการฟื้นตัวของระบบอาหาร",
+        "ระบบอาหารที่ยั่งยืน",
+    ], "Food security indicators & outcomes")
+
+    # SDG 2 | Layer 9 | Financing & partnerships (agri/food)
+    add_terms(2, 9, [
+        "food security policies",
+        "long-term food security",
+        "การแก้ปัญหาความหิวโหยระยะยาว",
+        "การแก้ปัญหาความหิวโหยในระยะยาว",
+        "นโยบายความมั่นคงทางอาหาร",
+    ], "Financing & partnerships (agri/food)")
+
+    # SDG 3 | Layer 1 | Core concepts – Health & well-being
+    add_terms(3, 1, [
+        "active aging",
+        "apoplexy",
+        "asthma",
+        "atrial fibrillation",
+        "brain ischemia",
+        "breast cancer",
+        "cancer screening",
+        "cardiovascular disease",
+        "child health",
+        "chronic kidney failure",
+        "colorectal cancer",
+        "community clinic",
+        "community-based wellness program",
+        "coronavirinae",
+        "coronavirus infection",
+        "covid 19 epidemic",
+        "covid-19",
+        "covid-19 vaccine",
+        "cross-sectional study",
+        "diabetes mellitus",
+        "disease",
+        "disease prevention",
+        "early cancer diagnosis",
+        "emotional wellness",
+        "functional food",
+        "good health",
+        "health care",
+        "health equity",
+        "health promotion",
+        "health services",
+        "health systems",
+        "healthcare",
+        "healthy eating",
+        "heart failure",
+        "hepatocellular carcinoma",
+        "human immunodeficiency virus",
+        "immune checkpoint inhibitor",
+        "immunotherapy",
+        "improve public health",
+        "infection",
+        "kidney failure",
+        "liver cell carcinoma",
+        "long untranslated rna",
+        "lung cancer",
+        "malignant neoplasm",
+        "malnutrition",
+        "maternal health",
+        "maturity onset diabetes of the young",
+        "medical research",
+        "mental health",
+        "mental stability",
+        "neoplasm",
+        "non insulin dependent diabetes mellitus",
+        "non small cell lung cancer",
+        "nutrition",
+        "occupational wellness",
+        "oncogene",
+        "oncology",
+        "preventive health program",
+        "promote mental wellness",
+        "prostate cancer",
+        "public health",
+        "retrospective study",
+        "road safety",
+        "sars coronavirus",
+        "severe acute respiratory syndrome",
+        "spa therapy",
+        "stomach cancer",
+        "systematic review",
+        "telemedicine",
+        "tumor marker",
+        "tumor microenvironment",
+        "universal health coverage",
+        "viral pneumonia",
+        "virus pneumonia",
+        "wellness",
+        "กลุ่มอาการหายใจลําบากเฉียบพลันรุนแรง",
+        "การกินอย่างมีสุขภาพ",
+        "การคัดกรองมะเร็ง",
+        "การดูแลสุขภาพ",
+        "การดูแลสุขภาพถ้วนหน้า",
+        "การติดเชื้อ",
+        "การติดเชื้อไวรัสโคโรนา",
+        "การทบทวนอย่างเป็นระบบ",
+        "การป้องกันโรค",
+        "การระบาดของโควิด-19",
+        "การระบาดใหญ่",
+        "การวิจัยทางการแพทย์",
+        "การวินิจฉัยมะเร็งระยะเริ่มต้น",
+        "การศึกษาย้อนหลัง",
+        "การศึกษาแบบภาคตัดขวาง",
+        "การส่งเสริมสุขภาพ",
+        "การเข้าถึงบริการสุขภาพสําหรับทุกคน",
+        "การเรียนรู้ด้านโภชนาการ",
+        "การแพทย์ทางไกล",
+        "กิจกรรมเพื่อสุขภาพ",
+        "คลินิกชุมชน",
+        "คลินิกชุมชนอบอุ่น",
+        "ความชุก",
+        "ความปลอดภัยทางถนน",
+        "ความเท่าเทียมทางสุขภาพ",
+        "ตระกูลไวรัสโคโรนา",
+        "ตัวบ่งชี้เนื้องอก",
+        "ตัวยับยั้งจุดตรวจภูมิคุ้มกัน",
+        "นโยบายการฉีดวัคซีน",
+        "บริการสุขภาพ",
+        "ปอดบวมจากไวรัส",
+        "ผู้สูงวัยแข็งแรง",
+        "ภาวะทุพโภชนาการ",
+        "ภาวะสมองขาดเลือด",
+        "ภาวะหัวใจล้มเหลว",
+        "ภาวะหัวใจห้องบนเต้นผิดจังหวะ",
+        "ภูมิคุ้มกันบําบัด",
+        "มะเร็งกระเพาะอาหาร",
+        "มะเร็งตับ",
+        "มะเร็งต่อมลูกหมาก",
+        "มะเร็งปอด",
+        "มะเร็งปอดชนิดเซลล์ไม่เล็ก",
+        "มะเร็งลําไส้ใหญ่",
+        "มะเร็งเซลล์ตับ",
+        "มะเร็งเต้านม",
+        "ยกระดับสาธารณสุข",
+        "ยีนที่ก่อให้เกิดมะเร็ง",
+        "รณรงค์สุขภาพ",
+        "ระบบสุขภาพ",
+        "วัคซีนโควิด-19",
+        "สาธารณสุข",
+        "สิ่งแวดล้อมจุลภาคของเนื้องอก",
+        "สุขภาพจิต",
+        "สุขภาพที่ดี",
+        "สุขภาพหนึ่งเดียว",
+        "สุขภาพแม่และเด็ก",
+        "สุขภาวะ",
+        "สุขภาวะจิต",
+        "สุขภาวะทางอารมณ์",
+        "สุขภาวะเยาวชน",
+        "ส่งเสริมสุขภาพ",
+        "ส่งเสริมสุขภาพจิต",
+        "หลักประกันสุขภาพถ้วนหน้า",
+        "อาร์เอ็นเอที่ไม่แปลรหัส",
+        "อาหารเพื่อสุขภาพ",
+        "เชื้อไวรัสเอชไอวี",
+        "เชื้อไวรัสโคโรนาซาร์ส",
+        "เนื้องอก",
+        "เนื้องอกมะเร็ง",
+        "เนื้องอกวิทยา",
+        "เบาหวานชนิดเริ่มในวัยผู้ใหญ่",
+        "เบาหวานชนิดไม่พึ่งอินซูลิน",
+        "เสถียรภาพทางจิตใจ",
+        "เอชไอวี",
+        "โครงการสุขภาวะที่มีฐานชุมชน",
+        "โควิด-19",
+        "โรค",
+        "โรคปอดอักเสบจากไวรัส",
+        "โรคหลอดเลือดสมอง",
+        "โรคหัวใจและหลอดเลือด",
+        "โรคหืด",
+        "โรคเบาหวาน",
+        "ไตวาย",
+        "ไตวายเรื้อรัง",
+    ], "Core concepts – Health & well-being")
+
+    # SDG 3 | Layer 2 | Disease prevention & control
+    add_terms(3, 2, [
+        "emergency health response",
+        "health system strengthening",
+        "healthcare access for all",
+        "mental health support",
+        "nutrition programs",
+        "primary health care",
+        "universal healthcare",
+        "vaccination programs",
+        "การฉีดวัคซีน",
+        "การตอบสนองฉุกเฉินด้านสุขภาพ",
+        "การสนับสนุนสุขภาพจิต",
+        "บริการปฐมภูมิ",
+        "เสริมสร้างระบบสุขภาพ",
+        "โภชนาการ",
+    ], "Disease prevention & control")
+
+    # SDG 3 | Layer 3 | Health systems & services (UHC)
+    add_terms(3, 3, [
+        "clinics and hospitals",
+        "disaster response",
+        "health insurance",
+        "mental health services",
+        "nutrition education",
+        "vaccination campaigns",
+        "การตอบสนองภัยพิบัติ",
+        "การรณรงค์ฉีดวัคซีน",
+        "การให้ความรู้ด้านโภชนาการ",
+        "คลินิกและโรงพยาบาล",
+        "บริการสุขภาพจิต",
+        "ประกันสุขภาพ",
+    ], "Health systems & services (UHC)")
+
+    # SDG 3 | Layer 4 | Maternal, child & reproductive health
+    add_terms(3, 4, [
+        "build rural clinics",
+        "community health outreach",
+        "health-related training",
+        "mobile emergency units",
+        "polio eradication",
+        "public health campaign",
+        "school meal programs",
+        "suicide prevention programs",
+        "youth wellness",
+        "การกำจัดโปลิโอ",
+        "การเข้าถึงชุมชนด้านสุขภาพ",
+        "สร้างคลินิกชนบท",
+        "หน่วยฉุกเฉินเคลื่อนที่",
+        "โครงการป้องกันการฆ่าตัวตาย",
+        "โครงการอาหารกลางวันโรงเรียน",
+    ], "Maternal, child & reproductive health")
+
+    # SDG 3 | Layer 5 | NCDs & mental health
+    add_terms(3, 5, [
+        "community health workers",
+        "crisis hotlines",
+        "field hospitals",
+        "health insurance rollout",
+        "hpv vaccination",
+        "vitamin supplementation",
+        "การขยายประกันสุขภาพ",
+        "การฉีดวัคซีน HPV",
+        "การเสริมวิตามิน",
+        "สายด่วนสุขภาพจิต",
+        "อาสาสมัครสาธารณสุข",
+        "โรงพยาบาลสนาม",
+    ], "NCDs & mental health")
+
+    # SDG 3 | Layer 6 | Policy, regulation & governance (health)
+    add_terms(3, 6, [
+        "emergency response time",
+        "health service access rate",
+        "insurance coverage",
+        "nutrition improvement",
+        "suicide rate",
+        "vaccination coverage",
+        "vaccination policy",
+        "การพัฒนาโภชนาการ",
+        "ความครอบคลุมของการประกันสุขภาพ",
+        "อัตราการฆ่าตัวตาย",
+        "อัตราการฉีดวัคซีน",
+        "อัตราการเข้าถึงบริการสุขภาพ",
+        "เวลาตอบสนองเหตุฉุกเฉิน",
+    ], "Policy, regulation & governance (health)")
+
+    # SDG 3 | Layer 7 | Emergency preparedness & patient safety
+    add_terms(3, 7, [
+        "higher health literacy",
+        "improved child health",
+        "improved mental health",
+        "increased patient access",
+        "pandemic",
+        "reduced disease outbreaks",
+        "ความรู้ด้านสุขภาพที่เพิ่มขึ้น",
+        "ลดการระบาดของโรค",
+        "สุขภาพจิตที่ดีขึ้น",
+        "สุขภาพเด็กที่ดีขึ้น",
+    ], "Emergency preparedness & patient safety")
+
+    # SDG 3 | Layer 8 | Health indicators & outcomes
+    add_terms(3, 8, [
+        "access to reproductive health",
+        "end epidemics",
+        "improve road safety",
+        "integrate mental health",
+        "prevalence",
+        "reduce maternal mortality",
+        "การเข้าถึงบริการอนามัยการเจริญพันธุ์",
+        "บูรณาการสุขภาพจิตในระบบสุขภาพปฐมภูมิ",
+        "ปรับปรุงความปลอดภัยทางถนน",
+        "ยุติการแพร่ระบาดของโรค",
+        "ลดอัตราการเสียชีวิตของมารดา",
+    ], "Health indicators & outcomes")
+
+    # SDG 3 | Layer 9 | Health financing & partnerships
+    add_terms(3, 9, [
+        "enhanced workforce productivity",
+        "healthier populations",
+        "increase life expectancy",
+        "reduce poverty from medical costs",
+        "strengthen health systems",
+        "ประชากรมีสุขภาพดีขึ้น",
+        "ลดความยากจนจากค่าใช้จ่ายทางการแพทย์",
+        "เพิ่มประสิทธิภาพแรงงาน",
+        "เพิ่มอายุขัยเฉลี่ย",
+        "เสริมสร้างระบบสุขภาพ",
+    ], "Health financing & partnerships")
+
+    # SDG 4 | Layer 1 | Core concepts – Education & learning quality
+    add_terms(4, 1, [
+        "academic performance",
+        "access to education",
+        "activity learning",
+        "adaptive learning",
+        "adolescents",
+        "blended learning",
+        "collaborative learning",
+        "community workshop",
+        "digital classroom",
+        "distance learning",
+        "e-learning",
+        "edtech",
+        "education",
+        "educational assessment",
+        "educational equity",
+        "electronic learning",
+        "equitable education",
+        "experiential learning",
+        "future skills",
+        "hands-on learning",
+        "inclusive education",
+        "inclusive learning",
+        "increase learning opportunities",
+        "innovation-based learning",
+        "instructional design",
+        "internship",
+        "labor market",
+        "learning",
+        "learning analytics",
+        "learning outcomes",
+        "lifelong learning",
+        "literacy",
+        "moocs",
+        "nursing student",
+        "online learning",
+        "peer learning",
+        "professional occupations",
+        "project-based learning",
+        "quality education",
+        "remote learning",
+        "school",
+        "school dropout",
+        "school readiness",
+        "self-efficacy",
+        "senior learners",
+        "student learning",
+        "students",
+        "work-based learning",
+        "กรณีศึกษา",
+        "การประเมินผลการศึกษา",
+        "การฝึกอบรม",
+        "การรู้หนังสือ",
+        "การวิเคราะห์ข้อมูลการเรียนรู้",
+        "การศึกษา stem",
+        "การศึกษาที่ครอบคลุม",
+        "การศึกษาที่ครอบคลุมและเป็นธรรม",
+        "การศึกษาที่มีคุณภาพ",
+        "การศึกษาที่เข้าถึงได้",
+        "การศึกษาที่เท่าเทียม",
+        "การศึกษาที่เน้นผลลัพธ์",
+        "การศึกษาที่เน้นสมรรถนะ",
+        "การศึกษาพลเมืองโลก",
+        "การศึกษาพิเศษ",
+        "การศึกษาวิศวกรรม",
+        "การศึกษาสายอาชีพ",
+        "การศึกษาเพื่อการพัฒนาที่ยั่งยืน",
+        "การศึกษาแบบเปิด",
+        "การออกจากโรงเรียนกลางคัน",
+        "การออกแบบการสอน",
+        "การออกแบบหลักสูตร",
+        "การเขียนโปรแกรมสําหรับเยาวชน",
+        "การเข้าถึงการศึกษา",
+        "การเรียนรู้",
+        "การเรียนรู้ของนักเรียน",
+        "การเรียนรู้จากระยะไกล",
+        "การเรียนรู้ตลอดชีวิต",
+        "การเรียนรู้ตลอดชีวิตในชุมชน",
+        "การเรียนรู้ทางไกล",
+        "การเรียนรู้นวัตกรรม",
+        "การเรียนรู้ผ่านประสบการณ์",
+        "การเรียนรู้ร่วมกัน",
+        "การเรียนรู้ออนไลน์",
+        "การเรียนรู้อิเล็กทรอนิกส์",
+        "การเรียนรู้แบบกิจกรรม",
+        "การเรียนรู้แบบปรับตามผู้เรียน",
+        "การเรียนรู้แบบผสมผสาน",
+        "การเรียนรู้แบบมีส่วนร่วม",
+        "การเรียนรู้แบบเพื่อนช่วยเพื่อน",
+        "การเรียนรู้แบบใช้โครงงานเป็นฐาน",
+        "การเรียนรู้ในสถานที่ทํางาน",
+        "ความพร้อมในการเข้าเรียน",
+        "ความรู้ดิจิทัล",
+        "ความเชื่อมั่นในตนเอง",
+        "ความเท่าเทียมทางการศึกษา",
+        "ความเสมอภาคทางการศึกษา",
+        "ตลาดแรงงาน",
+        "ทักษะการใช้เทคโนโลยีดิจิทัล",
+        "ทักษะแห่งอนาคต",
+        "นักศึกษาพยาบาล",
+        "นักเรียน",
+        "นโยบายการศึกษา",
+        "ผลลัพธ์การเรียนรู้",
+        "ผลสัมฤทธิ์ทางการเรียน",
+        "ผู้เรียนสูงวัย",
+        "ฝึกงาน",
+        "ยกระดับการศึกษาที่มีคุณภาพ",
+        "ระบบการจัดการเรียนรู้",
+        "วัยรุ่น",
+        "หลักสูตรออนไลน์แบบเปิดขนาดใหญ่",
+        "ห้องเรียนดิจิทัล",
+        "อาชีพวิชาชีพ",
+        "อีเลิร์นนิง",
+        "เทคโนโลยีการศึกษา",
+        "เทคโนโลยีทางการศึกษา",
+        "เพิ่มโอกาสในการเรียนรู้",
+        "เรียนรู้ด้วยการลงมือทํา",
+        "เวิร์กช็อปชุมชน",
+        "โรงเรียน",
+        "โรงเรียนชุมชน",
+    ], "Core concepts – Education & learning quality")
+
+    # SDG 4 | Layer 2 | Access & equity (inclusive education)
+    add_terms(4, 2, [
+        "early childhood education",
+        "inclusive and equitable education",
+        "open access education",
+        "primary education",
+        "secondary education",
+        "technical education",
+        "tertiary education",
+        "การศึกษาขั้นพื้นฐาน",
+        "การศึกษาปฐมวัย",
+        "การศึกษามัธยมศึกษา",
+        "การศึกษาระดับอุดมศึกษา",
+        "การศึกษาอาชีวศึกษา",
+    ], "Access & equity (inclusive education)")
+
+    # SDG 4 | Layer 3 | Teachers, curriculum & pedagogy
+    add_terms(4, 3, [
+        "affordable education",
+        "education for disabled",
+        "education for vulnerable",
+        "free education",
+        "gender equality in education",
+        "การศึกษาสำหรับกลุ่มเปราะบาง",
+        "การศึกษาสำหรับคนพิการ",
+        "การศึกษาโดยไม่เสียค่าใช้จ่าย",
+        "การศึกษาในราคาที่เอื้อมถึงได้",
+        "ความเสมอภาคทางเพศในระบบการศึกษา",
+    ], "Teachers, curriculum & pedagogy")
+
+    # SDG 4 | Layer 4 | TVET & lifelong learning
+    add_terms(4, 4, [
+        "accessible education",
+        "basic education",
+        "coding for youth",
+        "competency-based education",
+        "curriculum design",
+        "digital literacy",
+        "engineering education",
+        "enhance quality education",
+        "entrepreneurship education",
+        "global citizenship education",
+        "higher education",
+        "outcome-based education",
+        "relevant skills for employment",
+        "special education",
+        "stem education",
+        "technical skills",
+        "vocational education",
+        "vocational skills",
+        "การฝึกทักษะด้านเทคนิค",
+        "การศึกษาผู้ประกอบการ",
+        "ทักษะที่เกี่ยวข้องกับการจ้างงาน",
+        "ทักษะอาชีพ",
+    ], "TVET & lifelong learning")
+
+    # SDG 4 | Layer 5 | Digital infrastructure & learning spaces
+    add_terms(4, 5, [
+        "educational technology",
+        "effective learning environment",
+        "inclusive learning environment",
+        "learning management system",
+        "safe learning environment",
+        "สิ่งแวดล้อมการเรียนรู้ที่ครอบคลุม",
+        "สิ่งแวดล้อมการเรียนรู้ที่ปลอดภัย",
+        "สิ่งแวดล้อมการเรียนรู้ที่มีประสิทธิภาพ",
+    ], "Digital infrastructure & learning spaces")
+
+    # SDG 4 | Layer 6 | Policy, standards & accreditation
+    add_terms(4, 6, [
+        "basic literacy",
+        "basic numeracy",
+        "literacy skills",
+        "numeracy skills",
+        "การคำนวณขั้นพื้นฐาน",
+        "การรู้หนังสือขั้นพื้นฐาน",
+        "ทักษะการคำนวณ",
+        "ทักษะการรู้หนังสือ",
+    ], "Policy, standards & accreditation")
+
+    # SDG 4 | Layer 7 | Safety & resilience in schools
+    add_terms(4, 7, [
+        "education financing",
+        "education policy",
+        "investment in education",
+        "การจัดสรรงบประมาณเพื่อการศึกษา",
+        "การลงทุนในภาคการศึกษา",
+        "นโยบายด้านการศึกษา",
+    ], "Safety & resilience in schools")
+
+    # SDG 4 | Layer 8 | Assessment & outcomes (literacy, completion)
+    add_terms(4, 8, [
+        "capacity building for teachers",
+        "teacher qualification",
+        "teacher training",
+        "การฝึกอบรมครู",
+        "การพัฒนาศักยภาพครู",
+        "คุณสมบัติของครู",
+    ], "Assessment & outcomes (literacy, completion)")
+
+    # SDG 4 | Layer 9 | Financing & scholarships & partnerships
+    add_terms(4, 9, [
+        "education for cultural diversity",
+        "education for global citizenship",
+        "education for sustainable development",
+        "human rights education",
+        "การศึกษาด้านการพัฒนาที่ยั่งยืน",
+        "การศึกษาด้านความหลากหลายทางวัฒนธรรม",
+        "การศึกษาด้านพลเมืองโลก",
+        "การศึกษาด้านสิทธิมนุษยชน",
+    ], "Financing & scholarships & partnerships")
+
+    # SDG 5 | Layer 1 | Core concepts – Gender equality & empowerment
+    add_terms(5, 1, [
+        "anti-harassment",
+        "contraceptive behavior",
+        "digital gender divide",
+        "discrimination",
+        "end discrimination against women",
+        "end gender-based violence",
+        "entrepreneurship",
+        "equal pay",
+        "equal rights",
+        "family planning",
+        "female genital mutilation",
+        "female leadership",
+        "feminism",
+        "gender difference",
+        "gender equality",
+        "gender equity",
+        "gender identity",
+        "gender inequality",
+        "gender mainstreaming",
+        "gender role",
+        "gender stereotype",
+        "gender-based violence",
+        "harmful practices",
+        "hiv test",
+        "human immunodeficiency virus",
+        "human immunodeficiency virus infection",
+        "human male sexuality",
+        "intersectionality",
+        "intimate partner violence",
+        "lgbtqia+",
+        "masculinity",
+        "pre-exposure prophylaxis",
+        "promote gender equality",
+        "protect women's rights",
+        "reproductive health",
+        "reproductive rights",
+        "sexual abuse",
+        "sexual assault",
+        "sexual behavior",
+        "sexual harassment",
+        "sexual health",
+        "sexually transmitted disease",
+        "transgender",
+        "women empowerment",
+        "women's status",
+        "workplace harassment",
+        "กลุ่มแม่บ้าน",
+        "การขริบอวัยวะเพศหญิง",
+        "การข่มขืน",
+        "การข่มขืนกระทําชําเรา",
+        "การตรวจหาเชื้อเอชไอวี",
+        "การติดเชื้อ hiv",
+        "การทารุณกรรมเด็ก",
+        "การบูรณาการมิติเพศ",
+        "การปฏิบัติที่เป็นอันตราย",
+        "การป้องกันก่อนสัมผัสเชื้อ",
+        "การล่วงละเมิด",
+        "การล่วงละเมิดทางเพศ",
+        "การล่วงละเมิดในที่ทํางาน",
+        "การวางแผนครอบครัว",
+        "การศึกษาของเด็กผู้หญิง",
+        "การศึกษาทางเพศ",
+        "การเข้าถึงบริการด้านการเจริญพันธุ์",
+        "การเป็นผู้ประกอบการ",
+        "การเลือกปฏิบัติ",
+        "การเสริมพลังผู้หญิง",
+        "การเสริมพลังสตรี",
+        "การเสริมสร้างพลังให้ผู้หญิง",
+        "การเหมารวมทางเพศ",
+        "คนข้ามเพศ",
+        "ความทับซ้อนทางอัตลักษณ์",
+        "ความปลอดภัยของผู้หญิง",
+        "ความรุนแรงจากคู่รัก",
+        "ความรุนแรงต่อผู้หญิง",
+        "ความรุนแรงบนฐานเพศ",
+        "ความหลากหลายทางเพศ",
+        "ความเท่าเทียมทางเพศ",
+        "ความเป็นชาย",
+        "ความเสมอภาคทางเพศ",
+        "ความแตกต่างทางเพศ",
+        "ความไม่เท่าเทียมทางเพศ",
+        "คุ้มครองสิทธิของผู้หญิง",
+        "ค่าตอบแทนที่เท่าเทียม",
+        "ชุมชน lgbtqia+",
+        "ช่องว่างทางดิจิทัลระหว่างเพศ",
+        "ต่อต้านการล่วงละเมิด",
+        "นโยบายที่ครอบคลุมทางเพศ",
+        "นโยบายที่คํานึงถึงเพศสภาพ",
+        "บทบาททางเพศ",
+        "พฤติกรรมการคุมกําเนิด",
+        "พฤติกรรมทางเพศ",
+        "ภาวะผู้นําของผู้หญิง",
+        "ยุติการเลือกปฏิบัติต่อผู้หญิง",
+        "ยุติความรุนแรงทางเพศ",
+        "สถานะของผู้หญิง",
+        "สิทธิที่เท่าเทียมกัน",
+        "สิทธิสตรี",
+        "สิทธิอนามัยเจริญพันธุ์",
+        "สิทธิในการเจริญพันธุ์",
+        "สุขภาพการเจริญพันธุ์",
+        "สุขภาพทางเพศ",
+        "ส่งเสริมความเท่าเทียมทางเพศ",
+        "องค์กรสตรี",
+        "อัตลักษณ์ทางเพศ",
+        "เรื่องเพศของผู้ชาย",
+        "เอชไอวี",
+        "แนวคิดสตรีนิยม",
+        "โครงการเสริมพลังสตรี",
+        "โรคติดต่อทางเพศสัมพันธ์",
+        "โอกาสที่เท่าเทียม",
+        "ไวรัสภูมิคุ้มกันบกพร่องในมนุษย์",
+    ], "Core concepts – Gender equality & empowerment")
+
+    # SDG 5 | Layer 2 | Violence prevention & protection
+    add_terms(5, 2, [
+        "access to reproductive services",
+        "domestic violence",
+        "end all violence against women",
+        "sexual violence",
+        "violence against women",
+        "ความรุนแรงทางเพศ",
+        "ความรุนแรงในครอบครัว",
+        "ยุติความรุนแรงต่อผู้หญิง",
+    ], "Violence prevention & protection")
+
+    # SDG 5 | Layer 3 | Economic participation & leadership
+    add_terms(5, 3, [
+        "increase women's political participation",
+        "women in leadership",
+        "women participation in decision-making",
+        "การมีส่วนร่วมของผู้หญิงในการตัดสินใจ",
+        "การเพิ่มการมีส่วนร่วมทางการเมืองของผู้หญิง",
+        "ผู้หญิงในตำแหน่งผู้นำ",
+    ], "Economic participation & leadership")
+
+    # SDG 5 | Layer 4 | Education & skills for women/girls
+    add_terms(5, 4, [
+        "child abuse",
+        "empowerment of women",
+        "equal access to economic resources",
+        "financial services for women",
+        "girls education",
+        "sex education",
+        "women empowerment program",
+        "women's right to land and property",
+        "การเข้าถึงทรัพยากรทางเศรษฐกิจอย่างเท่าเทียม",
+        "บริการทางการเงินสำหรับผู้หญิง",
+        "สิทธิของผู้หญิงในที่ดินและทรัพย์สิน",
+    ], "Education & skills for women/girls")
+
+    # SDG 5 | Layer 5 | Health & SRHR (sexual and reproductive health/rights)
+    add_terms(5, 5, [
+        "access to reproductive rights",
+        "education on reproductive health",
+        "sexual and reproductive health",
+        "การศึกษาด้านสุขภาพการเจริญพันธุ์",
+        "การเข้าถึงสิทธิด้านการเจริญพันธุ์",
+        "สุขภาพทางเพศและอนามัยการเจริญพันธุ์",
+    ], "Health & SRHR (sexual and reproductive health/rights)")
+
+    # SDG 5 | Layer 6 | Law, policy & anti-discrimination
+    add_terms(5, 6, [
+        "gender-inclusive policy",
+        "gender-sensitive policy",
+        "laws promoting gender equality",
+        "legal protection for women",
+        "การคุ้มครองทางกฎหมายสำหรับผู้หญิง",
+        "นโยบายส่งเสริมความเสมอภาคทางเพศ",
+    ], "Law, policy & anti-discrimination")
+
+    # SDG 5 | Layer 7 | Safety & freedom from harassment
+    add_terms(5, 7, [
+        "recognize unpaid care and domestic work",
+        "shared responsibility within the household",
+        "การแบ่งปันความรับผิดชอบในครอบครัว",
+        "ยอมรับงานดูแลและงานบ้านที่ไม่ได้รับค่าจ้าง",
+    ], "Safety & freedom from harassment")
+
+    # SDG 5 | Layer 8 | Gender statistics & indicators
+    add_terms(5, 8, [
+        "equal opportunities in innovation",
+        "women in technology",
+        "ผู้หญิงในเทคโนโลยี",
+        "โอกาสที่เท่าเทียมในการนวัตกรรม",
+    ], "Gender statistics & indicators")
+
+    # SDG 5 | Layer 9 | Financing & partnerships (gender lens)
+    add_terms(5, 9, [
+        "global partnerships for gender equality",
+        "international support for women's rights",
+        "การสนับสนุนสิทธิสตรีในระดับสากล",
+        "ความร่วมมือระดับโลกเพื่อความเสมอภาคทางเพศ",
+    ], "Financing & partnerships (gender lens)")
+
+    # SDG 6 | Layer 1 | Core concepts – Water & sanitation
+    add_terms(6, 1, [
+        "activated carbon",
+        "activated sludge",
+        "activated sludge process",
+        "adsorption",
+        "advanced oxidation process",
+        "affordable water",
+        "anaerobic digestion",
+        "biochemical reactor",
+        "biodegradation",
+        "clean water",
+        "community-led water management",
+        "desalination",
+        "dissolved oxygen",
+        "drinking water",
+        "fenton",
+        "flocculation",
+        "groundwater pollution",
+        "groundwater resource",
+        "hydrochemistry",
+        "hygiene",
+        "irrigation",
+        "membrane fouling",
+        "microfiltration",
+        "nanoparticle",
+        "organic carbon",
+        "organic pollutant",
+        "ozonation",
+        "phenol",
+        "photocatalysis",
+        "photodegradation",
+        "potable water",
+        "provide clean water",
+        "rainwater harvesting",
+        "reverse osmosis",
+        "river pollution",
+        "river water",
+        "safe drinking water",
+        "safe water",
+        "sanitation",
+        "sorption",
+        "water",
+        "water access",
+        "water filtration",
+        "water purification",
+        "water quality",
+        "water quality monitoring",
+        "water resource",
+        "water resources",
+        "water supply",
+        "กระบวนการตะกอนเลี้ยงเชื้อ",
+        "กระบวนการออกซิเดชันขั้นสูง",
+        "กระบวนการเฟนตัน",
+        "การกรองน้ํา",
+        "การกรองแบบรีเวิร์สออสโมซิส",
+        "การกรองแบบไมโคร",
+        "การกําจัดสารเคมี (ในระบบบําบัดน้ํา",
+        "การจัดการน้ําเสีย",
+        "การจัดการน้ําโดยชุมชน",
+        "การจ่ายน้ํา",
+        "การชลประทาน",
+        "การดูดซับ",
+        "การดูดติดผิว",
+        "การตกตะกอน",
+        "การตรวจคุณภาพน้ํา",
+        "การทําให้น้ําบริสุทธิ์",
+        "การบําบัดน้ําด้วยวิธีชีวภาพ",
+        "การย่อยสลายทางชีวภาพ",
+        "การย่อยแบบไม่ใช้ออกซิเจน",
+        "การสลายด้วยแสง",
+        "การสุขาภิบาล",
+        "การอุดตันของเยื่อกรอง",
+        "การเก็บน้ําฝน",
+        "การเข้าถึงน้ำ",
+        "การเข้าถึงน้ําดื่มที่ปลอดภัย",
+        "การเข้าถึงสุขาภิบาล",
+        "การเติมโอโซน",
+        "การเร่งปฏิกิริยาด้วยแสง",
+        "การแยกเกลือออกจากน้ํา",
+        "คาร์บอนอินทรีย์",
+        "คุณภาพน้ำ",
+        "จัดหาน้ําสะอาด",
+        "ดัชนีคุณภาพน้ํา",
+        "ตะกอนเลี้ยงเชื้อ",
+        "ถังปฏิกรณ์ชีวเคมี",
+        "ถ่านกัมมันต์",
+        "ทรัพยากรน้ํา",
+        "น้ำดื่มปลอดภัย",
+        "น้ำราคาไม่แพง",
+        "น้ำสะอาด",
+        "น้ํา",
+        "น้ําดื่ม",
+        "น้ําที่ปลอดภัย",
+        "น้ําที่สามารถดื่มได้",
+        "น้ําสะอาดในชุมชน",
+        "น้ําเสีย",
+        "พัฒนาระบบสุขาภิบาล",
+        "ฟีนอล",
+        "มลพิษทางแม่น้ํา",
+        "มลพิษน้ําใต้ดิน",
+        "มลพิษอินทรีย์",
+        "ระบบกรองน้ําชุมชน",
+        "ระบบชลประทาน",
+        "ระบบน้ําชุมชน",
+        "สุขอนามัย",
+        "สุขาภิบาล",
+        "สุขาภิบาลสมัยใหม่",
+        "ส้วมสุขอนามัย",
+        "อนุภาคนาโน",
+        "ออกซิเจนที่ละลายในน้ํา",
+        "เคมีน้ํา",
+        "แม่น้ํา",
+        "แหล่งน้ํา",
+        "แหล่งน้ําใต้ดิน",
+        "โรงบําบัดน้ําเสีย",
+    ], "Core concepts – Water & sanitation")
+
+    # SDG 6 | Layer 2 | Water supply & access
+    add_terms(6, 2, [
+        "access to safe drinking water",
+        "integrated water resources management",
+        "river basin management",
+        "sanitation access",
+        "water management",
+        "การจัดการน้ำ",
+        "การบริหารจัดการทรัพยากรน้ำแบบบูรณาการ",
+        "การบริหารลุ่มน้ำ",
+    ], "Water supply & access")
+
+    # SDG 6 | Layer 3 | Sanitation & hygiene (WASH)
+    add_terms(6, 3, [
+        "improve sanitation systems",
+        "modern sanitation",
+        "wastewater reuse",
+        "wastewater treatment",
+        "water pollution",
+        "การนำกลับมาใช้น้ำเสีย",
+        "การบำบัดน้ำเสีย",
+        "มลพิษทางน้ำ",
+    ], "Sanitation & hygiene (WASH)")
+
+    # SDG 6 | Layer 4 | Water quality & wastewater
+    add_terms(6, 4, [
+        "reuse water",
+        "water conservation",
+        "water efficiency",
+        "การนำน้ำกลับมาใช้",
+        "การอนุรักษ์น้ำ",
+        "ประสิทธิภาพการใช้น้ำ",
+    ], "Water quality & wastewater")
+
+    # SDG 6 | Layer 5 | Water efficiency & reuse
+    add_terms(6, 5, [
+        "biological water treatment",
+        "chemicals removal (water treatment",
+        "community water system",
+        "ecosystem restoration",
+        "freshwater ecosystems",
+        "irrigation system",
+        "protect aquatic ecosystems",
+        "waste water treatment",
+        "wastewater",
+        "wastewater treatment plant",
+        "การปกป้องระบบนิเวศทางน้ำ",
+        "การฟื้นฟูระบบนิเวศ",
+        "ระบบนิเวศน้ำจืด",
+    ], "Water efficiency & reuse")
+
+    # SDG 6 | Layer 6 | Integrated water resources management & governance
+    add_terms(6, 6, [
+        "community participation in water management",
+        "local water initiatives",
+        "การมีส่วนร่วมของชุมชนในการบริหารน้ำ",
+        "โครงการน้ำในท้องถิ่น",
+    ], "Integrated water resources management & governance")
+
+    # SDG 6 | Layer 7 | Resilience to floods/droughts
+    add_terms(6, 7, [
+        "capacity-building in water sector",
+        "international cooperation on water",
+        "การเสริมสร้างศักยภาพในภาคส่วนน้ำ",
+        "ความร่วมมือระหว่างประเทศด้านน้ำ",
+    ], "Resilience to floods/droughts")
+
+    # SDG 6 | Layer 8 | Monitoring & service outcomes
+    add_terms(6, 8, [
+        "investment in water systems",
+        "sanitation infrastructure",
+        "water quality index",
+        "water supply systems",
+        "การลงทุนในระบบน้ำ",
+        "ระบบจ่ายน้ำ",
+        "โครงสร้างพื้นฐานด้านสุขาภิบาล",
+    ], "Monitoring & service outcomes")
+
+    # SDG 6 | Layer 9 | Finance & partnerships (WASH/WRM)
+    add_terms(6, 9, [
+        "climate resilience in water",
+        "flood and drought management",
+        "การจัดการน้ำท่วมและภัยแล้ง",
+        "การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศในด้านน้ำ",
+    ], "Finance & partnerships (WASH/WRM)")
+
+    # SDG 7 | Layer 1 | Core concepts – Affordable & clean energy
+    add_terms(7, 1, [
+        "advanced materials",
+        "affordable energy",
+        "anode",
+        "anode material",
+        "battery (electrochemical energy engineering",
+        "battery charging",
+        "cathode",
+        "cathode material",
+        "clean cooking",
+        "clean energy",
+        "decentralized energy",
+        "efficient lighting",
+        "electric vehicle",
+        "electricity",
+        "electrocatalysts",
+        "energy",
+        "energy access",
+        "energy engineering",
+        "energy storage",
+        "energy transition",
+        "green energy",
+        "hydrogen evolution",
+        "hydrogen production",
+        "lithium battery",
+        "lithium compounds",
+        "lithium ion battery",
+        "lithium-ion batteries",
+        "lithium-sulfur battery",
+        "low carbon energy",
+        "maximum power point",
+        "microgrid",
+        "oxygen evolution",
+        "photovoltaics",
+        "power electronics",
+        "promote renewable energy",
+        "pyrolysis",
+        "renewable source",
+        "smart meter",
+        "sodium ion battery",
+        "solid electrolyte",
+        "solid state battery",
+        "water splitting",
+        "กังหันลม",
+        "การกักเก็บพลังงาน",
+        "การชาร์จแบตเตอรี่",
+        "การผลิตไฟฟ้าจากแสงอาทิตย์",
+        "การผลิตไฮโดรเจน",
+        "การสร้างออกซิเจน",
+        "การสร้างไฮโดรเจน",
+        "การเข้าถึงพลังงาน",
+        "การเข้าถึงพลังงานทั่วถึง",
+        "การเปลี่ยนผ่านพลังงาน",
+        "การแยกน้ํา",
+        "การใช้พลังงานหมุนเวียน",
+        "ก๊าซชีวภาพ",
+        "ขั้วบวก",
+        "ขั้วลบ",
+        "จุดพลังงานสูงสุด",
+        "ตัวเร่งปฏิกิริยาไฟฟ้า",
+        "ประสิทธิภาพพลังงาน",
+        "พลังงาน",
+        "พลังงานกระจายศูนย์",
+        "พลังงานคาร์บอนต่ํา",
+        "พลังงานราคาประหยัด",
+        "พลังงานราคาย่อมเยา",
+        "พลังงานสะอาด",
+        "พลังงานสะอาดในพื้นที่ชนบท",
+        "พลังงานสีเขียว",
+        "พลังงานแสงอาทิตย์สําหรับชุมชน",
+        "มิเตอร์อัจฉริยะ",
+        "ยานยนต์ไฟฟ้า",
+        "ระบบจัดการแบตเตอรี่",
+        "ระบบพลังงานนอกโครงข่าย",
+        "ระบบแสงสว่างประสิทธิภาพสูง",
+        "วัสดุขั้วบวก",
+        "วัสดุขั้วลบ",
+        "วัสดุล้ําสมัย",
+        "วิศวกรรมพลังงาน",
+        "สมาร์ตกริด",
+        "สารประกอบลิเทียม",
+        "ส่งเสริมพลังงานหมุนเวียน",
+        "อิเล็กทรอนิกส์ด้านพลังงาน",
+        "อิเล็กโทรไลต์แบบของแข็ง",
+        "เซลล์แสงอาทิตย์",
+        "เซลล์แสงอาทิตย์ชนิดอินทรีย์",
+        "เซลล์แสงอาทิตย์ชนิดเพอรอฟสไกต์",
+        "เตาทําอาหารสะอาด",
+        "เทคโนโลยีแบตเตอรี่",
+        "เพิ่มประสิทธิภาพพลังงาน",
+        "แบตเตอรี่ (วิศวกรรมพลังงานไฟฟ้าเคมี",
+        "แบตเตอรี่ลิเทียม",
+        "แบตเตอรี่ลิเทียมซัลเฟอร์",
+        "แบตเตอรี่ลิเทียมไอออน",
+        "แบตเตอรี่ลิเทียมไอออน (พหูพจน์",
+        "แบตเตอรี่โซลิดสเตต",
+        "แบตเตอรี่โซเดียมไอออน",
+        "แผงโซลาร์เซลล์",
+        "แหล่งพลังงานหมุนเวียน",
+        "โซลาร์เซลล์ชุมชน",
+        "โฟโตโวลตาอิก",
+        "ไพโรลิซิส",
+        "ไมโครกริด",
+    ], "Core concepts – Affordable & clean energy")
+
+    # SDG 7 | Layer 2 | Energy access & reliability
+    add_terms(7, 2, [
+        "biomass energy",
+        "geothermal energy",
+        "hydropower",
+        "ocean energy",
+        "renewable energy",
+        "solar energy",
+        "universal energy access",
+        "wind energy",
+        "พลังงานความร้อนใต้พิภพ",
+        "พลังงานจากมหาสมุทร",
+        "พลังงานชีวมวล",
+        "พลังงานน้ำ",
+        "พลังงานลม",
+        "พลังงานหมุนเวียน",
+        "พลังงานแสงอาทิตย์",
+    ], "Energy access & reliability")
+
+    # SDG 7 | Layer 3 | Renewable energy generation
+    add_terms(7, 3, [
+        "efficient energy use",
+        "energy conservation",
+        "energy efficiency",
+        "การอนุรักษ์พลังงาน",
+        "การใช้พลังงานอย่างมีประสิทธิภาพ",
+        "ประสิทธิภาพการใช้พลังงาน",
+    ], "Renewable energy generation")
+
+    # SDG 7 | Layer 4 | Energy efficiency & demand-side
+    add_terms(7, 4, [
+        "increase energy efficiency",
+        "modern energy services",
+        "reliable energy",
+        "sustainable energy",
+        "บริการพลังงานสมัยใหม่",
+        "พลังงานที่ยั่งยืน",
+        "พลังงานที่เชื่อถือได้",
+    ], "Energy efficiency & demand-side")
+
+    # SDG 7 | Layer 5 | Energy grids & infrastructure
+    add_terms(7, 5, [
+        "battery management system",
+        "battery technology",
+        "biogas",
+        "energy infrastructure",
+        "off-grid system",
+        "organic solar cells",
+        "perovskite solar cells",
+        "smart grid",
+        "solar cell",
+        "solar energy for communities",
+        "solar panel",
+        "solar power generation",
+        "upgrade energy systems",
+        "wind power",
+        "wind turbine",
+        "การอัปเกรดระบบพลังงาน",
+        "โครงสร้างพื้นฐานด้านพลังงาน",
+    ], "Energy grids & infrastructure")
+
+    # SDG 7 | Layer 6 | Policy & market mechanisms (energy)
+    add_terms(7, 6, [
+        "international cooperation on energy",
+        "investment in clean energy",
+        "การลงทุนในพลังงานสะอาด",
+        "ความร่วมมือระหว่างประเทศด้านพลังงาน",
+    ], "Policy & market mechanisms (energy)")
+
+    # SDG 7 | Layer 7 | Energy security & resilience
+    add_terms(7, 7, [
+        "energy technology innovation",
+        "research on clean energy",
+        "การวิจัยด้านพลังงานสะอาด",
+        "นวัตกรรมเทคโนโลยีพลังงาน",
+    ], "Energy security & resilience")
+
+    # SDG 7 | Layer 8 | Energy metrics & performance
+    add_terms(7, 8, [
+        "energy access in least developed countries",
+        "sustainable energy for all",
+        "การเข้าถึงพลังงานในประเทศพัฒนาน้อยที่สุด",
+        "พลังงานที่ยั่งยืนสำหรับทุกคน",
+    ], "Energy metrics & performance")
+
+    # SDG 7 | Layer 9 | Energy finance & investment
+    add_terms(7, 9, [
+        "capacity-building in energy management",
+        "training for sustainable energy",
+        "การฝึกอบรมด้านพลังงานอย่างยั่งยืน",
+        "การเสริมสร้างศักยภาพในการบริหารจัดการพลังงาน",
+    ], "Energy finance & investment")
+
+    # SDG 8 | Layer 1 | Core concepts – Decent work & economic growth
+    add_terms(8, 1, [
+        "alternative economy",
+        "alternative income",
+        "aquaculture enterprise",
+        "covid-19",
+        "create decent jobs",
+        "decent employment",
+        "decent work",
+        "digital entrepreneurship",
+        "economic analysis",
+        "economic and social development",
+        "economic development",
+        "economic growth",
+        "ecotourism",
+        "employment",
+        "entrepreneurship",
+        "environmental economics",
+        "environmental standard",
+        "farming for income",
+        "finance",
+        "financial development",
+        "financial services",
+        "fintech",
+        "gig economy",
+        "green economy",
+        "green jobs",
+        "heritage tourism",
+        "human capital",
+        "human resources",
+        "income distribution",
+        "informal economy",
+        "job creation",
+        "job satisfaction",
+        "job security",
+        "labor market",
+        "productive employment",
+        "productivity change",
+        "professional occupations",
+        "remote work",
+        "snail business",
+        "startup incubation",
+        "support entrepreneurship",
+        "support for local businesses",
+        "sustainable development",
+        "tourism industry",
+        "value-added agriculture",
+        "workforce",
+        "working conditions",
+        "การกระจายรายได้",
+        "การจ้างงาน",
+        "การจ้างงานคนพิการ",
+        "การจ้างงานที่มีผลิตภาพ",
+        "การจ้างงานที่เหมาะสม",
+        "การท่องเที่ยวเชิงนิเวศ",
+        "การท่องเที่ยวเชิงมรดก",
+        "การทํางานทางไกล",
+        "การฝึกทักษะดิจิทัล",
+        "การพัฒนาทักษะเยาวชน",
+        "การพัฒนาทางการเงิน",
+        "การพัฒนาที่ยั่งยืน",
+        "การพัฒนาเศรษฐกิจ",
+        "การพัฒนาเศรษฐกิจและสังคม",
+        "การลงทุน",
+        "การลงทุนจากต่างประเทศ",
+        "การวิเคราะห์เศรษฐกิจ",
+        "การสนับสนุนธุรกิจท้องถิ่น",
+        "การสร้างงาน",
+        "การเงิน",
+        "การเติบโตทางเศรษฐกิจ",
+        "การเปลี่ยนแปลงด้านผลิตภาพ",
+        "การเป็นผู้ประกอบการ",
+        "กําลังแรงงาน",
+        "ความพึงพอใจในงาน",
+        "ความมั่นคงในการทํางาน",
+        "งานที่มีคุณค่า",
+        "งานสีเขียว",
+        "ตลาดแรงงาน",
+        "ทรัพยากรมนุษย์",
+        "ทุนมนุษย์",
+        "ธุรกิจหอยเชอรี่",
+        "ธุรกิจเพาะเลี้ยงสัตว์น้ํา",
+        "นโยบายอุตสาหกรรม",
+        "บริการทางการเงิน",
+        "บ่มเพาะสตาร์ทอัพ",
+        "ผู้ประกอบการดิจิทัล",
+        "ฟินเทค",
+        "มาตรฐานสิ่งแวดล้อม",
+        "รายได้ทางเลือก",
+        "สนับสนุนผู้ประกอบการ",
+        "สภาพการทํางาน",
+        "สร้างงานที่มีคุณค่า",
+        "สินเชื่อ",
+        "อาชีพชุมชน",
+        "อาชีพทางเลือกในท้องถิ่น",
+        "อาชีพวิชาชีพ",
+        "อุตสาหกรรมการท่องเที่ยว",
+        "เกษตรกรรมที่ยั่งยืน",
+        "เกษตรมูลค่าเพิ่ม",
+        "เกษตรสร้างรายได้",
+        "เศรษฐกิจกิ๊ก",
+        "เศรษฐกิจฐานราก",
+        "เศรษฐกิจทางเลือก",
+        "เศรษฐกิจนอกระบบ",
+        "เศรษฐกิจสีเขียว",
+        "เศรษฐศาสตร์สิ่งแวดล้อม",
+        "แรงงานเยาวชน",
+        "โควิด-19",
+    ], "Core concepts – Decent work & economic growth")
+
+    # SDG 8 | Layer 2 | Employment & skills development
+    add_terms(8, 2, [
+        "employment opportunities",
+        "full employment",
+        "labor rights",
+        "การจ้างงานเต็มที่",
+        "สิทธิแรงงาน",
+        "โอกาสการจ้างงาน",
+    ], "Employment & skills development")
+
+    # SDG 8 | Layer 3 | Workplace rights & occupational safety
+    add_terms(8, 3, [
+        "occupational safety",
+        "safe working environments",
+        "workplace security",
+        "ความปลอดภัยในการทำงาน",
+        "ความปลอดภัยในสถานที่ทำงาน",
+        "สภาพแวดล้อมการทำงานที่ปลอดภัย",
+    ], "Workplace rights & occupational safety")
+
+    # SDG 8 | Layer 4 | Productivity, SMEs & entrepreneurship
+    add_terms(8, 4, [
+        "digital skills training",
+        "education and training for youth",
+        "youth employment",
+        "youth skill development",
+        "youth workforce",
+        "การจ้างงานเยาวชน",
+        "การศึกษาและการฝึกอบรมสำหรับเยาวชน",
+    ], "Productivity, SMEs & entrepreneurship")
+
+    # SDG 8 | Layer 5 | Sustainable tourism & local economies
+    add_terms(8, 5, [
+        "increase economic productivity",
+        "innovation-driven economy",
+        "การเพิ่มผลิตภาพทางเศรษฐกิจ",
+        "เศรษฐกิจที่ขับเคลื่อนด้วยนวัตกรรม",
+    ], "Sustainable tourism & local economies")
+
+    # SDG 8 | Layer 6 | Policy & macroeconomic frameworks
+    add_terms(8, 6, [
+        "industrial policy",
+        "small and medium-sized enterprises",
+        "support for entrepreneurship",
+        "การสนับสนุนผู้ประกอบการ",
+        "วิสาหกิจขนาดกลางและขนาดย่อม",
+    ], "Policy & macroeconomic frameworks")
+
+    # SDG 8 | Layer 7 | Resilience (informal sector, shocks)
+    add_terms(8, 7, [
+        "access to affordable credit",
+        "access to financial services",
+        "การเข้าถึงบริการทางการเงิน",
+        "การเข้าถึงสินเชื่อในอัตราที่เอื้อมถึงได้",
+    ], "Resilience (informal sector, shocks)")
+
+    # SDG 8 | Layer 8 | Indicators (GDP per capita, unemployment)
+    add_terms(8, 8, [
+        "job creation through tourism",
+        "sustainable tourism",
+        "การท่องเที่ยวอย่างยั่งยืน",
+        "การสร้างงานผ่านการท่องเที่ยว",
+    ], "Indicators (GDP per capita, unemployment)")
+
+    # SDG 8 | Layer 9 | Finance & partnerships (jobs/growth)
+    add_terms(8, 9, [
+        "end modern slavery",
+        "eradicate forced labor",
+        "foreign investment",
+        "investment",
+        "การขจัดแรงงานบังคับ",
+        "การยุติทาสยุคใหม่",
+    ], "Finance & partnerships (jobs/growth)")
+
+    # SDG 9 | Layer 1 | Core concepts – Industry, innovation & infrastructure
+    add_terms(9, 1, [
+        "ai innovation",
+        "foster innovation",
+        "industry",
+        "industry 4.0",
+        "infrastructure",
+        "infrastructure development",
+        "innovation",
+        "innovation for sustainable development",
+        "innovative healthcare delivery",
+        "innovative solution",
+        "medical logistics",
+        "mobile medical unit",
+        "smart factory",
+        "smart systems",
+        "sustainable industrialization",
+        "การพัฒนาโครงสร้างพื้นฐาน",
+        "ความร่วมมือเทคโนโลยีภาครัฐและเอกชน",
+        "ทางออกนวัตกรรม",
+        "นวัตกรรม",
+        "นวัตกรรม ai",
+        "นวัตกรรมเพื่อการพัฒนาที่ยั่งยืน",
+        "พัฒนาโครงสร้างพื้นฐานที่ยืดหยุ่น",
+        "ระบบหุ่นยนต์",
+        "ระบบอัจฉริยะ",
+        "วิจัยและนวัตกรรม",
+        "ศูนย์เรียนรู้เทคโนโลยี",
+        "ส่งเสริมนวัตกรรม",
+        "อุตสาหกรรม",
+        "อุตสาหกรรม 4.0",
+        "อุตสาหกรรมที่ยั่งยืน",
+        "เทคโนโลยี",
+        "เทคโนโลยีเพื่อชุมชน",
+        "เทคโนโลยีแพลตฟอร์ม",
+        "โครงสร้างพื้นฐาน",
+        "โครงสร้างพื้นฐานดิจิทัล",
+        "โครงสร้างพื้นฐานอัจฉริยะ",
+        "โรงงานอัจฉริยะ",
+        "โรงงานอัจฉริยะชุมชน",
+    ], "Core concepts – Industry, innovation & infrastructure")
+
+    # SDG 9 | Layer 2 | Resilient infrastructure
+    add_terms(9, 2, [
+        "resilient buildings",
+        "resilient infrastructure",
+        "sustainable infrastructure",
+        "อาคารปลอดภัย",
+        "โครงสร้างพื้นฐานที่มีความสามารถในการฟื้นตัว",
+        "โครงสร้างพื้นฐานที่ยั่งยืน",
+    ], "Resilient infrastructure")
+
+    # SDG 9 | Layer 3 | Innovation, R&D & technology
+    add_terms(9, 3, [
+        "inclusive industrialization",
+        "promote inclusive and sustainable industrialization",
+        "การพัฒนาอุตสาหกรรมอย่างทั่วถึงและยั่งยืน",
+        "การส่งเสริมอุตสาหกรรมที่ทั่วถึงและยั่งยืน",
+    ], "Innovation, R&D & technology")
+
+    # SDG 9 | Layer 4 | Sustainable industry & resource efficiency
+    add_terms(9, 4, [
+        "increase scientific research",
+        "research and innovation",
+        "การวิจัยและนวัตกรรม",
+        "การเพิ่มการวิจัยทางวิทยาศาสตร์",
+    ], "Sustainable industry & resource efficiency")
+
+    # SDG 9 | Layer 5 | Digital/ICT & connectivity
+    add_terms(9, 5, [
+        "develop resilient infrastructure",
+        "digital infrastructure",
+        "infrastructure-based healthcare",
+        "platform technology",
+        "public-private technology collaboration",
+        "robotics system",
+        "smart infrastructure",
+        "support for small-scale industries",
+        "technology",
+        "upgrade small industries",
+        "การยกระดับอุตสาหกรรมขนาดเล็ก",
+        "การสนับสนุนอุตสาหกรรมขนาดเล็ก",
+    ], "Digital/ICT & connectivity")
+
+    # SDG 9 | Layer 6 | Standards & regulatory policy (industry)
+    add_terms(9, 6, [
+        "access to information and communication technology",
+        "internet access",
+        "การเข้าถึงอินเทอร์เน็ต",
+        "การเข้าถึงเทคโนโลยีสารสนเทศและการสื่อสาร",
+    ], "Standards & regulatory policy (industry)")
+
+    # SDG 9 | Layer 7 | Risk & safety in infrastructure
+    add_terms(9, 7, [
+        "industrial diversification",
+        "technology upgrading",
+        "การกระจายอุตสาหกรรม",
+        "การยกระดับเทคโนโลยี",
+    ], "Risk & safety in infrastructure")
+
+    # SDG 9 | Layer 8 | Performance & indicators (industry/infrastructure)
+    add_terms(9, 8, [
+        "economic infrastructure",
+        "regional and transborder infrastructure",
+        "โครงสร้างพื้นฐานทางเศรษฐกิจ",
+        "โครงสร้างพื้นฐานระดับภูมิภาคและข้ามพรมแดน",
+    ], "Performance & indicators (industry/infrastructure)")
+
+    # SDG 9 | Layer 9 | Finance & partnerships (industry/innovation)
+    add_terms(9, 9, [
+        "resilient industrialization",
+        "sustainable industrial systems",
+        "การพัฒนาอุตสาหกรรมที่มีความสามารถในการฟื้นตัว",
+        "ระบบอุตสาหกรรมที่ยั่งยืน",
+    ], "Finance & partnerships (industry/innovation)")
+
+    # SDG 10 | Layer 1 | Core concepts – Reducing inequalities
+    add_terms(10, 1, [
+        "asylum seeker",
+        "covid-19",
+        "delivery of health care",
+        "disability inclusion",
+        "discrimination",
+        "diversity and inclusion",
+        "economic opportunity for caregivers",
+        "empower marginalized communities",
+        "equality",
+        "ethnic disparity",
+        "financial crisis",
+        "financial market",
+        "financial stability",
+        "gender inequality",
+        "health disparity",
+        "health equity",
+        "health inequality",
+        "immigrant",
+        "inclusion",
+        "inclusive development",
+        "inclusive employment",
+        "income distribution",
+        "income inequality",
+        "inequality",
+        "international trade",
+        "labor market",
+        "language accessibility",
+        "marginalized groups",
+        "medicare",
+        "migrant workers",
+        "migration",
+        "minority groups",
+        "professional occupations",
+        "racial disparity",
+        "reduce inequality",
+        "reduced inequality",
+        "remittance",
+        "social determinants of health",
+        "social inequality",
+        "social justice",
+        "students with disabilities",
+        "wage structure",
+        "wealth",
+        "กลุ่มชนกลุ่มน้อย",
+        "กลุ่มชายขอบ",
+        "การกระจายรายได้",
+        "การค้าระหว่างประเทศ",
+        "การบรรเทาความยากจน",
+        "การพัฒนาแบบไม่ทิ้งใครไว้ข้างหลัง",
+        "การมีส่วนร่วม",
+        "การย้ายถิ่น",
+        "การลงทุนจากต่างประเทศ",
+        "การลดความเหลื่อมล้ําทางโอกาส",
+        "การเข้าถึงที่เท่าเทียม",
+        "การเข้าถึงบริการ",
+        "การเข้าถึงภาษาต่าง ๆ",
+        "การเลือกปฏิบัติ",
+        "การให้บริการด้านสุขภาพ",
+        "ความมั่งคั่ง",
+        "ความยุติธรรมทางสังคม",
+        "ความหลากหลายและการมีส่วนร่วม",
+        "ความเท่าเทียมด้านสุขภาพ",
+        "ความเสมอภาค",
+        "ความเหลื่อมล้ำทางรายได้",
+        "ความเหลื่อมล้ําด้านสุขภาพ",
+        "ความเหลื่อมล้ําทางชาติพันธุ์",
+        "ความเหลื่อมล้ําทางสังคม",
+        "ความเหลื่อมล้ําทางเชื้อชาติ",
+        "ความไม่เท่าเทียมกัน",
+        "ความไม่เท่าเทียมด้านสุขภาพ",
+        "ความไม่เท่าเทียมทางเพศ",
+        "ตลาดการเงิน",
+        "ตลาดแรงงาน",
+        "นักเรียนที่มีความพิการ",
+        "นโยบายการย้ายถิ่น",
+        "นโยบายแบบไม่ทิ้งใครไว้ข้างหลัง",
+        "ประชากรกลุ่มเปราะบาง",
+        "ปัจจัยทางสังคมที่มีผลต่อสุขภาพ",
+        "ผู้อพยพ",
+        "ระบบที่เป็นธรรม",
+        "ระบบประกันสังคม",
+        "ลดความเหลื่อมล้ำ",
+        "วิกฤตการณ์ทางการเงิน",
+        "ศูนย์ช่วยเหลือผู้ด้อยโอกาส",
+        "สร้างโอกาสอย่างเท่าเทียม",
+        "สิทธิของคนพิการ",
+        "องค์กรเพื่อคนพิการ",
+        "อาชีพวิชาชีพ",
+        "เงินส่งกลับจากต่างประเทศ",
+        "เมดิแคร์",
+        "เสถียรภาพทางการเงิน",
+        "เสริมพลังกลุ่มเปราะบาง",
+        "โครงสร้างค่าจ้าง",
+        "โควิด-19",
+        "โอกาสที่เท่าเทียม",
+    ], "Core concepts – Reducing inequalities")
+
+    # SDG 10 | Layer 2 | Income distribution & fiscal policy
+    add_terms(10, 2, [
+        "access to services",
+        "economic inclusion",
+        "ensure equal opportunity",
+        "equal access",
+        "equitable opportunity",
+        "equitable system",
+        "health service",
+        "political inclusion",
+        "social inclusion",
+        "การมีส่วนร่วมทางการเมือง",
+        "การรวมทางสังคม",
+        "การรวมทางเศรษฐกิจ",
+    ], "Income distribution & fiscal policy")
+
+    # SDG 10 | Layer 3 | Social inclusion & equal opportunities
+    add_terms(10, 3, [
+        "anti-discrimination policies",
+        "equal opportunity",
+        "equity policies",
+        "นโยบายต่อต้านการเลือกปฏิบัติ",
+        "นโยบายเพื่อความเสมอภาค",
+        "โอกาสที่เท่าเทียมกัน",
+    ], "Social inclusion & equal opportunities")
+
+    # SDG 10 | Layer 4 | Migration & remittances
+    add_terms(10, 4, [
+        "fiscal policy for equality",
+        "income for persons with disabilities",
+        "progressive taxation",
+        "rights of persons with disabilities",
+        "social protection systems",
+        "นโยบายการคลังเพื่อความเท่าเทียม",
+        "ผู้ลี้ภัย",
+        "ภาษีก้าวหน้า",
+        "ระบบการคุ้มครองทางสังคม",
+        "แรงงานข้ามชาติ",
+    ], "Migration & remittances")
+
+    # SDG 10 | Layer 5 | Accessibility & universal design
+    add_terms(10, 5, [
+        "migration governance",
+        "orderly migration",
+        "safe migration",
+        "social protection system",
+        "การบริหารจัดการการโยกย้ายถิ่นฐาน",
+        "การอพยพที่ปลอดภัย",
+        "การอพยพอย่างมีระเบียบ",
+    ], "Accessibility & universal design")
+
+    # SDG 10 | Layer 6 | Anti-discrimination laws & governance
+    add_terms(10, 6, [
+        "empower marginalized groups",
+        "immigration policy",
+        "inclusive policy",
+        "political representation",
+        "การเป็นตัวแทนทางการเมือง",
+        "การเสริมพลังกลุ่มเปราะบาง",
+    ], "Anti-discrimination laws & governance")
+
+    # SDG 10 | Layer 7 | Shock resilience & social safety nets
+    add_terms(10, 7, [
+        "disaster",
+        "earthquake",
+        "emergency response",
+        "inclusive global institutions",
+        "reform global governance",
+        "regulate global financial markets",
+        "การกำกับดูแลตลาดการเงินโลก",
+        "การปฏิรูปการปกครองโลก",
+        "สถาบันโลกที่ครอบคลุม",
+        "อุทกภัย",
+        "แผ่นดินไหว",
+    ], "Shock resilience & social safety nets")
+
+    # SDG 10 | Layer 8 | Inequality indicators (Gini, Palma)
+    add_terms(10, 8, [
+        "lower cost of remittances",
+        "remittance costs",
+        "การลดค่าธรรมเนียมการโอนเงิน",
+        "ค่าธรรมเนียมการส่งเงินกลับประเทศ",
+    ], "Inequality indicators (Gini, Palma)")
+
+    # SDG 10 | Layer 9 | Finance & partnerships (inclusion/equity)
+    add_terms(10, 9, [
+        "differential treatment for least developed countries",
+        "foreign investment",
+        "special treatment for developing countries",
+        "การปฏิบัติพิเศษสำหรับประเทศกำลังพัฒนา",
+        "การปฏิบัติแตกต่างสำหรับประเทศพัฒนาน้อยที่สุด",
+    ], "Finance & partnerships (inclusion/equity)")
+
+    # SDG 11 | Layer 1 | Core concepts – Sustainable cities & communities
+    add_terms(11, 1, [
+        "air pollution",
+        "air quality",
+        "community healthcare outreach",
+        "cultural heritage",
+        "earthquake event",
+        "earthquake magnitude",
+        "environmental assessment",
+        "environmental impact assessment",
+        "gentrification",
+        "green public space",
+        "green space",
+        "health support in underserved zones",
+        "heritage",
+        "internet of things",
+        "land cover",
+        "land surface temperature",
+        "make cities inclusive",
+        "metropolitan area",
+        "municipal solid waste",
+        "road network",
+        "road traffic",
+        "roads and streets",
+        "seismic hazard",
+        "solid waste management",
+        "source apportionment",
+        "sustainable cities",
+        "sustainable communities",
+        "traffic congestion",
+        "traffic control",
+        "traffic signal",
+        "transportation",
+        "urban sustainability",
+        "urbanization",
+        "การขนส่งในเมือง",
+        "การคมนาคม",
+        "การควบคุมจราจร",
+        "การควบคุมน้ําท่วม",
+        "การจราจรบนถนน",
+        "การจัดการของเสียของแข็ง",
+        "การจัดการภัยพิบัติ",
+        "การท่องเที่ยวชุมชน",
+        "การท่องเที่ยวโดยชุมชน",
+        "การประเมินผลกระทบสิ่งแวดล้อม",
+        "การประเมินสิ่งแวดล้อม",
+        "การป้องกันภัยพิบัติ",
+        "การพัฒนาเมือง",
+        "การพัฒนาเมืองที่ยืดหยุ่น",
+        "การพัฒนาเมืองอัจฉริยะ",
+        "การออกแบบเมือง",
+        "การเดินทางในเมือง",
+        "การเติบโตของเมือง",
+        "การเปลี่ยนแปลงเชิงพื้นที่ของเมือง",
+        "การแจกแจงแหล่งกําเนิด",
+        "ขนาดแผ่นดินไหว",
+        "ของเสียมูลฝอยเทศบาล",
+        "ความปลอดภัยด้านการขนส่ง",
+        "ความยั่งยืนของเมือง",
+        "ความเป็นเมือง",
+        "ความเสี่ยงจากแผ่นดินไหว",
+        "ความแออัดทางจราจร",
+        "คุณภาพอากาศ",
+        "ชุมชนที่ยั่งยืน",
+        "ชุมชนยั่งยืน",
+        "ตลาดที่อยู่อาศัย",
+        "ถนนและทางสัญจร",
+        "ที่อยู่อาศัยที่ปลอดภัยและครอบคลุม",
+        "ที่อยู่อาศัยราคาเอื้อมถึง",
+        "ทําให้เมืองครอบคลุม",
+        "ปรับปรุงผังเมือง",
+        "ผลกระทบเกาะความร้อนในเมือง",
+        "พื้นที่มหานคร",
+        "พื้นที่สาธารณะสีเขียว",
+        "พื้นที่สีเขียว",
+        "ภัยธรรมชาติ",
+        "มรดก",
+        "มรดกทางวัฒนธรรม",
+        "มลพิษทางอากาศ",
+        "รถไฟฟ้ารางเบา",
+        "ระบบขนส่งที่เข้าถึงได้",
+        "ระบบขนส่งอัจฉริยะ",
+        "ลักษณะพื้นที่ดิน",
+        "สัญญาณจราจร",
+        "อินเทอร์เน็ตของสรรพสิ่ง",
+        "อุณหภูมิพื้นผิวดิน",
+        "เมืองที่ยั่งยืน",
+        "เมืองที่ยืดหยุ่นต่อวิกฤต",
+        "เมืองยั่งยืน",
+        "เหตุการณ์แผ่นดินไหว",
+        "โครงข่ายถนน",
+        "โครงสร้างพื้นฐานอัจฉริยะ",
+    ], "Core concepts – Sustainable cities & communities")
+
+    # SDG 11 | Layer 2 | Housing & basic services
+    add_terms(11, 2, [
+        "inclusive cities",
+        "mobile health access",
+        "public service for remote areas",
+        "resilient cities",
+        "safe cities",
+        "เมืองที่ครอบคลุม",
+        "เมืองที่ปลอดภัย",
+        "เมืองที่มีความสามารถในการฟื้นตัว",
+    ], "Housing & basic services")
+
+    # SDG 11 | Layer 3 | Mobility & public transport
+    add_terms(11, 3, [
+        "adequate housing",
+        "affordable housing",
+        "housing upgrade",
+        "การปรับปรุงที่อยู่อาศัย",
+        "ที่อยู่อาศัยที่ราคาจับต้องได้",
+        "ที่อยู่อาศัยที่เพียงพอ",
+    ], "Mobility & public transport")
+
+    # SDG 11 | Layer 4 | Public spaces & cultural heritage
+    add_terms(11, 4, [
+        "accessible transportation",
+        "public transport",
+        "sustainable transport",
+        "urban mobility",
+        "การคมนาคมที่เข้าถึงได้",
+        "การเคลื่อนที่ในเมือง",
+        "ระบบขนส่งที่ยั่งยืน",
+        "ระบบขนส่งสาธารณะ",
+    ], "Public spaces & cultural heritage")
+
+    # SDG 11 | Layer 5 | Urban environment (air, waste, green)
+    add_terms(11, 5, [
+        "accessible transport",
+        "housing market",
+        "improve urban planning",
+        "integrated urban planning",
+        "intelligent transportation system",
+        "light rail transit",
+        "resilient urban development",
+        "safe and inclusive housing",
+        "smart city",
+        "smart infrastructure",
+        "transport safety",
+        "urban design",
+        "urban development",
+        "urban growth",
+        "urban heat island effect",
+        "urban management",
+        "urban planning",
+        "urban transportation",
+        "การจัดการเมือง",
+        "การวางผังเมือง",
+        "การวางผังเมืองแบบบูรณาการ",
+    ], "Urban environment (air, waste, green)")
+
+    # SDG 11 | Layer 6 | Urban governance & planning
+    add_terms(11, 6, [
+        "preserve cultural sites",
+        "protect cultural heritage",
+        "protect natural heritage",
+        "การสงวนแหล่งมรดกทางวัฒนธรรม",
+        "การอนุรักษ์มรดกทางวัฒนธรรม",
+        "การอนุรักษ์มรดกธรรมชาติ",
+    ], "Urban governance & planning")
+
+    # SDG 11 | Layer 7 | Disaster risk reduction
+    add_terms(11, 7, [
+        "disaster management",
+        "disaster prevention",
+        "disaster risk reduction",
+        "flood control",
+        "natural disaster",
+        "resilience to disasters",
+        "urban resilience",
+        "การฟื้นตัวของเมืองจากภัยพิบัติ",
+        "การลดความเสี่ยงจากภัยพิบัติ",
+    ], "Disaster risk reduction")
+
+    # SDG 11 | Layer 8 | Urban indicators & monitoring
+    add_terms(11, 8, [
+        "improve air quality",
+        "sustainable building design",
+        "sustainable waste management",
+        "การจัดการขยะอย่างยั่งยืน",
+        "การปรับปรุงคุณภาพอากาศ",
+        "การออกแบบอาคารอย่างยั่งยืน",
+    ], "Urban indicators & monitoring")
+
+    # SDG 11 | Layer 9 | Finance & partnerships (urban)
+    add_terms(11, 9, [
+        "access to green spaces",
+        "public green spaces",
+        "smart cities",
+        "การเข้าถึงพื้นที่สีเขียว",
+        "พื้นที่สีเขียวสาธารณะ",
+        "เมืองอัจฉริยะ",
+    ], "Finance & partnerships (urban)")
+
+    # SDG 12 | Layer 1 | Core concepts – Responsible consumption & production
+    add_terms(12, 1, [
+        "alternative ingredients",
+        "anaerobic digestion",
+        "composting",
+        "consumer behavior",
+        "consumption",
+        "corporate volunteering",
+        "eco-friendly cooking",
+        "eco-friendly production",
+        "eco-label",
+        "electronic products",
+        "electronic waste",
+        "environmental certification",
+        "environmental impact",
+        "farm-to-table",
+        "food innovation",
+        "food preservation",
+        "food waste",
+        "forest management",
+        "forestry industry",
+        "green building",
+        "green consumption",
+        "green supply chain",
+        "incineration",
+        "lifecycle thinking",
+        "organic waste",
+        "product labeling",
+        "product stewardship",
+        "promote sustainable consumption",
+        "pyrolysis",
+        "repair",
+        "resource-efficient production",
+        "responsible consumption",
+        "responsible production",
+        "reuse",
+        "solid waste",
+        "sustainable consumption",
+        "sustainable food",
+        "sustainable packaging",
+        "sustainable production",
+        "tourism management",
+        "vermicompost",
+        "waste",
+        "zero waste",
+        "กระบวนการไพโรไลซิส",
+        "การจัดการการท่องเที่ยว",
+        "การจัดการของเสียอย่างยั่งยืน",
+        "การจัดการป่าไม้",
+        "การซ่อมแซม",
+        "การติดฉลากผลิตภัณฑ์",
+        "การถนอมอาหาร",
+        "การทําปุ๋ยหมัก",
+        "การบริโภค",
+        "การบริโภคสีเขียว",
+        "การบริโภคอย่างมีความรับผิดชอบ",
+        "การบริโภคอย่างยั่งยืน",
+        "การบําบัดของเสีย",
+        "การประเมินวัฏจักรชีวิต",
+        "การปรุงอาหารเป็นมิตรกับสิ่งแวดล้อม",
+        "การผลิตที่เป็นมิตรกับสิ่งแวดล้อม",
+        "การผลิตที่ใช้ทรัพยากรอย่างมีประสิทธิภาพ",
+        "การผลิตอย่างมีความรับผิดชอบ",
+        "การผลิตอย่างยั่งยืน",
+        "การย่อยสลายแบบไม่ใช้ออกซิเจน",
+        "การรีไซเคิลของเสีย",
+        "การรีไซเคิลพลาสติก",
+        "การศึกษาด้านสิ่งแวดล้อม",
+        "การหมุนเวียนทรัพยากร",
+        "การอาสาขององค์กร",
+        "การเผาขยะ",
+        "การใช้ซ้ํา",
+        "ขยะอาหาร",
+        "ขยะอินทรีย์",
+        "ขยะอิเล็กทรอนิกส์",
+        "ขยะเป็นศูนย์",
+        "ของเสีย",
+        "ของเสียของแข็ง",
+        "ความรับผิดชอบต่อผลิตภัณฑ์",
+        "ฉลากสิ่งแวดล้อม",
+        "ธนาคารขยะ",
+        "นวัตกรรมอาหาร",
+        "บรรจุภัณฑ์ยั่งยืน",
+        "ประสิทธิภาพการใช้ทรัพยากร",
+        "ปุ๋ยหมักจากมูลไส้เดือน",
+        "ผลกระทบต่อสิ่งแวดล้อม",
+        "ผลิตภัณฑ์อิเล็กทรอนิกส์",
+        "พฤติกรรมผู้บริโภค",
+        "ฟาร์มถึงโต๊ะอาหาร",
+        "วัฏจักรชีวิตผลิตภัณฑ์",
+        "วัตถุดิบทางเลือก",
+        "ส่งเสริมการบริโภคอย่างยั่งยืน",
+        "ห่วงโซ่อุปทานสีเขียว",
+        "อาคารสีเขียว",
+        "อาหารยั่งยืน",
+        "อุตสาหกรรมป่าไม้",
+        "แนวคิดวัฏจักรชีวิต",
+    ], "Core concepts – Responsible consumption & production")
+
+    # SDG 12 | Layer 2 | Resource efficiency & circular economy
+    add_terms(12, 2, [
+        "circular economy",
+        "efficient resource use",
+        "resource efficiency",
+        "การใช้ทรัพยากรอย่างมีประสิทธิภาพ",
+        "เศรษฐกิจหมุนเวียน",
+    ], "Resource efficiency & circular economy")
+
+    # SDG 12 | Layer 3 | Waste reduction & recycling
+    add_terms(12, 3, [
+        "recycling",
+        "waste management",
+        "waste reduction",
+        "การจัดการขยะ",
+        "การจัดการของเสีย",
+        "การรีไซเคิล",
+        "การลดขยะ",
+    ], "Waste reduction & recycling")
+
+    # SDG 12 | Layer 4 | Sustainable procurement & eco-labels
+    add_terms(12, 4, [
+        "chemical waste management",
+        "environmental education",
+        "hazardous waste",
+        "life cycle assessment",
+        "plastic recycling",
+        "product life cycle",
+        "safe management of chemicals",
+        "waste recycling",
+        "การจัดการขยะเคมี",
+        "การจัดการสารเคมีอย่างปลอดภัย",
+        "ขยะอันตราย",
+    ], "Sustainable procurement & eco-labels")
+
+    # SDG 12 | Layer 5 | Cleaner production & eco-design
+    add_terms(12, 5, [
+        "sustainable business practices",
+        "sustainable industrial practices",
+        "sustainable supply chain",
+        "waste treatment",
+        "ห่วงโซ่อุปทานอย่างยั่งยืน",
+        "แนวปฏิบัติทางธุรกิจที่ยั่งยืน",
+        "แนวปฏิบัติทางอุตสาหกรรมที่ยั่งยืน",
+    ], "Cleaner production & eco-design")
+
+    # SDG 12 | Layer 6 | Policy & regulations (EPR, standards)
+    add_terms(12, 6, [
+        "awareness for sustainable lifestyles",
+        "eco-labeling",
+        "education for responsible consumption",
+        "การติดฉลากสิ่งแวดล้อม",
+        "การศึกษาเกี่ยวกับการบริโภคอย่างมีความรับผิดชอบ",
+        "การสร้างความตระหนักรู้เกี่ยวกับการดำรงชีวิตอย่างยั่งยืน",
+    ], "Policy & regulations (EPR, standards)")
+
+    # SDG 12 | Layer 7 | Risk & chemicals management
+    add_terms(12, 7, [
+        "green public procurement",
+        "sustainable procurement",
+        "การจัดซื้อจัดจ้างสีเขียว",
+        "การจัดซื้อจัดจ้างอย่างยั่งยืน",
+    ], "Risk & chemicals management")
+
+    # SDG 12 | Layer 8 | Indicators (material footprint, waste rates)
+    add_terms(12, 8, [
+        "consumer engagement",
+        "responsible tourism",
+        "การท่องเที่ยวอย่างมีความรับผิดชอบ",
+        "การท่องเที่ยวอย่างยั่งยืน",
+        "การมีส่วนร่วมของผู้บริโภค",
+    ], "Indicators (material footprint, waste rates)")
+
+    # SDG 12 | Layer 9 | Finance & partnerships (SCP)
+    add_terms(12, 9, [
+        "innovation for sustainable consumption",
+        "monitor sustainable practices",
+        "report on sustainable production",
+        "การติดตามแนวปฏิบัติที่ยั่งยืน",
+        "การรายงานการผลิตที่ยั่งยืน",
+        "นวัตกรรมเพื่อการบริโภคอย่างยั่งยืน",
+    ], "Finance & partnerships (SCP)")
+
+    # SDG 13 | Layer 1 | Core concepts – Climate action
+    add_terms(13, 1, [
+        "adaptive management",
+        "address climate crisis",
+        "carbon",
+        "carbon capture",
+        "carbon dioxide",
+        "carbon dioxide capture",
+        "carbon dioxide electroreduction",
+        "carbon dioxide emission",
+        "carbon dioxide reduction",
+        "carbon footprint",
+        "carbon reduction",
+        "carbon sequestration",
+        "catalyst selectivity",
+        "climate",
+        "climate action",
+        "climate change",
+        "climate change impact",
+        "climate effect",
+        "climate modeling",
+        "climate-smart agriculture",
+        "cmip (แบบจําลองสภาพภูมิอากาศ",
+        "co2 conversion",
+        "combat climate change",
+        "emission control",
+        "emission gas",
+        "emission reduction",
+        "emission trading",
+        "energy engineering",
+        "energy transition",
+        "environmental economics",
+        "environmental tax",
+        "extreme event",
+        "fossil fuel",
+        "greenhouse gas emission",
+        "greenhouse gas emissions",
+        "hydrogen production",
+        "hydrogenation",
+        "life cycle analysis",
+        "life cycle engineering",
+        "low-carbon economy",
+        "low-carbon future",
+        "methane",
+        "paris agreement",
+        "photocatalytic co2 reduction",
+        "reduce carbon emissions",
+        "resilient agriculture",
+        "การกักเก็บคาร์บอน",
+        "การควบคุมการปล่อย",
+        "การจัดการเชิงปรับตัว",
+        "การซื้อขายสิทธิการปล่อย",
+        "การดักจับคาร์บอน",
+        "การดักจับคาร์บอนไดออกไซด์",
+        "การดำเนินการด้านสภาพภูมิอากาศ",
+        "การปรับตัวต่อสภาพภูมิอากาศ",
+        "การปรับตัวต่อสภาพอากาศ",
+        "การปลูกต้นไม้ลดโลกร้อน",
+        "การปล่อยก๊าซเรือนกระจก",
+        "การปล่อยคาร์บอนไดออกไซด์",
+        "การผลิตไฮโดรเจน",
+        "การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การรีดักชันคาร์บอนไดออกไซด์ด้วยไฟฟ้า",
+        "การลดการปล่อย",
+        "การลดก๊าซเรือนกระจก",
+        "การลดความเสี่ยงจากการเปลี่ยนแปลงภูมิอากาศ",
+        "การลดคาร์บอนด้วยแสง",
+        "การลดคาร์บอนไดออกไซด์",
+        "การวิเคราะห์วัฏจักรชีวิต",
+        "การเติมไฮโดรเจน",
+        "การเปลี่ยนคาร์บอนไดออกไซด์",
+        "การเปลี่ยนผ่านพลังงาน",
+        "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การเลือกตัวเร่งปฏิกิริยา",
+        "กิจกรรมปลูกป่า",
+        "กิจกรรมลดคาร์บอน",
+        "ก๊าซคาร์บอนไดออกไซด์",
+        "ก๊าซมลพิษ",
+        "ก๊าซเรือนกระจก",
+        "ข้อตกลงปารีส",
+        "ความสามารถในการฟื้นตัวจากสภาพอากาศ",
+        "ความเป็นกลางทางคาร์บอน",
+        "คาร์บอน",
+        "คาร์บอนสุทธิเป็นศูนย์",
+        "ต่อสู้กับการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "ธนาคารต้นไม้",
+        "นโยบายด้านสิ่งแวดล้อม",
+        "นโยบายพลังงาน",
+        "ผลกระทบด้านภูมิอากาศ",
+        "ภาษีสิ่งแวดล้อม",
+        "ภูมิอากาศ",
+        "มีเทน",
+        "รอยเท้าคาร์บอน",
+        "ลดคาร์บอน",
+        "วิศวกรรมพลังงาน",
+        "วิศวกรรมวัฏจักรชีวิต",
+        "อนาคตคาร์บอนต่ํา",
+        "เกษตรที่ยืดหยุ่นต่อสภาพอากาศ",
+        "เกษตรอัจฉริยะด้านภูมิอากาศ",
+        "เชื้อเพลิงฟอสซิล",
+        "เศรษฐกิจคาร์บอนต่ํา",
+        "เศรษฐศาสตร์สิ่งแวดล้อม",
+        "เหตุการณ์สุดขั้ว",
+        "แก้ไขวิกฤตสภาพภูมิอากาศ",
+        "แบบจําลองภูมิอากาศ",
+    ], "Core concepts – Climate action")
+
+    # SDG 13 | Layer 2 | GHG reduction & neutrality
+    add_terms(13, 2, [
+        "achieve carbon neutrality",
+        "global warming",
+        "greenhouse gas",
+        "lower carbon emissions",
+        "reduce greenhouse gas emissions",
+        "บรรลุความเป็นกลางทางคาร์บอน",
+        "ภาวะโลกร้อน",
+        "ลดการปล่อยก๊าซเรือนกระจก",
+        "ลดการปล่อยคาร์บอน",
+    ], "GHG reduction & neutrality")
+
+    # SDG 13 | Layer 3 | Adaptation & climate resilience
+    add_terms(13, 3, [
+        "adaptation to climate change",
+        "climate resilience",
+        "nature-based solutions",
+        "การปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การฟื้นตัวจากการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "แนวทางที่ใช้ธรรมชาติเป็นพื้นฐาน",
+    ], "Adaptation & climate resilience")
+
+    # SDG 13 | Layer 4 | Climate risk management
+    add_terms(13, 4, [
+        "adaptation planning for disasters",
+        "build resilience to climate-related disasters",
+        "disaster risk reduction",
+        "การลดความเสี่ยงจากภัยพิบัติ",
+        "การวางแผนปรับตัวต่อภัยพิบัติ",
+        "การสร้างความสามารถในการรับมือภัยพิบัติที่เกี่ยวข้องกับสภาพภูมิอากาศ",
+    ], "Climate risk management")
+
+    # SDG 13 | Layer 5 | Policy, NDCs & governance
+    add_terms(13, 5, [
+        "climate change legislation",
+        "climate policies",
+        "national climate action plans",
+        "กฎหมายว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "นโยบายด้านสภาพภูมิอากาศ",
+        "แผนปฏิบัติการด้านสภาพภูมิอากาศระดับชาติ",
+    ], "Policy, NDCs & governance")
+
+    # SDG 13 | Layer 6 | Climate services, data & awareness
+    add_terms(13, 6, [
+        "capacity-building for climate action",
+        "carbon neutrality",
+        "education on climate change",
+        "energy policy",
+        "environmental policy",
+        "greenhouse gas mitigation",
+        "net zero",
+        "raising awareness on climate change",
+        "การศึกษาเรื่องการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การสร้างความตระหนักรู้เรื่องการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การเสริมสร้างขีดความสามารถในการดำเนินการด้านสภาพภูมิอากาศ",
+    ], "Climate services, data & awareness")
+
+    # SDG 13 | Layer 7 | Loss & damage / disaster linkage
+    add_terms(13, 7, [
+        "climate adaptation",
+        "climate agreements",
+        "climate risk reduction",
+        "global partnerships for climate action",
+        "international cooperation on climate",
+        "ข้อตกลงด้านสภาพภูมิอากาศ",
+        "ความร่วมมือระหว่างประเทศด้านสภาพภูมิอากาศ",
+        "หุ้นส่วนระดับโลกเพื่อการดำเนินการด้านสภาพภูมิอากาศ",
+    ], "Loss & damage / disaster linkage")
+
+    # SDG 13 | Layer 8 | Climate indicators & metrics
+    add_terms(13, 8, [
+        "climate early warning systems",
+        "climate information services",
+        "disaster early warning systems",
+        "บริการข้อมูลสภาพภูมิอากาศ",
+        "ระบบเตือนภัยล่วงหน้าจากภัยพิบัติ",
+        "ระบบเตือนภัยล่วงหน้าด้านสภาพภูมิอากาศ",
+    ], "Climate indicators & metrics")
+
+    # SDG 13 | Layer 9 | Climate finance, carbon markets & partnerships
+    add_terms(13, 9, [
+        "climate finance",
+        "funding for climate initiatives",
+        "investment in climate resilience",
+        "การลงทุนในความสามารถในการฟื้นตัวจากการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "การสนับสนุนทางการเงินสำหรับโครงการด้านสภาพภูมิอากาศ",
+        "การเงินด้านสภาพภูมิอากาศ",
+    ], "Climate finance, carbon markets & partnerships")
+
+    # SDG 14 | Layer 1 | Core concepts – Oceans & marine ecosystems
+    add_terms(14, 1, [
+        "clean ocean",
+        "coastal ecosystem protection",
+        "coastal protection",
+        "conserve oceans",
+        "marine life",
+        "ocean",
+        "prevent ocean pollution",
+        "protect marine ecosystems",
+        "safeguard marine biodiversity",
+        "sustainable fishing",
+        "การคุ้มครองความหลากหลายทางทะเล",
+        "การปกป้องระบบนิเวศทางทะเล",
+        "การป้องกันชายฝั่ง",
+        "การอนุรักษ์ทางทะเล",
+        "การอนุรักษ์ปะการัง",
+        "การอนุรักษ์มหาสมุทร",
+        "ความยั่งยืนของทรัพยากรทางทะเล",
+        "ความหลากหลายทางชีวภาพทางทะเล",
+        "ทรัพยากรทางทะเล",
+        "ทะเล",
+        "ปกป้องระบบนิเวศทางทะเล",
+        "ประมงพื้นบ้าน",
+        "ป้องกันมลพิษในมหาสมุทร",
+        "มหาสมุทร",
+        "มหาสมุทรสะอาด",
+        "สัตว์ทะเล",
+        "เขตอนุรักษ์ทะเล",
+    ], "Core concepts – Oceans & marine ecosystems")
+
+    # SDG 14 | Layer 2 | Marine pollution & plastics
+    add_terms(14, 2, [
+        "marine litter",
+        "plastic pollution in oceans",
+        "reduce marine pollution",
+        "ขยะทะเล",
+        "มลพิษพลาสติกในมหาสมุทร",
+        "ลดมลพิษทางทะเล",
+    ], "Marine pollution & plastics")
+
+    # SDG 14 | Layer 3 | Sustainable fisheries & aquaculture
+    add_terms(14, 3, [
+        "blue economy",
+        "marine biodiversity",
+        "marine conservation",
+        "marine resource sustainability",
+        "marine resources",
+        "sustainable marine management",
+        "sustainable ocean management",
+        "การบริหารจัดการทะเลอย่างยั่งยืน",
+        "การบริหารจัดการมหาสมุทรอย่างยั่งยืน",
+        "เศรษฐกิจสีน้ำเงิน",
+    ], "Sustainable fisheries & aquaculture")
+
+    # SDG 14 | Layer 4 | Marine protected areas & conservation
+    add_terms(14, 4, [
+        "climate change impact on oceans",
+        "ocean acidification",
+        "reduce ocean acidification",
+        "ผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศต่อมหาสมุทร",
+        "ภาวะกรดในมหาสมุทร",
+        "ลดภาวะกรดในมหาสมุทร",
+    ], "Marine protected areas & conservation")
+
+    # SDG 14 | Layer 5 | Blue economy & maritime industries
+    add_terms(14, 5, [
+        "end overfishing",
+        "sustainable aquaculture",
+        "sustainable fisheries",
+        "การประมงอย่างยั่งยืน",
+        "การยุติการจับปลามากเกินไป",
+        "การเพาะเลี้ยงสัตว์น้ำอย่างยั่งยืน",
+    ], "Blue economy & maritime industries")
+
+    # SDG 14 | Layer 6 | Ocean governance & treaties
+    add_terms(14, 6, [
+        "expand marine reserves",
+        "marine protected areas",
+        "protect coastal ecosystems",
+        "การขยายเขตอนุรักษ์ทางทะเล",
+        "การปกป้องระบบนิเวศชายฝั่ง",
+        "พื้นที่คุ้มครองทางทะเล",
+    ], "Ocean governance & treaties")
+
+    # SDG 14 | Layer 7 | Resilience to ocean change (acidification)
+    add_terms(14, 7, [
+        "economic support for artisanal fisheries",
+        "small fisheries livelihood",
+        "support small-scale fisheries",
+        "การดำรงชีวิตของชาวประมงขนาดเล็ก",
+        "การสนับสนุนการประมงขนาดเล็ก",
+        "การสนับสนุนทางเศรษฐกิจแก่การประมงพื้นบ้าน",
+    ], "Resilience to ocean change (acidification)")
+
+    # SDG 14 | Layer 8 | Marine indicators & monitoring
+    add_terms(14, 8, [
+        "innovation for marine conservation",
+        "marine scientific research",
+        "technology transfer for ocean health",
+        "การถ่ายทอดเทคโนโลยีเพื่อสุขภาพมหาสมุทร",
+        "การวิจัยทางวิทยาศาสตร์ทางทะเล",
+        "นวัตกรรมเพื่อการอนุรักษ์ทางทะเล",
+    ], "Marine indicators & monitoring")
+
+    # SDG 14 | Layer 9 | Finance & partnerships (oceans)
+    add_terms(14, 9, [
+        "UNCLOS",
+        "global ocean governance",
+        "implement international law for oceans",
+        "การบริหารจัดการมหาสมุทรในระดับโลก",
+        "การบังคับใช้กฎหมายระหว่างประเทศด้านมหาสมุทร",
+        "อนุสัญญาสหประชาชาติว่าด้วยกฎหมายทะเล (UNCLOS)",
+    ], "Finance & partnerships (oceans)")
+
+    # SDG 15 | Layer 1 | Core concepts – Terrestrial ecosystems
+    add_terms(15, 1, [
+        "afforestation",
+        "agroforestry",
+        "annuals",
+        "biodegradation",
+        "bioremediation",
+        "cladistics",
+        "conservation status",
+        "desertification",
+        "ecological connectivity",
+        "ecological resilience",
+        "endangered species",
+        "europeans",
+        "forestry",
+        "genetic diversity",
+        "grassland",
+        "habitat loss",
+        "introduced species",
+        "invasive species",
+        "land rehabilitation effort",
+        "land use",
+        "land use change",
+        "life on land",
+        "national parks",
+        "native species",
+        "natural resources",
+        "new species",
+        "phytoremediation",
+        "predation",
+        "predator-prey",
+        "protect terrestrial ecosystems",
+        "protected area",
+        "protected areas",
+        "reforestation",
+        "restore degraded land",
+        "soil conservation",
+        "soil degradation",
+        "species diversity",
+        "species extinction",
+        "sustainable use of terrestrial ecosystems",
+        "watershed management",
+        "การจัดการป่าไม้",
+        "การจัดการลุ่มน้ํา",
+        "การจัดจําแนกสายวิวัฒนาการ",
+        "การตัดไม้ทําลายป่า",
+        "การทําให้เป็นทะเลทราย",
+        "การปลูกป่าทดแทน",
+        "การปลูกป่าใหม่",
+        "การป่าไม้",
+        "การฟื้นฟูด้วยพืช",
+        "การฟื้นฟูที่ดินเสื่อมโทรม",
+        "การฟื้นฟูโดยชีววิธี",
+        "การย่อยสลายทางชีวภาพ",
+        "การล่าเหยื่อ",
+        "การสูญพันธุ์ของชนิดพันธุ์",
+        "การสูญเสียถิ่นอาศัย",
+        "การอนุรักษ์ดิน",
+        "การอนุรักษ์พันธุกรรมพืช",
+        "การอนุรักษ์ระบบนิเวศบนบก",
+        "การเชื่อมโยงทางนิเวศ",
+        "การเปลี่ยนแปลงการใช้ที่ดิน",
+        "การเสื่อมโทรมของดิน",
+        "การเสื่อมโทรมของที่ดิน",
+        "การใช้ที่ดิน",
+        "กิจกรรมเดินป่าเรียนรู้",
+        "ความยืดหยุ่นของระบบนิเวศ",
+        "ความหลากหลายของชนิดพันธุ์",
+        "ความหลากหลายทางพันธุกรรม",
+        "ชนิดพันธุ์ที่ถูกนําเข้า",
+        "ชนิดพันธุ์รุกราน",
+        "ชนิดพันธุ์ใหม่",
+        "ชาวยุโรป",
+        "ชีวิตบนบก",
+        "ทรัพยากรธรรมชาติ",
+        "ทุ่งหญ้า",
+        "บริการระบบนิเวศ",
+        "ป่าชุมชน",
+        "ป่าที่มีสุขภาพดี",
+        "ป่าฝนเขตร้อน",
+        "ป่าแอตแลนติก",
+        "ป่าไม้ชุมชน",
+        "ผู้ล่ากับเหยื่อ",
+        "พันธุ์พืชท้องถิ่น",
+        "พืชล้มลุก",
+        "พื้นที่คุ้มครอง",
+        "พื้นที่ป่าคลุม",
+        "พื้นที่อนุรักษ์",
+        "ฟื้นฟูพื้นที่เสื่อมโทรม",
+        "ระบบนิเวศ",
+        "ระบบนิเวศที่หลากหลาย",
+        "ระบบนิเวศป่าไม้",
+        "วนเกษตร",
+        "สถานภาพการอนุรักษ์",
+        "สัตว์ใกล้สูญพันธุ์",
+        "ส่งเสริมการใช้ระบบนิเวศบนบกอย่างยั่งยืน",
+        "อนุรักษ์ความหลากหลายทางชีวภาพ",
+        "อุทยานแห่งชาติ",
+        "แนวเชื่อมต่อสัตว์ป่า",
+        "โครงการอนุรักษ์ป่าไม้",
+    ], "Core concepts – Terrestrial ecosystems")
+
+    # SDG 15 | Layer 2 | Forests & restoration
+    add_terms(15, 2, [
+        "forest",
+        "halt deforestation",
+        "restore forests",
+        "sustainable forest management",
+        "การจัดการป่าไม้อย่างยั่งยืน",
+        "การฟื้นฟูป่าไม้",
+        "ป่าไม้",
+        "ยุติการตัดไม้ทำลายป่า",
+    ], "Forests & restoration")
+
+    # SDG 15 | Layer 3 | Land degradation & desertification
+    add_terms(15, 3, [
+        "atlantic forest",
+        "combat desertification",
+        "deforestation",
+        "diverse ecosystem",
+        "ecological restoration",
+        "ecosystem",
+        "ecosystem services",
+        "forest conservation program",
+        "forest cover",
+        "forest ecosystem",
+        "forest management",
+        "forest restoration",
+        "halt land degradation",
+        "healthy forest",
+        "land degradation",
+        "land degradation neutrality",
+        "tropical forest",
+        "wildlife corridor",
+        "ความเป็นกลางด้านการเสื่อมโทรมของที่ดิน",
+        "ต่อสู้กับการแปรสภาพเป็นทะเลทราย",
+        "ยุติการเสื่อมโทรมของที่ดิน",
+    ], "Land degradation & desertification")
+
+    # SDG 15 | Layer 4 | Biodiversity conservation
+    add_terms(15, 4, [
+        "biodiversity",
+        "conserve biodiversity",
+        "halt biodiversity loss",
+        "protect endangered species",
+        "wildlife",
+        "การปกป้องสัตว์ใกล้สูญพันธุ์",
+        "การอนุรักษ์ความหลากหลายทางชีวภาพ",
+        "ความหลากหลายทางชีวภาพ",
+        "ยุติการสูญเสียความหลากหลายทางชีวภาพ",
+    ], "Biodiversity conservation")
+
+    # SDG 15 | Layer 5 | Wildlife & protected areas
+    add_terms(15, 5, [
+        "manage protected areas",
+        "protect natural habitats",
+        "restore ecosystems",
+        "การจัดการพื้นที่คุ้มครอง",
+        "การปกป้องถิ่นที่อยู่อาศัยตามธรรมชาติ",
+        "การฟื้นฟูระบบนิเวศ",
+    ], "Wildlife & protected areas")
+
+    # SDG 15 | Layer 6 | Governance & land tenure/policy
+    add_terms(15, 6, [
+        "combat wildlife trafficking",
+        "end poaching",
+        "illegal wildlife trade",
+        "การค้าสัตว์ป่าอย่างผิดกฎหมาย",
+        "การปราบปรามการลักลอบค้าสัตว์ป่า",
+        "ยุติการล่าสัตว์ผิดกฎหมาย",
+    ], "Governance & land tenure/policy")
+
+    # SDG 15 | Layer 7 | Risk (wildfire, invasive species)
+    add_terms(15, 7, [
+        "control invasive alien species",
+        "prevent invasive species",
+        "การควบคุมชนิดพันธุ์ต่างถิ่นรุกราน",
+        "การป้องกันการรุกรานของชนิดพันธุ์ต่างถิ่น",
+    ], "Risk (wildfire, invasive species)")
+
+    # SDG 15 | Layer 8 | Terrestrial indicators & monitoring
+    add_terms(15, 8, [
+        "ecosystem values in development",
+        "integrate biodiversity into planning",
+        "mainstream biodiversity in development",
+        "การบูรณาการความหลากหลายทางชีวภาพในการพัฒนา",
+        "ค่านิยมระบบนิเวศในการพัฒนา",
+        "บูรณาการความหลากหลายทางชีวภาพในการวางแผน",
+    ], "Terrestrial indicators & monitoring")
+
+    # SDG 15 | Layer 9 | Finance & partnerships (land/biodiversity)
+    add_terms(15, 9, [
+        "fund ecosystem protection",
+        "increase biodiversity funding",
+        "mobilize financial resources for conservation",
+        "ระดมทรัพยากรทางการเงินเพื่อการอนุรักษ์",
+        "เงินทุนสำหรับการปกป้องระบบนิเวศ",
+        "เพิ่มเงินทุนเพื่อความหลากหลายทางชีวภาพ",
+    ], "Finance & partnerships (land/biodiversity)")
+
+    # SDG 16 | Layer 1 | Core concepts – Peace, justice & institutions
+    add_terms(16, 1, [
+        "adverse childhood experiences",
+        "civic engagement",
+        "civil and political rights",
+        "civil rights",
+        "combat corruption",
+        "corruption",
+        "courts",
+        "covid-19",
+        "crime",
+        "cyberbullying",
+        "democracy",
+        "e-government",
+        "elections",
+        "european community",
+        "fair institution",
+        "fundamental right",
+        "gender-based violence",
+        "homicide",
+        "human right",
+        "intimate partner violence",
+        "justice",
+        "legislation",
+        "maltreatment",
+        "participatory research",
+        "partner violence",
+        "peace",
+        "peace and justice",
+        "peacebuilding process",
+        "peaceful community",
+        "police",
+        "political participation",
+        "posttraumatic stress disorder",
+        "promote justice",
+        "public engagement",
+        "sexual abuse",
+        "sexual assault",
+        "sexual harassment",
+        "social accountability",
+        "social media",
+        "strong institutions",
+        "systematic review",
+        "กฎหมาย",
+        "กฎหมายระหว่างประเทศ",
+        "กฎหมายสิทธิมนุษยชนระหว่างประเทศ",
+        "กระบวนการยุติธรรมชุมชน",
+        "กระบวนการสร้างสันติภาพ",
+        "กลไกธรรมาภิบาลโปร่งใส",
+        "การกลั่นแกล้งทางไซเบอร์",
+        "การข่มขืน",
+        "การข่มขืนกระทําชําเรา",
+        "การคุกคามทางเพศ",
+        "การคุ้มครองเด็ก",
+        "การฆาตกรรม",
+        "การทบทวนอย่างเป็นระบบ",
+        "การทารุณกรรม",
+        "การทุจริต",
+        "การล่วงละเมิดทางเพศ",
+        "การล่วงละเมิดเด็ก",
+        "การวิจัยแบบมีส่วนร่วม",
+        "การสร้างสันติภาพและความยุติธรรม",
+        "การเข้าถึงกระบวนการยุติธรรม",
+        "การเลือกตั้ง",
+        "ความยุติธรรม",
+        "ความรับผิดชอบต่อสังคม",
+        "ความรุนแรงทางเพศตามเพศสภาพ",
+        "ความรุนแรงในคู่ชีวิต",
+        "ความรุนแรงในคู่รัก",
+        "ชุมชนที่สงบสุข",
+        "ต่อต้านการทุจริต",
+        "ตํารวจ",
+        "ธรรมาภิบาล",
+        "ธรรมาภิบาลแบบโปร่งใส",
+        "ประชาธิปไตย",
+        "ประสบการณ์ในวัยเด็กที่เป็นอันตราย",
+        "ระบบยุติธรรม",
+        "รัฐบาลอิเล็กทรอนิกส์",
+        "ศาล",
+        "สถาบันที่ยุติธรรม",
+        "สถาบันที่เข้มแข็ง",
+        "สวัสดิการเด็ก",
+        "สหภาพยุโรป",
+        "สหราชอาณาจักร",
+        "สันติภาพ",
+        "สิทธิขั้นพื้นฐาน",
+        "สิทธิพลเมือง",
+        "สิทธิพลเมืองและสิทธิทางการเมือง",
+        "สิทธิมนุษยชน (เอกพจน์",
+        "สื่อสังคมออนไลน์",
+        "ส่งเสริมความยุติธรรม",
+        "หลักนิติธรรม",
+        "อาชญากรรม",
+        "เวทีประชาคม",
+        "โควิด-19",
+        "โรคเครียดหลังเหตุการณ์สะเทือนใจ",
+    ], "Core concepts – Peace, justice & institutions")
+
+    # SDG 16 | Layer 2 | Rule of law & access to justice
+    add_terms(16, 2, [
+        "access to justice",
+        "legal aid",
+        "การช่วยเหลือทางกฎหมาย",
+        "การเข้าถึงความยุติธรรม",
+    ], "Rule of law & access to justice")
+
+    # SDG 16 | Layer 3 | Anti-corruption & transparency
+    add_terms(16, 3, [
+        "anti-corruption",
+        "combat bribery",
+        "การต่อต้านการทุจริต",
+        "การปราบปรามการติดสินบน",
+    ], "Anti-corruption & transparency")
+
+    # SDG 16 | Layer 4 | Violence reduction & security
+    add_terms(16, 4, [
+        "accountable institutions",
+        "child abuse",
+        "child protection",
+        "child welfare",
+        "inclusive institutions",
+        "transparent governance",
+        "การบริหารจัดการที่โปร่งใส",
+        "สถาบันที่ครอบคลุมทุกคน",
+        "สถาบันที่มีความรับผิดชอบ",
+    ], "Violence reduction & security")
+
+    # SDG 16 | Layer 5 | Participation & civic space
+    add_terms(16, 5, [
+        "justice system",
+        "participation in decision-making",
+        "public participation",
+        "การมีส่วนร่วมของประชาชน",
+        "การมีส่วนร่วมในการตัดสินใจ",
+    ], "Participation & civic space")
+
+    # SDG 16 | Layer 6 | Human rights
+    add_terms(16, 6, [
+        "governance",
+        "human rights",
+        "human rights protection",
+        "international human rights law",
+        "international law",
+        "transparent governance mechanism",
+        "การคุ้มครองสิทธิมนุษยชน",
+        "สิทธิมนุษยชน",
+    ], "Human rights")
+
+    # SDG 16 | Layer 7 | Institutional resilience & integrity
+    add_terms(16, 7, [
+        "rule of law",
+        "strengthen rule of law",
+        "การเสริมสร้างการปกครองโดยกฎหมาย",
+        "การเสริมสร้างหลักนิติธรรม",
+    ], "Institutional resilience & integrity")
+
+    # SDG 16 | Layer 8 | Governance indicators & metrics
+    add_terms(16, 8, [
+        "mediation and negotiation",
+        "non-violent conflict resolution",
+        "การแก้ปัญหาขัดแย้งโดยสันติ",
+        "การไกล่เกลี่ยและการเจรจาต่อรอง",
+    ], "Governance indicators & metrics")
+
+    # SDG 16 | Layer 9 | Finance & partnerships (governance)
+    add_terms(16, 9, [
+        "effective public institutions",
+        "institutional accountability",
+        "ตรวจสอบได้และโปร่งใส",
+        "สถาบันที่มีประสิทธิภาพและโปร่งใส",
+    ], "Finance & partnerships (governance)")
+
+    # SDG 17 | Layer 1 | Core concepts – Partnerships for the Goals
+    add_terms(17, 1, [
+        "build global partnerships",
+        "civil society engagement",
+        "collaborative mou",
+        "cross-organizational cooperation",
+        "cross-sector collaboration",
+        "cross-sector partnerships",
+        "cross-sectoral partnership",
+        "data sharing",
+        "development aid",
+        "development collaboration",
+        "development cooperation",
+        "digital cooperation",
+        "donor alignment",
+        "financial support",
+        "foreign aid",
+        "funding mechanism",
+        "global alliance",
+        "global development agenda",
+        "global dialogue",
+        "global indicators",
+        "global institutions",
+        "global partner institution",
+        "global partnership",
+        "global partnerships",
+        "harmonization",
+        "inclusive partnerships",
+        "information exchange",
+        "institutional strengthening",
+        "inter-agency collaboration",
+        "interagency collaboration",
+        "international agreements",
+        "international alliance",
+        "international cooperation",
+        "international development cooperation",
+        "international finance",
+        "international organizations",
+        "joint institutional program",
+        "joint program with government",
+        "knowledge exchange",
+        "local-global cooperation",
+        "mobilize shared resources",
+        "monitoring and evaluation",
+        "mou signing",
+        "multi-agency partnership",
+        "multi-sector collaboration",
+        "multi-stakeholder partnerships",
+        "multilateral mechanism",
+        "multilateralism",
+        "multinational initiatives",
+        "multistakeholder partnerships",
+        "north-south cooperation",
+        "partnership",
+        "partnerships",
+        "partnerships for the goals",
+        "platform for collaboration",
+        "public sector cooperation",
+        "public-private partnerships",
+        "public–private–people partnership",
+        "resource mobilization",
+        "results-based management",
+        "sdg collaboration",
+        "sdg joint initiative",
+        "shared vision",
+        "south-south cooperation",
+        "stakeholder network",
+        "strategic health partnership",
+        "strategic partnership",
+        "sustainable development funding",
+        "technical cooperation",
+        "transparency",
+        "voluntary national reviews",
+        "กลไกทางการเงิน",
+        "กลไกพหุภาคี",
+        "การจัดสรรความช่วยเหลือของผู้บริจาค",
+        "การดําเนินการตาม sdg",
+        "การติดตามและประเมินผล",
+        "การทบทวนระดับชาติแบบสมัครใจ",
+        "การบริหารจัดการแบบเน้นผลลัพธ์",
+        "การบูรณาการนโยบาย",
+        "การประสานงาน",
+        "การประสานนโยบาย",
+        "การมีส่วนร่วมของภาคประชาสังคม",
+        "การระดมทรัพยากร",
+        "การลงทุนในโครงสร้างพื้นฐาน",
+        "การลงนามบันทึกข้อตกลง",
+        "การสนทนาระดับโลก",
+        "การสนับสนุนจากภาคี",
+        "การสนับสนุนด้านขีดความสามารถ",
+        "การสร้างขีดความสามารถ",
+        "การสร้างหุ้นส่วนระดับโลก",
+        "การสร้างเครือข่ายความร่วมมือ",
+        "การเงินระหว่างประเทศ",
+        "การเสริมสร้างขีดความสามารถ",
+        "การเสริมสร้างสถาบัน",
+        "การแบ่งปันข้อมูล",
+        "การแลกเปลี่ยนข้อมูลข่าวสาร",
+        "การแลกเปลี่ยนองค์ความรู้",
+        "ขีดความสามารถทางสถิติ",
+        "ข้อตกลงระหว่างประเทศ",
+        "ความช่วยเหลือจากต่างประเทศ",
+        "ความช่วยเหลืออย่างเป็นทางการเพื่อการพัฒนา",
+        "ความช่วยเหลือเพื่อการพัฒนา",
+        "ความร่วมมือ",
+        "ความร่วมมือข้ามภาคส่วน",
+        "ความร่วมมือด้านดิจิทัล",
+        "ความร่วมมือด้านเป้าหมาย sdg",
+        "ความร่วมมือทางวิชาการ",
+        "ความร่วมมือทางเทคนิค",
+        "ความร่วมมือพหุภาคี",
+        "ความร่วมมือภาครัฐ–เอกชน–ประชาชน",
+        "ความร่วมมือระดับท้องถิ่นสู่สากล",
+        "ความร่วมมือระดับโลก",
+        "ความร่วมมือระหว่างประเทศ",
+        "ความร่วมมือระหว่างประเทศในภาคใต้",
+        "ความร่วมมือระหว่างภาครัฐและเอกชน",
+        "ความร่วมมือระหว่างหน่วยงาน",
+        "ความร่วมมือระหว่างเหนือ-ใต้",
+        "ความร่วมมือสำหรับเป้าหมาย",
+        "ความร่วมมือหลากหลายภาคส่วน",
+        "ความร่วมมือหลายภาคส่วน",
+        "ความร่วมมือเชิงกลยุทธ์",
+        "ความร่วมมือเพื่อการพัฒนา",
+        "ความร่วมมือเพื่อการพัฒนาระหว่างประเทศ",
+        "ความร่วมมือแบบครอบคลุม",
+        "ความร่วมมือแบบพหุภาคี",
+        "ความร่วมมือในภาครัฐ",
+        "ความโปร่งใส",
+        "ตัวชี้วัดระดับโลก",
+        "ธรรมาภิบาลระดับโลก",
+        "นโยบายการค้า",
+        "พันธมิตรข้ามภาคส่วน",
+        "พันธมิตรระดับนานาชาติ",
+        "พันธมิตรระดับโลก",
+        "ระดมทรัพยากรร่วมกัน",
+        "วาระการพัฒนาระดับโลก",
+        "วิสัยทัศน์ร่วม",
+        "สถาบันพันธมิตรระดับโลก",
+        "สถาบันระดับโลก",
+        "สร้างความร่วมมือระดับโลก",
+        "องค์กรระหว่างประเทศ",
+        "เครือข่ายผู้มีส่วนได้ส่วนเสีย",
+        "เครือข่ายภาคประชาชน",
+        "เงินทุนเพื่อการพัฒนาที่ยั่งยืน",
+        "เวทีแลกเปลี่ยนเรียนรู้",
+        "แพลตฟอร์มเพื่อความร่วมมือ",
+        "โครงการระดับพหุชาติ",
+        "โครงการร่วมตามเป้าหมาย sdg",
+    ], "Core concepts – Partnerships for the Goals")
+
+    # SDG 17 | Layer 2 | Policy coherence & multi-stakeholder platforms
+    add_terms(17, 2, [
+        "mobilize financial resources",
+        "oda",
+        "official development assistance",
+        "การช่วยเหลือเพื่อการพัฒนาอย่างเป็นทางการ",
+        "การระดมทรัพยากรทางการเงิน",
+    ], "Policy coherence & multi-stakeholder platforms")
+
+    # SDG 17 | Layer 3 | Data, monitoring & capacity building
+    add_terms(17, 3, [
+        "science and innovation",
+        "technology cooperation",
+        "technology transfer",
+        "การถ่ายทอดเทคโนโลยี",
+        "ความร่วมมือทางเทคโนโลยี",
+        "วิทยาศาสตร์และนวัตกรรม",
+    ], "Data, monitoring & capacity building")
+
+    # SDG 17 | Layer 4 | Technology & knowledge transfer
+    add_terms(17, 4, [
+        "capacity building",
+        "capacity support",
+        "institutional capacity",
+        "statistical capacity",
+        "technical assistance",
+        "การเสริมสร้างศักยภาพ",
+        "การให้ความช่วยเหลือทางเทคนิค",
+        "ศักยภาพสถาบัน",
+    ], "Technology & knowledge transfer")
+
+    # SDG 17 | Layer 5 | Trade & market access
+    add_terms(17, 5, [
+        "market access",
+        "promote trade",
+        "trade cooperation",
+        "การเข้าถึงตลาด",
+        "ความร่วมมือทางการค้า",
+        "ส่งเสริมการค้า",
+    ], "Trade & market access")
+
+    # SDG 17 | Layer 6 | Domestic resource mobilization
+    add_terms(17, 6, [
+        "accountability mechanisms",
+        "collaborative policy design",
+        "data availability",
+        "global governance",
+        "monitoring and reporting",
+        "policy coordination",
+        "policy integration",
+        "trade policy",
+        "กลไกความรับผิดชอบ",
+        "การติดตามและรายงาน",
+        "การเข้าถึงข้อมูล",
+    ], "Domestic resource mobilization")
+
+    # SDG 17 | Layer 7 | International development cooperation
+    add_terms(17, 7, [
+        "institutional coherence",
+        "integrated policies",
+        "policy coherence",
+        "ความสอดคล้องของนโยบาย",
+        "ความสอดคล้องของสถาบัน",
+        "นโยบายแบบบูรณาการ",
+    ], "International development cooperation")
+
+    # SDG 17 | Layer 8 | Multi-level governance & networks
+    add_terms(17, 8, [
+        "civil society partnerships",
+        "multi-stakeholder",
+        "private sector engagement",
+        "การมีส่วนร่วมของภาคเอกชน",
+        "ความร่วมมือกับภาคประชาสังคม",
+        "หุ้นส่วนที่หลากหลาย",
+    ], "Multi-level governance & networks")
+
+    # SDG 17 | Layer 9 | Sustainable financing & resources
+    add_terms(17, 9, [
+        "green finance",
+        "infrastructure investment",
+        "resource efficiency",
+        "sustainable financing",
+        "การจัดหาเงินทุนอย่างยั่งยืน",
+        "การเงินสีเขียว",
+        "ประสิทธิภาพในการใช้ทรัพยากร",
+    ], "Sustainable financing & resources")
+
+# ---- Legacy hook: auto-call when host provides add_terms() ----
+try:
+    add_terms  # จะมีเมื่อระบบเดิม inject ฟังก์ชันนี้มาก่อน import
+except NameError:
+    pass
+else:
+    register_terms(add_terms)
