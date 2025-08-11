@@ -1,41 +1,36 @@
+from full_context_reasoning import full_context_reasoning, reason_tracer
 
-# matcher.py (reasoning-driven version)
+def match_with_explanations(text: str, top_k_per_sdg: int = 2):
+    tx = (text or "").lower()
+    matched = set(full_context_reasoning(tx))
 
-import pandas as pd
-import re
-from full_context_reasoning import full_context_reasoning
+    # รวบรวม hits ทั้งหมดที่ใช้ได้
+    hits = [h for h in reason_tracer(tx) if h["sdg"] in matched]
 
-# Load keywords from Excel
-keyword_file = "sdg_keywords.xlsx"
-keywords_df = pd.read_excel(keyword_file)
+    # จัดกลุ่มตาม SDG
+    by_sdg = {}
+    for h in hits:
+        by_sdg.setdefault(h["sdg"], []).append(h)
 
-# Prepare keyword list
-keywords = {}
-for index, row in keywords_df.iterrows():
-    sdg_number = str(row['SDG'])
-    keyword_text = str(row['Keyword']).strip().lower()
+    explanations = {}
+    for sdg, hs in by_sdg.items():
+        # เรียง: คำยาว/เฉพาะก่อน แล้วค่อยชั้นเลเยอร์ต่ำกว่า
+        hs = sorted(hs, key=lambda h: (-len(h["term"]), h["layer"], h["term"]))
 
-    if sdg_number not in keywords:
-        keywords[sdg_number] = set()
+        keep, seen = [], []
+        for h in hs:
+            t = h["term"]
+            # ตัดคำที่เป็นซับสตริงกันเอง เช่น มี "reduce inequality" แล้วตัด "inequality"
+            if any(t in s or s in t for s in seen):
+                continue
+            seen.append(t)
+            keep.append(h)
+            if len(keep) == top_k_per_sdg:
+                break
 
-    if keyword_text:
-        keywords[sdg_number].add(keyword_text)
+        explanations[sdg] = [
+            f'ค้นพบคำว่า {h["term"]} ซึ่งอยู่ใน Layer {h["layer"]}: {h["layer_name"]}'
+            for h in keep
+        ]
 
-# Match text to SDGs
-def match_text(text):
-    text = str(text).lower()
-    matched_sdgs = set()
-
-    # (1) ใช้ Full Context Reasoning วิเคราะห์ก่อน
-    context_sdgs = full_context_reasoning(text)
-    matched_sdgs.update(context_sdgs)
-
-    # (2) ถ้ายังไม่เจอ SDG ใดเลย ➔ fallback มาหา keyword matching
-    if not matched_sdgs:
-        for sdg, kw_set in keywords.items():
-            for kw in kw_set:
-                if kw in text:
-                    matched_sdgs.add(sdg)
-                    break
-
-    return sorted(list(matched_sdgs))
+    return sorted(matched), explanations

@@ -1,11 +1,32 @@
 import streamlit as st
 import time
-from matcher import match_text
+from matcher import match_with_explanations
 import os
+import re, html
 
 # ===== Page Configuration =====
 
 st.set_page_config(page_title="KMITL SDG Matching for All", layout="wide", initial_sidebar_state="collapsed")
+
+st.markdown("""
+<style>
+.block-container{ padding-top: 1rem; }      /* ลดบนทั้งหน้า */
+hr{ margin: .5rem 0 !important; }           /* ถ้ามีเส้นคั่นจะไม่กินพื้นที่ */
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+/* จอที่กว้างมากค่อยบีบหน้าให้แคบลง = 4/6 ของจอ แล้วจัดกลาง */
+@media (min-width: 1280px){
+  .block-container{
+    max-width: 66.666vw;   /* 4 ส่วนจาก 6 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>
+""", unsafe_allow_html=True)
 
 import time
 now = time.time()
@@ -116,8 +137,8 @@ st.markdown("""
 
 st.markdown("""
     <div class='subtitle'>
-        🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ข้อใดบ้าง<br>
-        รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong><br><br>
+        🔍 เช็กข้อความของคุณว่าสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน (SDGs) ใดบ้าง<br>
+        รองรับทั้ง <strong>ภาษาไทย</strong> และ <strong>ภาษาอังกฤษ</strong><br>
     </div>
 """, unsafe_allow_html=True)
 st.markdown("---")
@@ -129,15 +150,85 @@ if st.button("🔍 วิเคราะห์"):
     if text_input.strip() == "":
         st.warning("⚠️ กรุณาใส่ข้อความก่อนกด วิเคราะห์")
     else:
-        matched_sdgs = match_text(text_input)
+        matched_sdgs, explanations = match_with_explanations(text_input)
+        # normalize types so UI and matcher agree
+        matched_sdgs = [int(s) for s in matched_sdgs]
+        explanations = {int(k): v for k, v in explanations.items()}
         if matched_sdgs:
             matched_sdgs = sorted(matched_sdgs, key=lambda x: int(x))
             st.success(f"✅ พบ {len(matched_sdgs)} เป้าหมายที่เกี่ยวข้อง")
+
+            # ===== Toggle ไฮไลต์ข้อความ =====
+            st.markdown("##### 📝 คำที่เชื่อมโยงกับ SDG (Highlight) จากข้อความที่กรอก ")
+
+            raw_text = text_input  # เก็บต้นฉบับ
+            # ดึง terms จาก explanations
+            terms = []
+            for msgs in (explanations or {}).values():
+                for m in msgs or []:
+                    s = str(m).strip().replace("\u200b", "")
+                    m1 = re.search(r"ค้นพบคำว่า (.+?) ซึ่งอยู่ใน Layer", s)
+                    if not m1:
+                        m1 = re.search(r"ค้นพบว่า (.+?) ซึ่งเป็น Keyword ของ SDG", s)  # เผื่ออนาคต fallback/post
+                    if m1:
+                        terms.append(m1.group(1))
+
+            # กันซ้ำ + เรียงคำยาวก่อน (กันซ้อนทับ)
+            terms = sorted(set(terms), key=lambda x: -len(x))
+
+            def build_spans(text: str, terms: list[str]):
+                spans = []
+                lower = text.lower()
+                occupied = [False] * len(text)
+
+                for term in terms:
+                    if not term: 
+                        continue
+                    pattern = re.escape(term)
+                    for m in re.finditer(pattern, lower, flags=re.IGNORECASE):
+                        s, e = m.start(), m.end()
+                        if any(occupied[s:e]):  # ถ้าทับกับช่วงที่ทำเครื่องหมายไว้แล้ว ให้ข้าม
+                            continue
+                        for i in range(s, e):
+                            occupied[i] = True
+                        spans.append((s, e))
+                spans.sort()
+                return spans
+
+            def render_highlight(text: str, spans: list[tuple[int,int]]):
+                out, last = [], 0
+                for s, e in spans:
+                    out.append(html.escape(text[last:s]))
+                    out.append(f"<mark class='hl'>{html.escape(text[s:e])}</mark>")
+                    last = e
+                out.append(html.escape(text[last:]))
+                return "".join(out)
+
+            spans = build_spans(raw_text, terms)
+
+            # แสดงผลตามสถานะ toggle
+            if spans:
+                st.markdown(
+                    """
+                    <style>
+                    mark.hl { padding: 0 .2em; border-radius: .25rem; }
+                    </style>
+                    """,
+                    unsafe_allow_html=True
+                )
+                st.markdown(render_highlight(raw_text, spans), unsafe_allow_html=True)
+            else:
+                # แสดงต้นฉบับ (ล็อกแก้ไข เพื่อไม่งงว่ากล่องนี้คือผลลัพธ์)
+                st.text_area("ข้อความต้นฉบับ", value=raw_text, height=220, disabled=True)
+
+
             for sdg in matched_sdgs:
-                name = sdg_names.get(sdg, 'Unknown SDG')
+                name = sdg_names.get(str(sdg), f'SDG {sdg}')
                 icon_path = f"icons/{sdg}.png"
                 default_icon = "icons/default.png"
                 used_icon = icon_path if os.path.exists(icon_path) else default_icon if os.path.exists(default_icon) else None
+
+                
                 if used_icon:
                     cols = st.columns([0.13, 0.87])
                     with cols[0]:
@@ -147,7 +238,13 @@ if st.button("🔍 วิเคราะห์"):
                 else:
                     st.markdown(f"<span class='sdg-result'>SDG {sdg}: {name}</span>", unsafe_allow_html=True)
 
-            base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
+                # ===== อธิบายเชิงมืออาชีพ ตามรูปประโยคที่คุณต้องการ =====
+                msgs = explanations.get(sdg) or explanations.get(str(sdg), [])
+                if msgs:
+                    for m in sorted(set(msgs)):  # กันซ้ำเล็กน้อย
+                        st.markdown(f"- {m}")
+                        
+                base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
             sdg_hashtags = ' '.join([f"#SDG{sdg}" for sdg in matched_sdgs])
             full_hashtags = base_hashtags + "\n" + sdg_hashtags
 
@@ -156,6 +253,7 @@ if st.button("🔍 วิเคราะห์"):
 
         else:
             st.info("ไม่พบคำที่ตรงกับ SDGs ในข้อความนี้")
+
 
 
 # ===== Footer =====

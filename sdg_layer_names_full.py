@@ -1,0 +1,232 @@
+# sdg_layer_names_full.py
+# -*- coding: utf-8 -*-
+"""
+Full layer names for SDG 1–17 (Layers 1–9).
+Usage:
+    from sdg_layer_names_full import apply_full_layer_names
+    LAYER_NAMES = {str(i): {} for i in range(1, 18)}
+    apply_full_layer_names(LAYER_NAMES)
+"""
+
+SDG_TITLES = {
+    "1": "No Poverty",
+    "2": "Zero Hunger",
+    "3": "Good Health and Well-being",
+    "4": "Quality Education",
+    "5": "Gender Equality",
+    "6": "Clean Water and Sanitation",
+    "7": "Affordable and Clean Energy",
+    "8": "Decent Work and Economic Growth",
+    "9": "Industry, Innovation and Infrastructure",
+    "10": "Reduced Inequalities",
+    "11": "Sustainable Cities and Communities",
+    "12": "Responsible Consumption and Production",
+    "13": "Climate Action",
+    "14": "Life Below Water",
+    "15": "Life on Land",
+    "16": "Peace, Justice and Strong Institutions",
+    "17": "Partnerships for the Goals",
+}
+
+# Mapping: SDG (string) -> {layer_number (int): layer_name (str)}
+LAYER_NAMES_FULL = {
+    "1": {
+        1: "Core concepts – No Poverty",
+        2: "Social protection systems",
+        3: "Financial inclusion & livelihoods",
+        4: "Vulnerable groups & targeting",
+        5: "Access to basic services",
+        6: "Policy & governance for poverty reduction",
+        7: "Resilience to shocks (disaster/economic)",
+        8: "Measurement & poverty lines (e.g., $1.90)",
+        9: "Financing & partnerships for poverty alleviation",
+    },
+    "2": {
+        1: "Core concepts – Zero Hunger & food security",
+        2: "Nutrition & malnutrition",
+        3: "Sustainable agriculture & smallholders",
+        4: "Supply chains & food loss/waste",
+        5: "Access & affordability of food",
+        6: "Policy & governance of food systems",
+        7: "Climate resilience in food systems",
+        8: "Food security indicators & outcomes",
+        9: "Financing & partnerships (agri/food)",
+    },
+    "3": {
+        1: "Core concepts – Health & well-being",
+        2: "Disease prevention & control",
+        3: "Health systems & services (UHC)",
+        4: "Maternal, child & reproductive health",
+        5: "NCDs & mental health",
+        6: "Policy, regulation & governance (health)",
+        7: "Emergency preparedness & patient safety",
+        8: "Health indicators & outcomes",
+        9: "Health financing & partnerships",
+    },
+    "4": {
+        1: "Core concepts – Education & learning quality",
+        2: "Access & equity (inclusive education)",
+        3: "Teachers, curriculum & pedagogy",
+        4: "TVET & lifelong learning",
+        5: "Digital infrastructure & learning spaces",
+        6: "Policy, standards & accreditation",
+        7: "Safety & resilience in schools",
+        8: "Assessment & outcomes (literacy, completion)",
+        9: "Financing & scholarships & partnerships",
+    },
+    "5": {
+        1: "Core concepts – Gender equality & empowerment",
+        2: "Violence prevention & protection",
+        3: "Economic participation & leadership",
+        4: "Education & skills for women/girls",
+        5: "Health & SRHR (sexual and reproductive health/rights)",
+        6: "Law, policy & anti-discrimination",
+        7: "Safety & freedom from harassment",
+        8: "Gender statistics & indicators",
+        9: "Financing & partnerships (gender lens)",
+    },
+    "6": {
+        1: "Core concepts – Water & sanitation",
+        2: "Water supply & access",
+        3: "Sanitation & hygiene (WASH)",
+        4: "Water quality & wastewater",
+        5: "Water efficiency & reuse",
+        6: "Integrated water resources management & governance",
+        7: "Resilience to floods/droughts",
+        8: "Monitoring & service outcomes",
+        9: "Finance & partnerships (WASH/WRM)",
+    },
+    "7": {
+        1: "Core concepts – Affordable & clean energy",
+        2: "Energy access & reliability",
+        3: "Renewable energy generation",
+        4: "Energy efficiency & demand-side",
+        5: "Energy grids & infrastructure",
+        6: "Policy & market mechanisms (energy)",
+        7: "Energy security & resilience",
+        8: "Energy metrics & performance",
+        9: "Energy finance & investment",
+    },
+    "8": {
+        1: "Core concepts – Decent work & economic growth",
+        2: "Employment & skills development",
+        3: "Workplace rights & occupational safety",
+        4: "Productivity, SMEs & entrepreneurship",
+        5: "Sustainable tourism & local economies",
+        6: "Policy & macroeconomic frameworks",
+        7: "Resilience (informal sector, shocks)",
+        8: "Indicators (GDP per capita, unemployment)",
+        9: "Finance & partnerships (jobs/growth)",
+    },
+    "9": {
+        1: "Core concepts – Industry, innovation & infrastructure",
+        2: "Resilient infrastructure",
+        3: "Innovation, R&D & technology",
+        4: "Sustainable industry & resource efficiency",
+        5: "Digital/ICT & connectivity",
+        6: "Standards & regulatory policy (industry)",
+        7: "Risk & safety in infrastructure",
+        8: "Performance & indicators (industry/infrastructure)",
+        9: "Finance & partnerships (industry/innovation)",
+    },
+    "10": {
+        1: "Core concepts – Reducing inequalities",
+        2: "Income distribution & fiscal policy",
+        3: "Social inclusion & equal opportunities",
+        4: "Migration & remittances",
+        5: "Accessibility & universal design",
+        6: "Anti-discrimination laws & governance",
+        7: "Shock resilience & social safety nets",
+        8: "Inequality indicators (Gini, Palma)",
+        9: "Finance & partnerships (inclusion/equity)",
+    },
+    "11": {
+        1: "Core concepts – Sustainable cities & communities",
+        2: "Housing & basic services",
+        3: "Mobility & public transport",
+        4: "Public spaces & cultural heritage",
+        5: "Urban environment (air, waste, green)",
+        6: "Urban governance & planning",
+        7: "Disaster risk reduction",
+        8: "Urban indicators & monitoring",
+        9: "Finance & partnerships (urban)",
+    },
+    "12": {
+        1: "Core concepts – Responsible consumption & production",
+        2: "Resource efficiency & circular economy",
+        3: "Waste reduction & recycling",
+        4: "Sustainable procurement & eco-labels",
+        5: "Cleaner production & eco-design",
+        6: "Policy & regulations (EPR, standards)",
+        7: "Risk & chemicals management",
+        8: "Indicators (material footprint, waste rates)",
+        9: "Finance & partnerships (SCP)",
+    },
+    "13": {
+        1: "Core concepts – Climate action",
+        2: "GHG reduction & neutrality",
+        3: "Adaptation & climate resilience",
+        4: "Climate risk management",
+        5: "Policy, NDCs & governance",
+        6: "Climate services, data & awareness",
+        7: "Loss & damage / disaster linkage",
+        8: "Climate indicators & metrics",
+        9: "Climate finance, carbon markets & partnerships",
+    },
+    "14": {
+        1: "Core concepts – Oceans & marine ecosystems",
+        2: "Marine pollution & plastics",
+        3: "Sustainable fisheries & aquaculture",
+        4: "Marine protected areas & conservation",
+        5: "Blue economy & maritime industries",
+        6: "Ocean governance & treaties",
+        7: "Resilience to ocean change (acidification)",
+        8: "Marine indicators & monitoring",
+        9: "Finance & partnerships (oceans)",
+    },
+    "15": {
+        1: "Core concepts – Terrestrial ecosystems",
+        2: "Forests & restoration",
+        3: "Land degradation & desertification",
+        4: "Biodiversity conservation",
+        5: "Wildlife & protected areas",
+        6: "Governance & land tenure/policy",
+        7: "Risk (wildfire, invasive species)",
+        8: "Terrestrial indicators & monitoring",
+        9: "Finance & partnerships (land/biodiversity)",
+    },
+    "16": {
+        1: "Core concepts – Peace, justice & institutions",
+        2: "Rule of law & access to justice",
+        3: "Anti-corruption & transparency",
+        4: "Violence reduction & security",
+        5: "Participation & civic space",
+        6: "Human rights",
+        7: "Institutional resilience & integrity",
+        8: "Governance indicators & metrics",
+        9: "Finance & partnerships (governance)",
+    },
+    "17": {
+        1: "Core concepts – Partnerships for the Goals",
+        2: "Policy coherence & multi-stakeholder platforms",
+        3: "Data, monitoring & capacity building",
+        4: "Technology & knowledge transfer",
+        5: "Trade & market access",
+        6: "Domestic resource mobilization",
+        7: "International development cooperation",
+        8: "Multi-level governance & networks",
+        9: "Sustainable financing & resources",
+    },
+}
+
+def apply_full_layer_names(target_layer_names: dict):
+    """
+    Copy all layer names into a target LAYER_NAMES dict.
+    Example:
+        LAYER_NAMES = {str(i): {} for i in range(1, 18)}
+        apply_full_layer_names(LAYER_NAMES)
+    """
+    for sdg, layers in LAYER_NAMES_FULL.items():
+        target_layer_names.setdefault(sdg, {})
+        for layer_no, name in layers.items():
+            target_layer_names[sdg][layer_no] = name
