@@ -1,6 +1,5 @@
-# Auto-generated v2: COMBINED with extra FP exclusions from audit
-
-# Encoding: UTF-8
+# -*- coding: utf-8 -*-
+"""Auto-generated: FUZZY remap from COMBINED v2 onto canonical layer names"""
 
 def register_terms(add_terms):
     # SDG 1 | Layer 1 | Core concepts – No Poverty
@@ -3372,9 +3371,12 @@ def register_terms(add_terms):
         "ประสิทธิภาพในการใช้ทรัพยากร",
     ], "Sustainable financing & resources")
 
-# ---- Legacy hook: auto-call when host provides add_terms() ----
+def register_all_terms(add_terms):
+    register_terms(add_terms)
+
+# Legacy auto-call
 try:
-    add_terms  # จะมีเมื่อระบบเดิม inject ฟังก์ชันนี้มาก่อน import
+    add_terms
 except NameError:
     pass
 else:
