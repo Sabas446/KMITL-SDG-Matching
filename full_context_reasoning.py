@@ -86,7 +86,7 @@ def full_context_reasoning(text: str):
     # กันโอเวอร์เคลม SDG 4 ถ้าไม่มีสัญญาณชัดจาก L1 และไม่มีคำหลักสำคัญ
     has_core4 = any(h["sdg"] == "4" and h["layer"] == 1 for h in hits)
     if '4' in matched and not has_core4 and not any(w in tx for w in
-        ["education","training","school","learning","literacy","การศึกษา","การฝึกอบรม","การเรียนรู้","การรู้หนังสือ"]):
+        ["education","training","learning","literacy","การศึกษา","การฝึกอบรม","การเรียนรู้","การรู้หนังสือ"]):
         matched.discard('4')
 
     return sorted(matched, key=lambda s: int(s))
