@@ -1676,8 +1676,7 @@ def register_terms(add_terms):
         "เศรษฐกิจนอกระบบ",
         "เศรษฐกิจสีเขียว",
         "เศรษฐศาสตร์สิ่งแวดล้อม",
-        "แรงงานเยาวชน",
-        "โควิด-19",
+        "แรงงานเยาวชน",    
     ], "Core concepts – Decent work & economic growth")
 
     # SDG 8 | Layer 2 | Employment & skills development
@@ -1964,7 +1963,6 @@ def register_terms(add_terms):
         "เสถียรภาพทางการเงิน",
         "เสริมพลังกลุ่มเปราะบาง",
         "โครงสร้างค่าจ้าง",
-        "โควิด-19",
         "โอกาสที่เท่าเทียม",
     ], "Core concepts – Reducing inequalities")
 
@@ -3045,7 +3043,6 @@ def register_terms(add_terms):
         "หลักนิติธรรม",
         "อาชญากรรม",
         "เวทีประชาคม",
-        "โควิด-19",
         "โรคเครียดหลังเหตุการณ์สะเทือนใจ",
     ], "Core concepts – Peace, justice & institutions")
 
