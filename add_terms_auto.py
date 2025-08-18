@@ -1607,6 +1607,7 @@ def register_terms(add_terms):
         "job security",
         "labor market",
         "productive employment",
+        "productivity"
         "productivity change",
         "professional occupations",
         "remote work",
@@ -1708,6 +1709,10 @@ def register_terms(add_terms):
         "youth workforce",
         "การจ้างงานเยาวชน",
         "การศึกษาและการฝึกอบรมสำหรับเยาวชน",
+        "NEET",
+        "apprenticeship",
+        "SME"
+        "เอสเอ็มอี",
     ], "Productivity, SMEs & entrepreneurship")
 
     # SDG 8 | Layer 5 | Sustainable tourism & local economies
