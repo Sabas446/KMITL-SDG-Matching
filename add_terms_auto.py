@@ -1607,7 +1607,7 @@ def register_terms(add_terms):
         "job security",
         "labor market",
         "productive employment",
-        "productivity"
+        "productivity",
         "productivity change",
         "professional occupations",
         "remote work",
