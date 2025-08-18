@@ -2099,6 +2099,7 @@ def register_terms(add_terms):
         "transportation",
         "urban sustainability",
         "urbanization",
+        "urban sprawl",
         "การขนส่งในเมือง",
         "การคมนาคม",
         "การควบคุมจราจร",
@@ -2186,6 +2187,7 @@ def register_terms(add_terms):
         "public transport",
         "sustainable transport",
         "urban mobility",
+        "TOD",
         "การคมนาคมที่เข้าถึงได้",
         "การเคลื่อนที่ในเมือง",
         "ระบบขนส่งที่ยั่งยืน",
@@ -2377,6 +2379,7 @@ def register_terms(add_terms):
         "การจัดการของเสีย",
         "การรีไซเคิล",
         "การลดขยะ",
+        "แยกขยะ",
     ], "Waste reduction & recycling")
 
     # SDG 12 | Layer 4 | Sustainable procurement & eco-labels
