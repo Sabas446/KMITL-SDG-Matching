@@ -198,6 +198,39 @@ div[data-testid="stCode"] pre{
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+/* พิลที่ฝัง “ในบรรทัดเดียว” */
+.chip-inline{
+  display:inline;                /* ต้องเป็น inline เพื่อไม่แตกบรรทัด */
+  padding:2px 6px; margin:0 2px;
+  border-radius:999px; font-weight:700; font-size:.95em;
+  vertical-align:baseline;
+}
+
+/* ผูกสี SDG ให้ .chip-inline ด้วย (เพิ่มต่อจากชุด .hl/.chip-term เดิม) */
+.hl.sdg1,.chip-term.sdg1,.chip-inline.sdg1{background:#e5243b1d;border:1px solid #e5243b66;color:#b01226}
+.hl.sdg2,.chip-term.sdg2,.chip-inline.sdg2{background:#dda63a1d;border:1px solid #dda63a66;color:#8c6a15}
+.hl.sdg3,.chip-term.sdg3,.chip-inline.sdg3{background:#4c9f381d;border:1px solid #4c9f3866;color:#2f6122}
+.hl.sdg4,.chip-term.sdg4,.chip-inline.sdg4{background:#c5192d1d;border:1px solid #c5192d66;color:#7c0f1d}
+.hl.sdg5,.chip-term.sdg5,.chip-inline.sdg5{background:#ff3a211d;border:1px solid #ff3a2166;color:#992314}
+.hl.sdg6,.chip-term.sdg6,.chip-inline.sdg6{background:#26bde21d;border:1px solid #26bde266;color:#136a7e}
+.hl.sdg7,.chip-term.sdg7,.chip-inline.sdg7{background:#fcc30b1d;border:1px solid #fcc30b66;color:#6f5400}
+.hl.sdg8,.chip-term.sdg8,.chip-inline.sdg8{background:#a219421d;border:1px solid #a2194266;color:#6a0f29}
+.hl.sdg9,.chip-term.sdg9,.chip-inline.sdg9{background:#fd69251d;border:1px solid #fd692566;color:#8a370e}
+.hl.sdg10,.chip-term.sdg10,.chip-inline.sdg10{background:#dd13671d;border:1px solid #dd136766;color:#7b0a39}
+.hl.sdg11,.chip-term.sdg11,.chip-inline.sdg11{background:#fd9d241d;border:1px solid #fd9d2466;color:#8a5610}
+.hl.sdg12,.chip-term.sdg12,.chip-inline.sdg12{background:#bf8b2e1d;border:1px solid #bf8b2e66;color:#6c4e18}
+.hl.sdg13,.chip-term.sdg13,.chip-inline.sdg13{background:#3f7e441d;border:1px solid #3f7e4466;color:#214426}
+.hl.sdg14,.chip-term.sdg14,.chip-inline.sdg14{background:#0a97d91d;border:1px solid #0a97d966;color:#074f71}
+.hl.sdg15,.chip-term.sdg15,.chip-inline.sdg15{background:#56c02b1d;border:1px solid #56c02b66;color:#2f6918}
+.hl.sdg16,.chip-term.sdg16,.chip-inline.sdg16{background:#00689d1d;border:1px solid #00689d66;color:#004466}
+.hl.sdg17,.chip-term.sdg17,.chip-inline.sdg17{background:#19486a1d;border:1px solid #19486a66;color:#102c40}
+</style>
+""", unsafe_allow_html=True)
+
+
+
 # ===== SDG Names for Display =====
 
 sdg_names = {str(i): name for i, name in enumerate([
@@ -260,50 +293,51 @@ if st.button("🔍 วิเคราะห์"):
             # กันซ้ำ + เรียงคำยาวก่อน (กันซ้อนทับ)
             terms = sorted(set(terms), key=lambda x: -len(x))
 
-            def build_spans(text: str, terms: list[str]):
-                spans = []
-                lower = text.lower()
-                occupied = [False] * len(text)
+            # --- สร้าง mapping term -> sdg จาก explanations ---
+            def _extract_term(s: str):
+                s = str(s).strip().replace("\u200b","")
+                m = re.search(r"ค้นพบคำว่า (.+?) ซึ่งอยู่ใน Layer", s) or \
+                    re.search(r"ค้นพบว่า (.+?) ซึ่งเป็น Keyword ของ SDG", s)
+                return m.group(1).strip() if m else None
 
-                for term in terms:
-                    if not term: 
-                        continue
-                    pattern = re.escape(term)
-                    for m in re.finditer(pattern, lower, flags=re.IGNORECASE):
-                        s, e = m.start(), m.end()
-                        if any(occupied[s:e]):  # ถ้าทับกับช่วงที่ทำเครื่องหมายไว้แล้ว ให้ข้าม
-                            continue
-                        for i in range(s, e):
-                            occupied[i] = True
-                        spans.append((s, e))
-                spans.sort()
+            term2sdg = {}
+            for sdg, msgs in (explanations or {}).items():
+                for m in msgs or []:
+                    t = _extract_term(m)
+                    if t and t.lower() not in term2sdg:
+                        term2sdg[t.lower()] = int(sdg)
+
+            # --- หา spans แบบมี sdg ติดไปด้วย และกันทับซ้อน ---
+            def build_spans_colored(text: str, term2sdg: dict[str,int]):
+                spans, lower, used = [], text.lower(), [False]*len(text)
+                for term, sdg in sorted(term2sdg.items(), key=lambda kv: -len(kv[0])):  # คำยาวก่อน
+                    for m in re.finditer(re.escape(term), lower, flags=re.IGNORECASE):
+                        s,e = m.span()
+                        if any(used[s:e]): continue
+                        for i in range(s,e): used[i]=True
+                        spans.append((s,e,sdg))
+                spans.sort(key=lambda x:x[0])
                 return spans
 
-            def render_highlight(text: str, spans: list[tuple[int,int]]):
+            def render_highlight_colored(text: str, spans):
                 out, last = [], 0
-                for s, e in spans:
+                for s,e,sdg in spans:
                     out.append(html.escape(text[last:s]))
-                    out.append(f"<mark class='hl'>{html.escape(text[s:e])}</mark>")
+                    out.append(f"<mark class='hl sdg{sdg}'>{html.escape(text[s:e])}</mark>")
                     last = e
                 out.append(html.escape(text[last:]))
                 return "".join(out)
 
-            spans = build_spans(raw_text, terms)
+            spans = build_spans_colored(raw_text, term2sdg)
 
-            # แสดงผลตามสถานะ toggle
+
             if spans:
-                st.markdown(
-                    """
-                    <style>
-                    mark.hl { padding: 0 .2em; border-radius: .25rem; }
-                    </style>
-                    """,
-                    unsafe_allow_html=True
-                )
-                st.markdown(render_highlight(raw_text, spans), unsafe_allow_html=True)
+                st.markdown(render_highlight_colored(raw_text, spans), unsafe_allow_html=True)
             else:
-                # แสดงต้นฉบับ (ล็อกแก้ไข เพื่อไม่งงว่ากล่องนี้คือผลลัพธ์)
                 st.text_area("ข้อความต้นฉบับ", value=raw_text, height=220, disabled=True)
+
+
+
 
             import base64
             src = base64.b64encode(open("icons/sdg.png","rb").read()).decode()
@@ -332,8 +366,19 @@ if st.button("🔍 วิเคราะห์"):
                 # ===== อธิบายเชิงมืออาชีพ ตามรูปประโยคที่คุณต้องการ =====
                 msgs = explanations.get(sdg) or explanations.get(str(sdg), [])
                 if msgs:
-                    for m in sorted(set(msgs)):  # กันซ้ำเล็กน้อย
-                        st.markdown(f"- {m}")
+                    def embed_chip_inline(sentence: str, sdg: int) -> str:
+                        term = _extract_term(sentence)
+                        if not term:  # ไม่มีคำ ก็ escape ปกติ
+                            return html.escape(sentence)
+                        esc = html.escape(sentence)
+                        # แทน "term" ครั้งแรกเป็นชิปสีตาม SDG
+                        esc = re.sub(re.escape(html.escape(term)),
+                                     f"<span class='chip-inline sdg{sdg}'>{html.escape(term)}</span>",
+                                     esc, count=1)
+                        return esc
+
+                    for m in sorted(set(explanations.get(sdg, []))):
+                        st.markdown(f"- {embed_chip_inline(m, sdg)}", unsafe_allow_html=True)             
                         
                 base_hashtags = "#KMITL #สจล #พระจอมเกล้าลาดกระบัง"
             sdg_hashtags = ' '.join([f"#SDG{sdg}" for sdg in matched_sdgs])
