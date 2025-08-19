@@ -14,9 +14,17 @@ st.markdown("""
 :root{
   --brand:#f26f21;
   --bg:#fff;
+  --red-500:#E84A3C;
+  --orange-500:#FF6A2A;
+  --orange-400:#FF8A3D;
+  --amber-400:#FDBA4D;
+  --cream:#F7E9D7;
+  --ivory:#F2EEE6;
+  --aqua-400:#2BA8C2;
+  --sky-400:#67C7E6;
   /* type scale with minimums */
   --fz-base:  clamp(13px, 1.6vw, 16px);
-  --fz-h1:    clamp(26px, 5.2vw, 40px);
+  --fz-h1:    clamp(26px, 5.2vw, 48px);
   --fz-h2:    clamp(18px, 3.6vw, 28px);
   --fz-h3:    clamp(16px, 3.0vw, 22px);
   --fz-sdg:   clamp(14px, 2.4vw, 18px);
@@ -55,7 +63,15 @@ st.markdown("""
 
 /* Inputs/Buttons */
 .stTextArea label{ font-size: var(--fz-sdg) !important; font-weight:700; }
-.stTextArea textarea{ font-size: var(--fz-base) !important; padding:1em; }
+.stTextArea textarea{
+  font-size: var(--fz-base) !important;
+  padding: 1em;
+  background: radial-gradient(800px 480px at 15% 75%, rgba(255,106,42,.28), transparent 60%), linear-gradient(110deg, var(--red-500) 0%, var(--orange-500) 22%, var(--amber-400) 40%, var(--cream) 60%, var(--sky-400) 100%);   /* ← สีพื้น */
+  color: #111827 !important;         /* ← สีตัวอักษร */
+  border: 1.5px solid #e5e7eb !important; /* ← สีขอบ */
+  border-radius: 12px !important;
+}
+
 .stButton > button{
   background: var(--brand); color:#fff; font-weight:700;
   font-size: clamp(16px,4vw,22px); padding:.5em 1.2em; border-radius:12px; border:none;
@@ -175,7 +191,7 @@ st.markdown("""
 /* หัวข้อ/หัวข้อย่อยให้เด่นแบบ brand */
 .responsive-title{
   background: linear-gradient(100deg,#f26f21,#ff9d3d);
-  -webkit-background-clip:text; background-clip:text; color:transparent !important;
+  -webkit-background-clip:text; background-clip:text; color:#f26f21 !important;
 }
 .block-container h2, .block-container h3{
   font-weight:800 !important;
