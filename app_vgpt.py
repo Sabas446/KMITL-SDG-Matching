@@ -198,14 +198,6 @@ div[data-testid="stCode"] pre{
 </style>
 """, unsafe_allow_html=True)
 
-
-
-
-import time
-now = time.time()
-from datetime import datetime, timezone, timedelta
-thai_time = datetime.fromtimestamp(now, timezone(timedelta(hours=7)))
-
 # ===== SDG Names for Display =====
 
 sdg_names = {str(i): name for i, name in enumerate([
@@ -313,6 +305,13 @@ if st.button("🔍 วิเคราะห์"):
                 # แสดงต้นฉบับ (ล็อกแก้ไข เพื่อไม่งงว่ากล่องนี้คือผลลัพธ์)
                 st.text_area("ข้อความต้นฉบับ", value=raw_text, height=220, disabled=True)
 
+            import base64
+            src = base64.b64encode(open("icons/sdg.png","rb").read()).decode()
+            st.markdown(f'<h3 style="display:flex;align-items:center;gap:10px">'
+                        f'<img src="data:image/png;base64,{src}" style="width:26px;height:26px">'
+                        f' เป้าหมายพัฒนาอย่างยั่งยืนที่เกี่ยวข้อง (Related SDGs)</h3>',
+                        unsafe_allow_html=True)
+        
 
             for sdg in matched_sdgs:
                 name = sdg_names.get(str(sdg), f'SDG {sdg}')
