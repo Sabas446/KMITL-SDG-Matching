@@ -1,5 +1,1 @@
-streamlit
-gspread
-oauth2client
-pandas
-openpyxl
+streamlit>=1.53.0,<2.0
