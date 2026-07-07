@@ -13,22 +13,25 @@ st.set_page_config(
 
 st.html(
     f"""
-    <!doctype html>
-    <html lang="th">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="refresh" content="0; url={TARGET_URL}">
-        <script>
-            window.location.replace("{TARGET_URL}");
-        </script>
-    </head>
-    <body>
+    <script>
+        window.location.replace("{TARGET_URL}");
+    </script>
+
+    <div style="
+        max-width: 680px;
+        margin: 80px auto;
+        padding: 32px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    ">
+        <h2>KMITL SDG Matching for All</h2>
+        <p>ระบบได้ย้ายไปยังเว็บไซต์ OSM KMITL</p>
         <p>
-            ระบบได้ย้ายไปยัง
-            <a href="{TARGET_URL}">เว็บไซต์ OSM KMITL</a>
+            <a href="{TARGET_URL}">
+                คลิกที่นี่หากระบบไม่เปลี่ยนหน้าอัตโนมัติ
+            </a>
         </p>
-    </body>
-    </html>
+    </div>
     """,
     unsafe_allow_javascript=True,
 )
